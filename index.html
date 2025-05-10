@@ -10,15 +10,33 @@ Edit
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>40 Plus Glow</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>40 Plus Glow</title>
+  <style>
+    /* Remove default browser padding/margin */
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Make sure the image fills the screen width */
+    .full-width-img {
+      width: 100%;
+      height: auto;
+      display: block; /* removes a tiny gap under images */
+    }
+  </style>
 </head>
 <body>
-    <h1>Welcome to 40 Plus Glow!</h1>
-    
-    <!-- Your image goes here -->
-    <img src="https://github.com/40plusglow/40plusglow.com/raw/main/cover.png" alt="Cover Image" style="max-width: 100%; height: auto;">
+
+  <img 
+    src="https://github.com/40plusglow/40plusglow.com/raw/main/cover.png" 
+    alt="Cover Image" 
+    class="full-width-img">
+
+</body>
+</html>
     
     <p>Your journey to glowing at any age starts here.</p>
 </body>
