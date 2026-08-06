@@ -2,28 +2,33 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>40PlusGlow | Wellness, Beauty & Self-Care</title>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
   <meta
     name="description"
-    content="Shop 40PlusGlow premium herbal tea, hair care, body care, candles and luxury self-care products."
+    content="40PlusGlow is a wellness, beauty and self-care brand offering premium products, wellness education and community experiences."
   >
+
+  <title>40PlusGlow | Wellness, Beauty & Self-Care</title>
 
   <style>
     :root {
-      --green: #103c2d;
-      --dark-green: #08291e;
-      --gold: #bd8c2d;
-      --light-gold: #ead4a0;
+      --gold: #b8862b;
+      --dark-gold: #8b631f;
+      --light-gold: #ead8ab;
       --cream: #fbf7ef;
-      --sand: #efe5d2;
+      --ivory: #fffdf8;
+      --sand: #f1e8da;
+      --tan: #d7c2a0;
+      --taupe: #817467;
+      --charcoal: #282521;
       --white: #ffffff;
-      --black: #1d1d1b;
-      --gray: #68645d;
-      --border: rgba(189, 140, 45, 0.27);
-      --shadow: 0 18px 45px rgba(30, 25, 17, 0.13);
+      --border: rgba(184, 134, 43, 0.25);
+      --shadow: 0 18px 45px rgba(94, 70, 33, 0.13);
     }
 
     * {
@@ -36,20 +41,24 @@
 
     body {
       margin: 0;
+      background: var(--ivory);
+      color: var(--charcoal);
       font-family: Arial, Helvetica, sans-serif;
-      background: var(--cream);
-      color: var(--black);
       line-height: 1.6;
     }
 
-    a {
-      text-decoration: none;
-      color: inherit;
+    body.menu-open {
+      overflow: hidden;
     }
 
     img {
       display: block;
-      width: 100%;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
     }
 
     button,
@@ -59,40 +68,31 @@
 
     .container {
       width: min(1180px, 92%);
-      margin: auto;
-    }
-
-    .top-bar {
-      padding: 11px 15px;
-      background: var(--dark-green);
-      color: var(--white);
-      text-align: center;
-      text-transform: uppercase;
-      letter-spacing: 1.3px;
-      font-size: 14px;
+      margin: 0 auto;
     }
 
     header {
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(251, 247, 239, 0.98);
+      background: rgba(255, 253, 248, 0.97);
       border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(10px);
     }
 
     .navigation {
-      min-height: 82px;
+      min-height: 78px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 25px;
+      gap: 24px;
     }
 
     .logo {
       font-family: Georgia, serif;
       font-size: 31px;
+      color: var(--dark-gold);
       font-weight: 700;
-      color: var(--green);
       white-space: nowrap;
     }
 
@@ -109,254 +109,157 @@
     }
 
     nav a {
-      color: var(--green);
-      font-size: 14px;
+      color: var(--charcoal);
+      font-size: 13px;
       font-weight: 800;
       text-transform: uppercase;
-      letter-spacing: 0.6px;
+      letter-spacing: 0.7px;
     }
 
     nav a:hover {
       color: var(--gold);
     }
 
-    .nav-icons {
-      display: flex;
-      gap: 8px;
-    }
-
-    .icon-button {
+    .menu-button {
+      display: none;
       width: 42px;
       height: 42px;
-      display: grid;
-      place-items: center;
       border: 1px solid var(--border);
       border-radius: 50%;
       background: var(--white);
-      color: var(--green);
+      color: var(--charcoal);
       cursor: pointer;
       font-size: 18px;
     }
 
-    .icon-button:hover {
-      border-color: var(--gold);
-      transform: translateY(-2px);
-    }
-
-    .mobile-button {
-      display: none;
-    }
-
-    .search-area {
-      display: none;
-      padding: 15px 0;
+    .cover-section {
+      width: 100%;
       background: var(--white);
-      border-top: 1px solid var(--border);
-    }
-
-    .search-area.open {
-      display: block;
-    }
-
-    .search-row {
-      display: flex;
-      gap: 10px;
-    }
-
-    .search-row input {
-      flex: 1;
-      padding: 14px 18px;
-      border: 1px solid #d8cfbd;
-      border-radius: 40px;
-      outline: none;
-    }
-
-    .search-row button {
-      padding: 12px 22px;
-      border: none;
-      border-radius: 40px;
-      background: var(--green);
-      color: var(--white);
-      font-weight: 800;
-      cursor: pointer;
-    }
-
-    .hero {
-      padding: 75px 0;
-      background:
-        radial-gradient(
-          circle at 75% 20%,
-          rgba(234, 212, 160, 0.45),
-          transparent 35%
-        ),
-        linear-gradient(135deg, #fbf8f1, #eee1cc);
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 0.9fr 1.1fr;
-      align-items: center;
-      gap: 50px;
-    }
-
-    .small-title {
-      color: var(--gold);
-      font-weight: 900;
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      font-size: 13px;
-    }
-
-    .hero h1 {
-      margin: 12px 0 23px;
-      font-family: Georgia, serif;
-      font-size: clamp(55px, 7vw, 100px);
-      line-height: 0.95;
-      color: var(--green);
-      font-weight: 500;
-    }
-
-    .hero h1 em {
-      color: var(--gold);
-      font-weight: 400;
-    }
-
-    .hero p {
-      max-width: 590px;
-      color: #46423c;
-      font-size: 18px;
-      margin-bottom: 28px;
-    }
-
-    .button-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 13px;
-    }
-
-    .button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 50px;
-      padding: 13px 24px;
-      border-radius: 40px;
-      font-size: 14px;
-      font-weight: 900;
-      text-transform: uppercase;
-      letter-spacing: 0.7px;
-    }
-
-    .button-green {
-      background: var(--green);
-      color: var(--white);
-    }
-
-    .button-green:hover {
-      background: var(--dark-green);
-    }
-
-    .button-outline {
-      color: var(--green);
-      border: 1px solid var(--gold);
-    }
-
-    .button-outline:hover {
-      background: var(--gold);
-      color: var(--white);
-    }
-
-    .hero-image {
-      position: relative;
       overflow: hidden;
-      border-radius: 30px;
-      box-shadow: var(--shadow);
-      background: #d8c49b;
     }
 
-    .hero-image img {
-      aspect-ratio: 4 / 3;
-      object-fit: cover;
-    }
-
-    .shipping-badge {
-      position: absolute;
-      top: 18px;
-      right: 18px;
-      width: 115px;
-      height: 115px;
-      display: grid;
-      place-items: center;
-      padding: 12px;
-      border: 3px solid var(--light-gold);
-      border-radius: 50%;
-      background: var(--green);
-      color: var(--white);
-      text-align: center;
-      font-weight: 900;
-      line-height: 1.2;
-    }
-
-    .benefit-bar {
-      padding: 25px 0;
-      background: var(--green);
-      color: var(--white);
-    }
-
-    .benefit-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 16px;
-    }
-
-    .benefit {
-      display: flex;
-      align-items: center;
-      gap: 13px;
-      padding: 8px 15px;
-      border-right: 1px solid rgba(255, 255, 255, 0.2);
-    }
-
-    .benefit:last-child {
-      border-right: none;
-    }
-
-    .benefit-icon {
-      color: var(--light-gold);
-      font-size: 30px;
-    }
-
-    .benefit strong {
-      display: block;
-      font-family: Georgia, serif;
-      font-size: 17px;
-    }
-
-    .benefit small {
-      color: #e3ede7;
+    .cover-section img {
+      width: 100%;
+      height: auto;
+      max-height: none;
+      object-fit: contain;
+      object-position: center;
     }
 
     section {
-      padding: 85px 0;
+      padding: 82px 0;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 2.2px;
+      font-size: 12px;
+      font-weight: 900;
     }
 
     .section-heading {
       max-width: 760px;
-      margin: 0 auto 45px;
+      margin: 0 auto 42px;
       text-align: center;
     }
 
-    .section-heading h2 {
-      margin: 10px 0 15px;
+    .section-heading h2,
+    .mission-copy h2,
+    .expo-copy h2 {
+      margin: 10px 0 16px;
       font-family: Georgia, serif;
-      font-size: clamp(40px, 5vw, 64px);
-      line-height: 1.05;
-      color: var(--green);
+      color: var(--charcoal);
+      font-size: clamp(38px, 5vw, 62px);
       font-weight: 500;
+      line-height: 1.06;
     }
 
-    .section-heading p {
-      color: var(--gray);
+    .section-heading p,
+    .mission-copy p,
+    .expo-copy p {
+      color: var(--taupe);
+    }
+
+    .mission {
+      background:
+        radial-gradient(
+          circle at 15% 20%,
+          rgba(234, 216, 171, 0.35),
+          transparent 30%
+        ),
+        linear-gradient(
+          135deg,
+          var(--cream),
+          var(--white)
+        );
+    }
+
+    .mission-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 52px;
+      align-items: center;
+    }
+
+    .mission-image {
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      background: var(--white);
+      box-shadow: var(--shadow);
+    }
+
+    .mission-image img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+    }
+
+    .mission-points {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin: 24px 0;
+    }
+
+    .mission-point {
+      padding: 17px;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: var(--white);
+    }
+
+    .mission-point strong {
+      display: block;
+      color: var(--dark-gold);
+      margin-bottom: 4px;
+    }
+
+    .gold-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 49px;
+      padding: 13px 24px;
+      border: 0;
+      border-radius: 999px;
+      background: linear-gradient(
+        135deg,
+        var(--dark-gold),
+        var(--gold)
+      );
+      color: var(--white);
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.7px;
+      cursor: pointer;
+    }
+
+    .gold-button:hover {
+      filter: brightness(0.96);
+      transform: translateY(-1px);
     }
 
     .shop {
@@ -375,13 +278,13 @@
       overflow: hidden;
       border: 1px solid var(--border);
       border-radius: 22px;
-      background: var(--cream);
-      box-shadow: 0 8px 30px rgba(40, 32, 20, 0.06);
-      transition: 0.25s;
+      background: var(--ivory);
+      box-shadow: 0 8px 30px rgba(88, 66, 30, 0.07);
+      transition: 0.25s ease;
     }
 
     .product:hover {
-      transform: translateY(-7px);
+      transform: translateY(-6px);
       box-shadow: var(--shadow);
     }
 
@@ -391,13 +294,14 @@
     }
 
     .product-image img {
+      width: 100%;
       aspect-ratio: 1 / 1;
       object-fit: cover;
-      transition: 0.35s;
+      transition: 0.3s ease;
     }
 
     .product:hover .product-image img {
-      transform: scale(1.035);
+      transform: scale(1.03);
     }
 
     .product-content {
@@ -407,10 +311,10 @@
       padding: 22px;
     }
 
-    .product-category {
+    .category {
       margin-bottom: 7px;
       color: var(--gold);
-      font-size: 12px;
+      font-size: 11px;
       font-weight: 900;
       text-transform: uppercase;
       letter-spacing: 1.5px;
@@ -419,41 +323,41 @@
     .product h3 {
       margin: 0 0 10px;
       font-family: Georgia, serif;
-      color: var(--green);
-      font-size: 23px;
+      color: var(--charcoal);
+      font-size: 22px;
       line-height: 1.2;
     }
 
     .product p {
-      margin: 0 0 17px;
-      color: var(--gray);
+      margin: 0 0 16px;
+      color: var(--taupe);
       font-size: 15px;
     }
 
     .price {
       margin-top: auto;
-      margin-bottom: 8px;
+      color: var(--charcoal);
       font-size: 22px;
       font-weight: 900;
     }
 
-    .free-shipping {
-      margin-bottom: 12px;
-      color: var(--green);
+    .shipping-note {
+      margin: 7px 0 12px;
+      color: var(--dark-gold);
       font-size: 12px;
       font-weight: 900;
-    }
-
-    .paypal-form {
-      margin: 0;
     }
 
     .buy-button {
       width: 100%;
       min-height: 48px;
-      border: none;
-      border-radius: 40px;
-      background: var(--green);
+      border: 0;
+      border-radius: 999px;
+      background: linear-gradient(
+        135deg,
+        var(--dark-gold),
+        var(--gold)
+      );
       color: var(--white);
       font-weight: 900;
       text-transform: uppercase;
@@ -462,107 +366,66 @@
     }
 
     .buy-button:hover {
-      background: var(--gold);
-    }
-
-    .no-results {
-      display: none;
-      grid-column: 1 / -1;
-      padding: 30px;
-      text-align: center;
-      color: var(--gray);
-    }
-
-    .about {
-      background: linear-gradient(135deg, var(--dark-green), var(--green));
-      color: var(--white);
-    }
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      align-items: center;
-      gap: 50px;
-    }
-
-    .about-image {
-      overflow: hidden;
-      border-radius: 28px;
-      box-shadow: var(--shadow);
-    }
-
-    .about-image img {
-      aspect-ratio: 4 / 3;
-      object-fit: cover;
-    }
-
-    .about h2 {
-      margin: 10px 0 22px;
-      font-family: Georgia, serif;
-      font-size: clamp(42px, 5vw, 70px);
-      line-height: 1.03;
-      font-weight: 500;
-    }
-
-    .about p {
-      color: #e6eee9;
+      filter: brightness(0.95);
     }
 
     .expo {
       background: var(--sand);
     }
 
-    .expo-box {
+    .expo-grid {
       display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
+      grid-template-columns: 1.25fr 0.75fr;
       gap: 30px;
-      padding: 40px;
+      align-items: stretch;
+    }
+
+    .expo-copy,
+    .expo-card {
       border: 1px solid var(--border);
-      border-radius: 28px;
+      border-radius: 26px;
       background: var(--white);
       box-shadow: var(--shadow);
     }
 
-    .expo h2 {
-      margin: 10px 0 16px;
-      font-family: Georgia, serif;
-      color: var(--green);
-      font-size: clamp(40px, 5vw, 65px);
-      line-height: 1.05;
-      font-weight: 500;
+    .expo-copy {
+      padding: 38px;
     }
 
-    .expo-items {
+    .expo-list {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 11px;
-      margin-top: 23px;
+      gap: 12px;
+      margin: 24px 0 0;
     }
 
-    .expo-items span {
-      padding: 13px;
+    .expo-list span {
+      padding: 14px;
       border: 1px solid var(--border);
-      border-radius: 12px;
+      border-radius: 14px;
       background: var(--cream);
-      color: var(--green);
+      color: var(--dark-gold);
       font-weight: 800;
     }
 
-    .expo-contact {
+    .expo-card {
       padding: 32px;
-      border-radius: 22px;
-      background: var(--green);
-      color: var(--white);
+      background: linear-gradient(
+        145deg,
+        #fffdf8,
+        #f4ead5
+      );
     }
 
-    .expo-contact h3 {
+    .expo-card h3 {
       margin-top: 0;
       font-family: Georgia, serif;
+      color: var(--charcoal);
       font-size: 30px;
     }
 
-    .expo-contact p {
-      color: #e3ede7;
+    .expo-card p {
+      color: var(--taupe);
     }
 
     .newsletter {
@@ -572,21 +435,29 @@
     .newsletter-box {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      align-items: center;
       gap: 30px;
-      padding: 45px;
+      align-items: center;
+      padding: 42px;
       border: 1px solid var(--border);
       border-radius: 28px;
-      background: linear-gradient(135deg, #f2e5ca, #fcf9f3);
+      background: linear-gradient(
+        135deg,
+        var(--cream),
+        var(--white)
+      );
     }
 
-    .newsletter h2 {
-      margin: 10px 0;
+    .newsletter-box h2 {
+      margin: 8px 0;
       font-family: Georgia, serif;
-      color: var(--green);
-      font-size: clamp(38px, 4vw, 57px);
-      line-height: 1.05;
+      color: var(--charcoal);
+      font-size: clamp(34px, 4vw, 54px);
       font-weight: 500;
+      line-height: 1.08;
+    }
+
+    .newsletter-box p {
+      color: var(--taupe);
     }
 
     .newsletter-form {
@@ -596,51 +467,51 @@
 
     .newsletter-form input {
       flex: 1;
-      padding: 15px 19px;
-      border: 1px solid #cdbf9f;
-      border-radius: 40px;
-      outline: none;
+      padding: 15px 18px;
+      border: 1px solid #d8c49b;
+      border-radius: 999px;
       background: var(--white);
+      outline: none;
     }
 
     .newsletter-form button {
-      padding: 15px 24px;
-      border: none;
-      border-radius: 40px;
-      background: var(--green);
+      padding: 15px 22px;
+      border: 0;
+      border-radius: 999px;
+      background: var(--dark-gold);
       color: var(--white);
       font-weight: 900;
       cursor: pointer;
     }
 
     .newsletter-note {
-      margin-top: 10px;
-      color: var(--gray);
+      margin-top: 8px;
+      color: var(--taupe);
       font-size: 12px;
     }
 
     footer {
-      padding: 55px 0 25px;
-      background: var(--dark-green);
+      padding: 52px 0 24px;
+      background: #211d18;
       color: var(--white);
     }
 
     .footer-grid {
       display: grid;
       grid-template-columns: 1.2fr 1fr 1fr;
-      gap: 35px;
-      padding-bottom: 35px;
+      gap: 34px;
+      padding-bottom: 30px;
     }
 
     footer .logo {
       display: inline-block;
-      margin-bottom: 12px;
-      color: var(--white);
+      margin-bottom: 10px;
+      color: var(--light-gold);
     }
 
     footer p,
     footer a {
-      color: #d8e5dd;
+      color: #e8dfd0;
     }
 
     footer a:hover {
@@ -655,34 +526,34 @@
     .social-links {
       display: flex;
       flex-wrap: wrap;
-      gap: 9px;
-      margin-top: 15px;
+      gap: 8px;
+      margin-top: 14px;
     }
 
     .social-links a {
-      padding: 8px 13px;
-      border: 1px solid rgba(255, 255, 255, 0.22);
-      border-radius: 30px;
+      padding: 7px 12px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 999px;
     }
 
     .copyright {
-      padding-top: 20px;
-      border-top: 1px solid rgba(255, 255, 255, 0.14);
+      padding-top: 18px;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
       text-align: center;
-      color: #b9c9bf;
+      color: #c8bdad;
       font-size: 13px;
     }
 
-    @media (max-width: 950px) {
+    @media (max-width: 960px) {
       nav {
         position: fixed;
-        top: 82px;
-        right: 0;
+        top: 78px;
         left: 0;
+        right: 0;
         display: none;
         flex-direction: column;
-        padding: 30px;
-        background: var(--cream);
+        padding: 28px;
+        background: var(--ivory);
         border-bottom: 1px solid var(--border);
       }
 
@@ -690,35 +561,18 @@
         display: flex;
       }
 
-      .mobile-button {
-        display: grid;
+      .menu-button {
+        display: inline-grid;
+        place-items: center;
       }
 
-      .hero-grid,
-      .about-grid,
-      .expo-box,
+      .mission-grid,
+      .expo-grid,
       .newsletter-box {
         grid-template-columns: 1fr;
       }
 
-      .hero-copy {
-        text-align: center;
-      }
-
-      .hero-copy p {
-        margin-right: auto;
-        margin-left: auto;
-      }
-
-      .button-row {
-        justify-content: center;
-      }
-
       .products {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .benefit-grid {
         grid-template-columns: repeat(2, 1fr);
       }
 
@@ -727,54 +581,33 @@
       }
     }
 
-    @media (max-width: 620px) {
+    @media (max-width: 640px) {
       .navigation {
-        min-height: 72px;
+        min-height: 70px;
       }
 
       .logo {
         font-size: 24px;
       }
 
-      .support-icon {
-        display: none;
-      }
-
-      .hero {
-        padding: 50px 0;
-      }
-
-      .hero h1 {
-        font-size: 55px;
-      }
-
-      .shipping-badge {
-        width: 92px;
-        height: 92px;
-        font-size: 12px;
-      }
-
       section {
-        padding: 65px 0;
+        padding: 62px 0;
       }
 
       .products,
-      .benefit-grid,
-      .expo-items,
+      .mission-points,
+      .expo-list,
       .footer-grid {
         grid-template-columns: 1fr;
-      }
-
-      .benefit {
-        border-right: none;
       }
 
       .newsletter-form {
         flex-direction: column;
       }
 
-      .expo-box,
-      .newsletter-box {
+      .newsletter-box,
+      .expo-copy,
+      .expo-card {
         padding: 24px;
       }
     }
@@ -783,10 +616,6 @@
 
 <body>
 
-  <div class="top-bar">
-    Free shipping on all orders for a limited time
-  </div>
-
   <header>
     <div class="container navigation">
 
@@ -794,184 +623,123 @@
         40Plus<span>Glow</span>
       </a>
 
-      <nav id="navigationMenu">
+      <nav id="mainNavigation">
         <a href="#home">Home</a>
+        <a href="#mission">Our Mission</a>
         <a href="#shop">Shop</a>
-        <a href="#about">Our Story</a>
         <a href="#expo">Expo</a>
         <a href="#newsletter">Newsletter</a>
         <a href="#contact">Contact</a>
       </nav>
 
-      <div class="nav-icons">
+      <button
+        class="menu-button"
+        id="menuButton"
+        type="button"
+        aria-label="Open menu">
+        ☰
+      </button>
 
-        <button
-          class="icon-button"
-          id="searchButton"
-          type="button"
-          aria-label="Search products"
-          title="Search products">
-          🔍
-        </button>
-
-        <a
-          class="icon-button support-icon"
-          href="mailto:40plusglow@gmail.com"
-          aria-label="Email 40PlusGlow"
-          title="Email 40PlusGlow">
-          ♡
-        </a>
-
-        <a
-          class="icon-button"
-          href="#shop"
-          aria-label="Shop products"
-          title="Shop products">
-          🛍
-        </a>
-
-        <button
-          class="icon-button mobile-button"
-          id="menuButton"
-          type="button"
-          aria-label="Open menu">
-          ☰
-        </button>
-
-      </div>
-    </div>
-
-    <div class="search-area" id="searchArea">
-      <div class="container search-row">
-
-        <input
-          id="productSearch"
-          type="search"
-          placeholder="Search tea, candles, body care, hair care or bundles..."
-          aria-label="Search products">
-
-        <button id="clearSearch" type="button">
-          Clear
-        </button>
-
-      </div>
     </div>
   </header>
 
   <main>
 
-    <section class="hero" id="home">
-      <div class="container hero-grid">
+    <section class="cover-section" id="home">
 
-        <div class="hero-copy">
+      <img
+        src="cover.png?v=11"
+        alt="40PlusGlow luxury wellness and self-care collection">
 
-          <span class="small-title">
-            Wellness • Confidence • Self-Care
-          </span>
+    </section>
 
-          <h1>
-            Glow from the
-            <em>inside out.</em>
-          </h1>
+    <section class="mission" id="mission">
+      <div class="container mission-grid">
 
-          <p>
-            Discover premium self-care products, botanical wellness and
-            an uplifting community created to help you feel healthier,
-            stronger, more confident and beautifully empowered.
-          </p>
+        <div class="mission-image">
 
-          <div class="button-row">
+          <img
+            src="botanical-balance.png"
+            alt="40PlusGlow Botanical Balance herbal tea">
 
-            <a href="#shop" class="button button-green">
-              Shop Our Products
-            </a>
-
-            <a href="#about" class="button button-outline">
-              Discover Our Story
-            </a>
-
-          </div>
         </div>
 
-        <div class="hero-image">
+        <div class="mission-copy">
 
-         <img
-   src="cover.png?v=5"
-  alt="40PlusGlow luxury wellness and self-care collection">
+          <span class="eyebrow">
+            Who We Are
+          </span>
 
-          <div class="shipping-badge">
-            Free<br>
-            Shipping<br>
-            Limited Time
+          <h2>
+            More than products. A wellness movement.
+          </h2>
+
+          <p>
+            40PlusGlow exists to empower people to prioritize their
+            health, embrace confidence and create intentional self-care
+            habits at every stage of life.
+          </p>
+
+          <p>
+            We combine wellness education, premium self-care products,
+            uplifting content and community experiences to help people
+            feel healthier, stronger and beautifully empowered.
+          </p>
+
+          <div class="mission-points">
+
+            <div class="mission-point">
+              <strong>Wellness Education</strong>
+              Practical information that supports healthier choices.
+            </div>
+
+            <div class="mission-point">
+              <strong>Intentional Self-Care</strong>
+              Products and rituals designed to help you slow down and glow.
+            </div>
+
+            <div class="mission-point">
+              <strong>Confidence</strong>
+              Encouraging people to feel good in every season of life.
+            </div>
+
+            <div class="mission-point">
+              <strong>Community</strong>
+              Connecting people through content, events and shared wellness goals.
+            </div>
+
           </div>
+
+          <a class="gold-button" href="#expo">
+            Explore Our Community Work
+          </a>
 
         </div>
       </div>
     </section>
-
-    <div class="benefit-bar">
-      <div class="container benefit-grid">
-
-        <div class="benefit">
-          <span class="benefit-icon">❧</span>
-          <div>
-            <strong>Premium Products</strong>
-            <small>Carefully selected for your glow.</small>
-          </div>
-        </div>
-
-        <div class="benefit">
-          <span class="benefit-icon">✦</span>
-          <div>
-            <strong>Self-Care Made Simple</strong>
-            <small>Luxury rituals for your real life.</small>
-          </div>
-        </div>
-
-        <div class="benefit">
-          <span class="benefit-icon">♡</span>
-          <div>
-            <strong>Supportive Community</strong>
-            <small>Learn, connect and grow.</small>
-          </div>
-        </div>
-
-        <div class="benefit">
-          <span class="benefit-icon">✓</span>
-          <div>
-            <strong>Secure PayPal Checkout</strong>
-            <small>Purchase confidently through PayPal.</small>
-          </div>
-        </div>
-
-      </div>
-    </div>
 
     <section class="shop" id="shop">
       <div class="container">
 
         <div class="section-heading">
 
-          <span class="small-title">
+          <span class="eyebrow">
             The 40PlusGlow Collection
           </span>
 
           <h2>
-            Shop wellness and self-care essentials.
+            Luxury wellness and self-care essentials.
           </h2>
 
           <p>
-            Each Buy Now button opens that product’s secure PayPal
-            checkout page in a new browser tab.
+            Secure PayPal checkout is available for every product below.
           </p>
 
         </div>
 
-        <div class="products" id="productGrid">
+        <div class="products">
 
-          <article
-            class="product"
-            data-search="botanical balance herbal tea hibiscus cinnamon star anise cloves">
+          <article class="product">
 
             <div class="product-image">
               <img
@@ -981,7 +749,7 @@
 
             <div class="product-content">
 
-              <span class="product-category">
+              <span class="category">
                 Tea & Wellness
               </span>
 
@@ -990,7 +758,7 @@
               </h3>
 
               <p>
-                A bold botanical blend featuring hibiscus, cinnamon,
+                A botanical blend featuring hibiscus, cinnamon,
                 star anise and cloves.
               </p>
 
@@ -998,12 +766,11 @@
                 $24.99
               </div>
 
-              <div class="free-shipping">
+              <div class="shipping-note">
                 Free shipping for a limited time
               </div>
 
               <form
-                class="paypal-form"
                 action="https://www.paypal.com/ncp/payment/CBQSTAN25BJ8S"
                 method="post"
                 target="_blank">
@@ -1013,22 +780,21 @@
                 </button>
 
               </form>
+
             </div>
           </article>
 
-          <article
-            class="product"
-            data-search="luxe growth elixir nourishing hair scalp oil hair care">
+          <article class="product">
 
             <div class="product-image">
               <img
                 src="luxe-growth-elixir.png"
-                alt="Luxe Growth Elixir hair and scalp oil">
+                alt="Luxe Growth Elixir">
             </div>
 
             <div class="product-content">
 
-              <span class="product-category">
+              <span class="category">
                 Hair Care
               </span>
 
@@ -1045,12 +811,11 @@
                 $25.00
               </div>
 
-              <div class="free-shipping">
+              <div class="shipping-note">
                 Free shipping for a limited time
               </div>
 
               <form
-                class="paypal-form"
                 action="https://www.paypal.com/ncp/payment/HMBDS3ANA8L5G"
                 method="post"
                 target="_blank">
@@ -1060,12 +825,11 @@
                 </button>
 
               </form>
+
             </div>
           </article>
 
-          <article
-            class="product"
-            data-search="golden kiss luxe lip gloss beauty lips shimmer">
+          <article class="product">
 
             <div class="product-image">
               <img
@@ -1075,7 +839,7 @@
 
             <div class="product-content">
 
-              <span class="product-category">
+              <span class="category">
                 Beauty
               </span>
 
@@ -1084,20 +848,18 @@
               </h3>
 
               <p>
-                A radiant high-shine finishing touch for beautifully
-                polished lips.
+                A radiant high-shine gloss for beautifully polished lips.
               </p>
 
               <div class="price">
                 $15.00
               </div>
 
-              <div class="free-shipping">
+              <div class="shipping-note">
                 Free shipping for a limited time
               </div>
 
               <form
-                class="paypal-form"
                 action="https://www.paypal.com/ncp/payment/9CHLW3PGD5G96"
                 method="post"
                 target="_blank">
@@ -1107,12 +869,11 @@
                 </button>
 
               </form>
+
             </div>
           </article>
 
-          <article
-            class="product"
-            data-search="golden glow bundle gift set candles body shimmer scrub lip gloss elixir">
+          <article class="product">
 
             <div class="product-image">
               <img
@@ -1122,7 +883,7 @@
 
             <div class="product-content">
 
-              <span class="product-category">
+              <span class="category">
                 Bundles & Gifts
               </span>
 
@@ -1139,12 +900,11 @@
                 $95.00
               </div>
 
-              <div class="free-shipping">
+              <div class="shipping-note">
                 Free shipping for a limited time
               </div>
 
               <form
-                class="paypal-form"
                 action="https://www.paypal.com/ncp/payment/KP77SJUQ9TX5L"
                 method="post"
                 target="_blank">
@@ -1154,12 +914,11 @@
                 </button>
 
               </form>
+
             </div>
           </article>
 
-          <article
-            class="product"
-            data-search="lux glow body scrub eight oz exfoliating body care">
+          <article class="product">
 
             <div class="product-image">
               <img
@@ -1169,7 +928,7 @@
 
             <div class="product-content">
 
-              <span class="product-category">
+              <span class="category">
                 Body Care
               </span>
 
@@ -1186,12 +945,11 @@
                 $20.00
               </div>
 
-              <div class="free-shipping">
+              <div class="shipping-note">
                 Free shipping for a limited time
               </div>
 
               <form
-                class="paypal-form"
                 action="https://www.paypal.com/ncp/payment/XKU7MKZHVW6KJ"
                 method="post"
                 target="_blank">
@@ -1201,12 +959,11 @@
                 </button>
 
               </form>
+
             </div>
           </article>
 
-          <article
-            class="product"
-            data-search="luxe glow body shimmer body oil gold radiant 1.7 oz">
+          <article class="product">
 
             <div class="product-image">
               <img
@@ -1216,7 +973,7 @@
 
             <div class="product-content">
 
-              <span class="product-category">
+              <span class="category">
                 Body Care
               </span>
 
@@ -1233,12 +990,11 @@
                 $25.00
               </div>
 
-              <div class="free-shipping">
+              <div class="shipping-note">
                 Free shipping for a limited time
               </div>
 
               <form
-                class="paypal-form"
                 action="https://www.paypal.com/ncp/payment/SV8BTDBA263WW"
                 method="post"
                 target="_blank">
@@ -1248,22 +1004,21 @@
                 </button>
 
               </form>
+
             </div>
           </article>
 
-          <article
-            class="product"
-            data-search="luxury candle set golden aura soft life candles">
+          <article class="product">
 
             <div class="product-image">
               <img
                 src="luxury-candle-set.png"
-                alt="Golden Aura and Soft Life candle set">
+                alt="Luxury Candle Set">
             </div>
 
             <div class="product-content">
 
-              <span class="product-category">
+              <span class="category">
                 Home Fragrance
               </span>
 
@@ -1273,19 +1028,18 @@
 
               <p>
                 Enjoy both signature fragrances together in one elegant
-                luxury candle pairing.
+                candle pairing.
               </p>
 
               <div class="price">
                 $48.00
               </div>
 
-              <div class="free-shipping">
+              <div class="shipping-note">
                 Free shipping for a limited time
               </div>
 
               <form
-                class="paypal-form"
                 action="https://www.paypal.com/ncp/payment/XFHFF2FY95GHJ"
                 method="post"
                 target="_blank">
@@ -1295,12 +1049,11 @@
                 </button>
 
               </form>
+
             </div>
           </article>
 
-          <article
-            class="product"
-            data-search="soft life luxury candle tonka bean sandalwood soy vanilla">
+          <article class="product">
 
             <div class="product-image">
               <img
@@ -1310,7 +1063,7 @@
 
             <div class="product-content">
 
-              <span class="product-category">
+              <span class="category">
                 Home Fragrance
               </span>
 
@@ -1320,19 +1073,18 @@
 
               <p>
                 A warm, comforting fragrance designed to create a peaceful
-                luxury atmosphere.
+                atmosphere.
               </p>
 
               <div class="price">
                 $25.00
               </div>
 
-              <div class="free-shipping">
+              <div class="shipping-note">
                 Free shipping for a limited time
               </div>
 
               <form
-                class="paypal-form"
                 action="https://www.paypal.com/ncp/payment/BT2DWXMN7E2YL"
                 method="post"
                 target="_blank">
@@ -1342,12 +1094,11 @@
                 </button>
 
               </form>
+
             </div>
           </article>
 
-          <article
-            class="product"
-            data-search="golden aura luxury candle amber sandalwood ylang ylang">
+          <article class="product">
 
             <div class="product-image">
               <img
@@ -1357,7 +1108,7 @@
 
             <div class="product-content">
 
-              <span class="product-category">
+              <span class="category">
                 Home Fragrance
               </span>
 
@@ -1374,12 +1125,11 @@
                 $25.00
               </div>
 
-              <div class="free-shipping">
+              <div class="shipping-note">
                 Free shipping for a limited time
               </div>
 
               <form
-                class="paypal-form"
                 action="https://www.paypal.com/ncp/payment/EFWGJC8VHCTSU"
                 method="post"
                 target="_blank">
@@ -1389,67 +1139,20 @@
                 </button>
 
               </form>
+
             </div>
           </article>
-
-          <div class="no-results" id="noResults">
-            No products matched your search.
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <section class="about" id="about">
-      <div class="container about-grid">
-
-        <div class="about-image">
-          <img
-            src="botanical-balance.png"
-            alt="40PlusGlow Botanical Balance herbal tea">
-        </div>
-
-        <div>
-
-          <span
-            class="small-title"
-            style="color: var(--light-gold);">
-            Our Story
-          </span>
-
-          <h2>
-            More than products. A wellness movement.
-          </h2>
-
-          <p>
-            40PlusGlow was created to encourage healthier living,
-            confident aging and intentional self-care at every stage
-            of life.
-          </p>
-
-          <p>
-            Through wellness education, premium products, uplifting
-            content and meaningful community experiences, we help people
-            make space for their health, beauty, balance and personal glow.
-          </p>
-
-          <a
-            class="button button-outline"
-            style="color: white; border-color: var(--light-gold);"
-            href="mailto:40plusglow@gmail.com">
-            Connect With Us
-          </a>
 
         </div>
       </div>
     </section>
 
     <section class="expo" id="expo">
-      <div class="container expo-box">
+      <div class="container expo-grid">
 
-        <div>
+        <div class="expo-copy">
 
-          <span class="small-title">
+          <span class="eyebrow">
             Presented by 40PlusGlow
           </span>
 
@@ -1458,39 +1161,41 @@
           </h2>
 
           <p>
-            A signature community experience bringing together wellness
-            experts, health professionals, speakers, fitness leaders,
-            local vendors and families.
+            A signature community experience designed to bring together
+            health professionals, wellness experts, fitness leaders,
+            speakers, local vendors, sponsors and families.
           </p>
 
-          <div class="expo-items">
+          <div class="expo-list">
 
             <span>Health education</span>
             <span>Wellness workshops</span>
             <span>Fitness demonstrations</span>
             <span>Expert speakers</span>
             <span>Local vendors</span>
-            <span>Giveaways and prizes</span>
+            <span>Giveaways and community resources</span>
 
           </div>
         </div>
 
-        <div class="expo-contact">
+        <div class="expo-card">
 
           <h3>
-            Interested in participating?
+            Join the Expo
           </h3>
 
           <p>
-            Contact us about sponsorship, vendor opportunities,
-            partnerships or event updates.
+            Interested in becoming a sponsor, vendor, speaker, wellness
+            partner or attendee? Contact us and tell us how you would like
+            to participate.
           </p>
 
           <a
-            class="button button-green"
-            style="background: var(--gold);"
-            href="mailto:40plusglow@gmail.com?subject=Central%20Florida%20Health%20and%20Wellness%20Expo%20Interest">
-            Contact the Expo Team
+            class="gold-button"
+            href="mailto:40plusglow@gmail.com?subject=Central%20Florida%20Health%20%26%20Wellness%20Expo%20Interest">
+
+            Sign Up or Request Information
+
           </a>
 
         </div>
@@ -1502,17 +1207,16 @@
 
         <div>
 
-          <span class="small-title">
+          <span class="eyebrow">
             Join the Glow List
           </span>
 
           <h2>
-            Wellness inspiration delivered to you.
+            Wellness inspiration, product news and expo updates.
           </h2>
 
           <p>
-            Receive product updates, special offers, wellness tips and
-            Central Florida Health & Wellness Expo news.
+            Stay connected with the 40PlusGlow community.
           </p>
 
         </div>
@@ -1535,8 +1239,8 @@
           </form>
 
           <div class="newsletter-note">
-            This simple signup opens the visitor’s email application to
-            send a subscription request to 40PlusGlow.
+            This form opens the visitor’s email application to send a
+            signup request to 40PlusGlow.
           </div>
 
         </div>
@@ -1557,8 +1261,7 @@
           </a>
 
           <p>
-            Health. Wellness. Confidence. Self-care.
-            Your glow begins within.
+            Wellness. Beauty. Confidence. Self-care. Community.
           </p>
 
           <div class="social-links">
@@ -1596,30 +1299,41 @@
 
         <div>
 
-          <h3>Quick Links</h3>
+          <h3>
+            Explore
+          </h3>
 
           <div class="footer-links">
 
-            <a href="#shop">Shop</a>
-            <a href="#about">Our Story</a>
-            <a href="#expo">Health & Wellness Expo</a>
-            <a href="#newsletter">Newsletter</a>
+            <a href="#mission">
+              Our Mission
+            </a>
+
+            <a href="#shop">
+              Shop
+            </a>
+
+            <a href="#expo">
+              Health & Wellness Expo
+            </a>
+
+            <a href="#newsletter">
+              Newsletter
+            </a>
 
           </div>
         </div>
 
         <div>
 
-          <h3>Contact</h3>
+          <h3>
+            Contact
+          </h3>
 
           <div class="footer-links">
 
             <a href="mailto:40plusglow@gmail.com">
               40plusglow@gmail.com
-            </a>
-
-            <a href="#shop">
-              Free shipping for a limited time
             </a>
 
             <a href="#home">
@@ -1642,89 +1356,28 @@
     const menuButton =
       document.getElementById("menuButton");
 
-    const navigationMenu =
-      document.getElementById("navigationMenu");
+    const mainNavigation =
+      document.getElementById("mainNavigation");
 
-    const searchButton =
-      document.getElementById("searchButton");
-
-    const searchArea =
-      document.getElementById("searchArea");
-
-    const productSearch =
-      document.getElementById("productSearch");
-
-    const clearSearch =
-      document.getElementById("clearSearch");
-
-    const products =
-      Array.from(document.querySelectorAll(".product"));
-
-    const noResults =
-      document.getElementById("noResults");
-
-    menuButton.addEventListener("click", function () {
-      navigationMenu.classList.toggle("open");
-    });
+    menuButton.addEventListener(
+      "click",
+      function () {
+        mainNavigation.classList.toggle("open");
+        document.body.classList.toggle("menu-open");
+      }
+    );
 
     document
       .querySelectorAll("nav a")
       .forEach(function (link) {
-        link.addEventListener("click", function () {
-          navigationMenu.classList.remove("open");
-        });
+        link.addEventListener(
+          "click",
+          function () {
+            mainNavigation.classList.remove("open");
+            document.body.classList.remove("menu-open");
+          }
+        );
       });
-
-    searchButton.addEventListener("click", function () {
-      searchArea.classList.toggle("open");
-
-      if (searchArea.classList.contains("open")) {
-        productSearch.focus();
-      }
-    });
-
-    function filterProducts() {
-      const searchTerm =
-        productSearch.value.toLowerCase().trim();
-
-      let visibleProducts = 0;
-
-      products.forEach(function (product) {
-        const searchableText =
-          (
-            product.dataset.search +
-            " " +
-            product.innerText
-          ).toLowerCase();
-
-        const matches =
-          searchableText.includes(searchTerm);
-
-        product.style.display =
-          matches ? "flex" : "none";
-
-        if (matches) {
-          visibleProducts++;
-        }
-      });
-
-      noResults.style.display =
-        visibleProducts === 0 ? "block" : "none";
-    }
-
-    productSearch.addEventListener(
-      "input",
-      filterProducts
-    );
-
-    clearSearch.addEventListener(
-      "click",
-      function () {
-        productSearch.value = "";
-        filterProducts();
-        productSearch.focus();
-      }
-    );
 
     document
       .getElementById("newsletterForm")
