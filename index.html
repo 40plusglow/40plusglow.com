@@ -1963,20 +1963,30 @@
 
         </div>
 
-        <form class="newsletter-form" id="newsletterForm">
+       <form
+    class="newsletter-form"
+    action="https://formspree.io/f/xoeavlzo"
+    method="POST">
 
-          <input
-            id="newsletterEmail"
-            type="email"
-            required
-            placeholder="Enter your email address"
-            aria-label="Email address">
+    <input
+        id="newsletterEmail"
+        name="email"
+        type="email"
+        required
+        placeholder="Enter your email address"
+        aria-label="Email address">
 
-          <button type="submit">
-            Join the Community
-          </button>
+    <input
+        type="hidden"
+        name="_subject"
+        value="New 40PlusGlow Community Signup">
 
-        </form>
+    <button type="submit">
+        Join the Community
+    </button>
+
+</form>
+        
 
       </div>
     </section>
@@ -2169,39 +2179,8 @@
         }
       );
 
-    document
-      .getElementById("newsletterForm")
-      .addEventListener(
-        "submit",
-        function (event) {
-          event.preventDefault();
+   
 
-          const email =
-            document
-              .getElementById("newsletterEmail")
-              .value
-              .trim();
-
-          const subject =
-            encodeURIComponent(
-              "Join the 40PlusGlow Community"
-            );
-
-          const body =
-            encodeURIComponent(
-              "Please add " +
-              email +
-              " to the 40PlusGlow email list."
-            );
-
-          window.location.href =
-            "mailto:40plusglow@gmail.com" +
-            "?subject=" +
-            subject +
-            "&body=" +
-            body;
-        }
-      );
   </script>
 
 </body>
