@@ -1963,8 +1963,9 @@
 
         </div>
 
-       <form
+<form
     class="newsletter-form"
+    id="newsletterForm"
     action="https://formspree.io/f/xoeavlzo"
     method="POST">
 
@@ -2183,7 +2184,30 @@
             body;
         }
       );
+document.getElementById("newsletterForm").addEventListener("submit", async function (e) {
+    e.preventDefault();
 
+    const form = this;
+
+    try {
+        const response = await fetch(form.action, {
+            method: "POST",
+            body: new FormData(form),
+            headers: {
+                "Accept": "application/json"
+            }
+        });
+
+        if (response.ok) {
+            alert("🎉 Welcome to the 40PlusGlow Community! Thank you for joining our wellness family.");
+            form.reset();
+        } else {
+            alert("Something went wrong. Please try again.");
+        }
+    } catch (error) {
+        alert("Unable to submit the form. Please try again.");
+    }
+});
    
 
   </script>
