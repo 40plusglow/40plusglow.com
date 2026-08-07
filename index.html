@@ -1703,7 +1703,11 @@
 
         </div>
 
-        <form class="expo-form" id="expoInterestForm">
+      <form
+    class="expo-form"
+    id="expoInterestForm"
+    action="https://formspree.io/f/mnpanbbn"
+    method="POST">
 
           <h3>
             Join the Expo Interest List
@@ -1717,12 +1721,12 @@
                 Full Name
               </label>
 
-              <input
-                id="expoName"
-                type="text"
-                required
-                placeholder="Your full name">
-
+            <input
+    id="expoName"
+    name="name"
+    type="text"
+    required
+    placeholder="Your full name">
             </div>
 
             <div class="field">
@@ -1731,11 +1735,12 @@
                 Email Address
               </label>
 
-              <input
-                id="expoEmail"
-                type="email"
-                required
-                placeholder="Your email address">
+            <input
+    id="expoEmail"
+    name="email"
+    type="email"
+    required
+    placeholder="Your email address">
 
             </div>
 
@@ -1745,10 +1750,11 @@
                 Business or Organization
               </label>
 
-              <input
-                id="expoBusiness"
-                type="text"
-                placeholder="Business or organization name">
+            <input
+    id="expoBusiness"
+    name="business"
+    type="text"
+    placeholder="Business or organization name">
 
             </div>
 
@@ -1758,7 +1764,10 @@
                 I Am Interested In
               </label>
 
-              <select id="expoInterest" required>
+             <select
+    id="expoInterest"
+    name="interest"
+    required>
 
                 <option value="">
                   Select an opportunity
@@ -1804,6 +1813,7 @@
 
               <textarea
                 id="expoMessage"
+                name="message"
                 placeholder="Share any questions or details about your interest."></textarea>
 
             </div>
@@ -2140,50 +2150,32 @@
         );
       });
 
-    document
-      .getElementById("expoInterestForm")
-      .addEventListener(
-        "submit",
-        function (event) {
-          event.preventDefault();
+   
 
-          const name =
-            document.getElementById("expoName").value.trim();
+    document.getElementById("expoInterestForm").addEventListener("submit", async function (e) {
+    e.preventDefault();
 
-          const email =
-            document.getElementById("expoEmail").value.trim();
+    const form = this;
 
-          const business =
-            document.getElementById("expoBusiness").value.trim();
+    try {
+        const response = await fetch(form.action, {
+            method: "POST",
+            body: new FormData(form),
+            headers: {
+                "Accept": "application/json"
+            }
+        });
 
-          const interest =
-            document.getElementById("expoInterest").value;
-
-          const message =
-            document.getElementById("expoMessage").value.trim();
-
-          const subject =
-            encodeURIComponent(
-              "Central Florida Health & Wellness Expo Interest"
-            );
-
-          const body =
-            encodeURIComponent(
-              "Name: " + name + "\n" +
-              "Email: " + email + "\n" +
-              "Business/Organization: " + business + "\n" +
-              "Interest: " + interest + "\n\n" +
-              "Message:\n" + message
-            );
-
-          window.location.href =
-            "mailto:40plusglow@gmail.com" +
-            "?subject=" +
-            subject +
-            "&body=" +
-            body;
+        if (response.ok) {
+            alert("Thank you for your interest in the Central Florida Health & Wellness Expo! Your information has been received.");
+            form.reset();
+        } else {
+            alert("Something went wrong. Please try again.");
         }
-      );
+    } catch (error) {
+        alert("Unable to submit the form. Please try again.");
+    }
+});
 document.getElementById("newsletterForm").addEventListener("submit", async function (e) {
     e.preventDefault();
 
