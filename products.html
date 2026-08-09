@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Shop the complete 40PlusGlow collection including Botanical Balance herbal tea, Luxe Growth Elixir hair and scalp oil, luxury body care, lip gloss, candles and self-care bundles."
+  >
+
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="40PlusGlow">
+  <meta name="theme-color" content="#b88936">
+
+  <link
+    rel="canonical"
+    href="https://www.40plusglow.com/products.html"
+  >
+
+  <title>Shop 40PlusGlow | Wellness, Beauty & Self-Care Products</title>
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="Shop 40PlusGlow | Wellness & Self-Care">
+  <meta property="og:description" content="Explore premium herbal tea, hair and scalp oil, body care, candles, beauty essentials and wellness bundles from 40PlusGlow.">
+  <meta property="og:url" content="https://www.40plusglow.com/products.html">
+  <meta property="og:site_name" content="40PlusGlow">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Shop 40PlusGlow | Wellness & Self-Care">
+  <meta name="twitter:description" content="Explore premium wellness products, herbal tea, hair and scalp oil, body care, candles and beauty essentials from 40PlusGlow.">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-06Z99YJG82"></script>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-06Z99YJG82');
+  </script>
+
+  <style>
+    :root {
+      --gold: #b88936;
+      --dark-gold: #87611f;
+      --champagne: #ead9b9;
+      --cream: #fbf7ef;
+      --ivory: #fffdf9;
+      --sand: #f2e9dc;
+      --warm-tan: #d5bea0;
+      --taupe: #766b60;
+      --charcoal: #28241f;
+      --white: #ffffff;
+      --border: rgba(184, 137, 54, 0.25);
+      --shadow: 0 18px 50px rgba(91, 67, 30, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--ivory);
+      color: var(--charcoal);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    .container {
+      width: min(1180px, 92%);
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      color: var(--gold);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 2.4px;
+      text-transform: uppercase;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 253, 249, 0.97);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(12px);
+    }
+
+    .navigation {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .logo {
+      color: var(--dark-gold);
+      font-family: Georgia, serif;
+      font-size: 31px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .logo span {
+      color: var(--gold);
+      font-style: italic;
+      font-weight: 400;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: var(--charcoal);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.7px;
+      text-transform: uppercase;
+    }
+
+    nav a:hover {
+      color: var(--gold);
+    }
+
+    .hero {
+      padding: 85px 0 65px;
+      text-align: center;
+      background:
+        radial-gradient(
+          circle at 20% 15%,
+          rgba(234, 217, 185, 0.55),
+          transparent 30%
+        ),
+        linear-gradient(
+          135deg,
+          var(--cream),
+          var(--white)
+        );
+    }
+
+    .hero h1 {
+      max-width: 900px;
+      margin: 12px auto 20px;
+      font-family: Georgia, serif;
+      font-size: clamp(46px, 7vw, 78px);
+      font-weight: 500;
+      line-height: 1.03;
+    }
+
+    .hero p {
+      max-width: 760px;
+      margin: 0 auto;
+      color: var(--taupe);
+      font-size: 18px;
+    }
+
+    .shop {
+      padding: 75px 0 90px;
+      background: var(--white);
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .product {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      background: var(--ivory);
+      box-shadow: 0 8px 30px rgba(88, 66, 30, 0.07);
+      transition: 0.25s ease;
+    }
+
+    .product:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow);
+    }
+
+    .product-image {
+      overflow: hidden;
+      background: var(--sand);
+    }
+
+    .product-image img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      transition: 0.3s ease;
+    }
+
+    .product:hover .product-image img {
+      transform: scale(1.03);
+    }
+
+    .product-content {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      padding: 22px;
+    }
+
+    .category {
+      margin-bottom: 7px;
+      color: var(--gold);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .product h2 {
+      margin: 0 0 10px;
+      color: var(--charcoal);
+      font-family: Georgia, serif;
+      font-size: 23px;
+      font-weight: 500;
+      line-height: 1.2;
+    }
+
+    .product p {
+      margin: 0 0 16px;
+      color: var(--taupe);
+      font-size: 15px;
+    }
+
+    .price {
+      margin-top: auto;
+      color: var(--charcoal);
+      font-size: 22px;
+      font-weight: 900;
+    }
+
+    .shipping-note {
+      margin: 7px 0 12px;
+      color: var(--dark-gold);
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    .buy-button {
+      width: 100%;
+      min-height: 48px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 0;
+      border-radius: 999px;
+      background: linear-gradient(
+        135deg,
+        var(--dark-gold),
+        var(--gold)
+      );
+      color: var(--white);
+      cursor: pointer;
+      font-weight: 900;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .buy-button:hover {
+      filter: brightness(0.95);
+    }
+
+    .closing {
+      padding: 65px 0;
+      background: var(--cream);
+      text-align: center;
+    }
+
+    .closing h2 {
+      margin: 10px auto 15px;
+      font-family: Georgia, serif;
+      font-size: clamp(36px, 5vw, 54px);
+      font-weight: 500;
+    }
+
+    .closing p {
+      max-width: 700px;
+      margin: 0 auto 25px;
+      color: var(--taupe);
+    }
+
+    .home-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 49px;
+      padding: 13px 25px;
+      border-radius: 999px;
+      background: linear-gradient(
+        135deg,
+        var(--dark-gold),
+        var(--gold)
+      );
+      color: var(--white);
+      font-weight: 900;
+      letter-spacing: 0.7px;
+      text-transform: uppercase;
+    }
+
+    footer {
+      padding: 38px 0;
+      background: #211d18;
+      color: var(--white);
+      text-align: center;
+    }
+
+    footer p {
+      margin: 5px 0;
+      color: #e8dfd0;
+    }
+
+    footer .logo {
+      display: inline-block;
+      margin-bottom: 8px;
+      color: var(--champagne);
+    }
+
+    footer .logo span {
+      color: var(--gold);
+    }
+
+    @media (max-width: 960px) {
+      .products {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .navigation {
+        flex-direction: column;
+        padding: 18px 0;
+      }
+
+      nav {
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .products {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding: 60px 0 45px;
+      }
+
+      nav {
+        gap: 12px;
+      }
+
+      .logo {
+        font-size: 25px;
+      }
+    }
+  </style>
+</head>
+
+
+<body>
+
+  <header>
+
+    <div class="container navigation">
+
+      <a class="logo" href="index.html">
+        40Plus<span>Glow</span>
+      </a>
+
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="index.html#story">Our Story</a>
+        <a href="index.html#mission">Mission</a>
+        <a href="products.html">Products</a>
+        <a href="index.html#expo">Expo</a>
+        <a href="index.html#journal">Journal</a>
+        <a href="index.html#community">Community</a>
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <main>
+
+    <section class="hero">
+
+      <div class="container">
+
+        <span class="eyebrow">
+          THE 40PLUSGLOW COLLECTION
+        </span>
+
+        <h1>
+          Wellness, Beauty & Self-Care — All in One Place.
+        </h1>
+
+        <p>
+          Explore thoughtfully selected wellness and self-care essentials designed to support intentional routines, everyday confidence, and your journey to glow from the inside out.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section class="shop">
+
+      <div class="container">
+
+        <div class="products">
+
+
+          <!-- BOTANICAL BALANCE TEA -->
+
+          <article class="product">
+
+            <div class="product-image">
+
+              <img
+                src="botanical-balance.png?v=20"
+                alt="40PlusGlow Botanical Balance Premium Herbal Tea with hibiscus, Ceylon cinnamon, star anise and cloves">
+
+            </div>
+
+            <div class="product-content">
+
+              <span class="category">
+                Tea & Wellness
+              </span>
+
+              <h2>
+                Botanical Balance™ – 15 Premium Herbal Tea Bags
+              </h2>
+
+              <p>
+                A botanical blend featuring hibiscus, cinnamon, star anise and cloves.
+              </p>
+
+              <div class="price">
+                $24.99
+              </div>
+
+              <div class="shipping-note">
+                Free shipping for a limited time
+              </div>
+
+              <form
+                action="https://www.paypal.com/ncp/payment/CBQSTAN25BJ8S"
+                method="post"
+                target="_blank">
+
+                <button class="buy-button" type="submit">
+                  Buy Now
+                </button>
+
+              </form>
+
+            </div>
+
+          </article>
+
+
+          <!-- LUXE GROWTH ELIXIR -->
+
+          <article class="product">
+
+            <div class="product-image">
+
+              <img
+                src="luxe-growth-elixir.png?v=20"
+                alt="40PlusGlow Luxe Growth Elixir nourishing hair and scalp oil">
+
+            </div>
+
+            <div class="product-content">
+
+              <span class="category">
+                Hair Care
+              </span>
+
+              <h2>
+                Luxe Growth Elixir – Nourishing Hair & Scalp Oil
+              </h2>
+
+              <p>
+                A lightweight 2 oz hair and scalp oil created for a nourishing self-care routine.
+              </p>
+
+              <div class="price">
+                $25.00
+              </div>
+
+              <div class="shipping-note">
+                Free shipping for a limited time
+              </div>
+
+              <form
+                action="https://www.paypal.com/ncp/payment/HMBDS3ANA8L5G"
+                method="post"
+                target="_blank">
+
+                <button class="buy-button" type="submit">
+                  Buy Now
+                </button>
+
+              </form>
+
+            </div>
+
+          </article>
+
+
+          <!-- GOLDEN KISS LIP GLOSS -->
+
+          <article class="product">
+
+            <div class="product-image">
+
+              <img
+                src="golden-kiss-lip-gloss.png?v=20"
+                alt="40PlusGlow Golden Kiss Luxe Lip Gloss with radiant high-shine finish">
+
+            </div>
+
+            <div class="product-content">
+
+              <span class="category">
+                Beauty
+              </span>
+
+              <h2>
+                Golden Kiss Luxe Lip Gloss
+              </h2>
+
+              <p>
+                A radiant, high-shine gloss for beautifully polished lips.
+              </p>
+
+              <div class="price">
+                $15.00
+              </div>
+
+              <div class="shipping-note">
+                Free shipping for a limited time
+              </div>
+
+              <form
+                action="https://www.paypal.com/ncp/payment/9CHLW3PGD5G96"
+                method="post"
+                target="_blank">
+
+                <button class="buy-button" type="submit">
+                  Buy Now
+                </button>
+
+              </form>
+
+            </div>
+
+          </article>
+
+
+          <!-- GOLDEN GLOW BUNDLE -->
+
+          <article class="product">
+
+            <div class="product-image">
+
+              <img
+                src="golden-glow-bundle.png?v=20"
+                alt="40PlusGlow Golden Glow Bundle featuring premium wellness and self-care products">
+
+            </div>
+
+            <div class="product-content">
+
+              <span class="category">
+                Bundles & Gifts
+              </span>
+
+              <h2>
+                The Golden Glow Bundle
+              </h2>
+
+              <p>
+                A complete luxury self-care experience featuring multiple 40PlusGlow favorites.
+              </p>
+
+              <div class="price">
+                $95.00
+              </div>
+
+              <div class="shipping-note">
+                Free shipping for a limited time
+              </div>
+
+              <form
+                action="https://www.paypal.com/ncp/payment/KP77SJUQ9TX5L"
+                method="post"
+                target="_blank">
+
+                <button class="buy-button" type="submit">
+                  Buy Now
+                </button>
+
+              </form>
+
+            </div>
+
+          </article>
+
+
+          <!-- LUX GLOW BODY SCRUB -->
+
+          <article class="product">
+
+            <div class="product-image">
+
+              <img
+                src="lux-glow-body-scrub.png?v=20"
+                alt="40PlusGlow Lux Glow Body Scrub exfoliating body scrub for smooth glowing skin">
+
+            </div>
+
+            <div class="product-content">
+
+              <span class="category">
+                Body Care
+              </span>
+
+              <h2>
+                Lux Glow Body Scrub – 8 oz
+              </h2>
+
+              <p>
+                A luxurious polishing scrub created to refresh and soften the feel of your skin.
+              </p>
+
+              <div class="price">
+                $20.00
+              </div>
+
+              <div class="shipping-note">
+                Free shipping for a limited time
+              </div>
+
+              <form
+                action="https://www.paypal.com/ncp/payment/XKU7MKZHVW6KJ"
+                method="post"
+                target="_blank">
+
+                <button class="buy-button" type="submit">
+                  Buy Now
+                </button>
+
+              </form>
+
+            </div>
+
+          </article>
+
+
+          <!-- LUXE GLOW BODY SHIMMER -->
+
+          <article class="product">
+
+            <div class="product-image">
+
+              <img
+                src="luxe-glow-body-shimmer.png?v=20"
+                alt="40PlusGlow Luxe Glow Body Shimmer for radiant glowing skin">
+
+            </div>
+
+            <div class="product-content">
+
+              <span class="category">
+                Body Care
+              </span>
+
+              <h2>
+                Luxe Glow Body Shimmer – 1.7 oz
+              </h2>
+
+              <p>
+                A radiant body oil that adds moisture and a beautiful golden-looking glow.
+              </p>
+
+              <div class="price">
+                $25.00
+              </div>
+
+              <div class="shipping-note">
+                Free shipping for a limited time
+              </div>
+
+              <form
+                action="https://www.paypal.com/ncp/payment/SV8BTDBA263WW"
+                method="post"
+                target="_blank">
+
+                <button class="buy-button" type="submit">
+                  Buy Now
+                </button>
+
+              </form>
+
+            </div>
+
+          </article>
+
+
+          <!-- LUXURY CANDLE SET -->
+
+          <article class="product">
+
+            <div class="product-image">
+
+              <img
+                src="luxury-candle-set.png?v=20"
+                alt="40PlusGlow Luxury Candle Set featuring Soft Life and Golden Aura coconut soy wax candles">
+
+            </div>
+
+            <div class="product-content">
+
+              <span class="category">
+                Home Fragrance
+              </span>
+
+              <h2>
+                Luxury Candle Set – Golden Aura + Soft Life
+              </h2>
+
+              <p>
+                Enjoy both signature fragrances together in one elegant candle pairing.
+              </p>
+
+              <div class="price">
+                $48.00
+              </div>
+
+              <div class="shipping-note">
+                Free shipping for a limited time
+              </div>
+
+              <form
+                action="https://www.paypal.com/ncp/payment/XFHFF2FY95GHJ"
+                method="post"
+                target="_blank">
+
+                <button class="buy-button" type="submit">
+                  Buy Now
+                </button>
+
+              </form>
+
+            </div>
+
+          </article>
+
+
+          <!-- SOFT LIFE CANDLE -->
+
+          <article class="product">
+
+            <div class="product-image">
+
+              <img
+                src="soft-life-candle.png?v=20"
+                alt="40PlusGlow Soft Life luxury coconut soy wax candle">
+
+            </div>
+
+            <div class="product-content">
+
+              <span class="category">
+                Home Fragrance
+              </span>
+
+              <h2>
+                Soft Life Luxury Candle
+              </h2>
+
+              <p>
+                A warm, comforting fragrance designed to create a peaceful atmosphere.
+              </p>
+
+              <div class="price">
+                $25.00
+              </div>
+
+              <div class="shipping-note">
+                Free shipping for a limited time
+              </div>
+
+              <form
+                action="https://www.paypal.com/ncp/payment/BT2DWXMN7E2YL"
+                method="post"
+                target="_blank">
+
+                <button class="buy-button" type="submit">
+                  Buy Now
+                </button>
+
+              </form>
+
+            </div>
+
+          </article>
+
+
+          <!-- GOLDEN AURA CANDLE -->
+
+          <article class="product">
+
+            <div class="product-image">
+
+              <img
+                src="golden-aura-candle.png?v=20"
+                alt="40PlusGlow Golden Aura luxury coconut soy wax candle">
+
+            </div>
+
+            <div class="product-content">
+
+              <span class="category">
+                Home Fragrance
+              </span>
+
+              <h2>
+                Golden Aura Luxury Candle
+              </h2>
+
+              <p>
+                A rich, elegant fragrance that brings warmth and golden ambiance to your space.
+              </p>
+
+              <div class="price">
+                $25.00
+              </div>
+
+              <div class="shipping-note">
+                Free shipping for a limited time
+              </div>
+
+              <form
+                action="https://www.paypal.com/ncp/payment/EFWGJC8VHCTSU"
+                method="post"
+                target="_blank">
+
+                <button class="buy-button" type="submit">
+                  Buy Now
+                </button>
+
+              </form>
+
+            </div>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="closing">
+
+      <div class="container">
+
+        <span class="eyebrow">
+          MORE THAN PRODUCTS
+        </span>
+
+        <h2>
+          Wellness designed to support your journey.
+        </h2>
+
+        <p>
+          Explore the 40PlusGlow community for trusted wellness education, healthy living inspiration, and intentional self-care encouragement.
+        </p>
+
+        <a
+          href="index.html"
+          class="home-button">
+          Discover 40PlusGlow
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+
+    <div class="container">
+
+      <a class="logo" href="index.html">
+        40Plus<span>Glow</span>
+      </a>
+
+      <p>
+        Wellness • Beauty • Confidence • Self-Care • Community
+      </p>
+
+      <p>
+        © 2026 40PlusGlow. All rights reserved.
+      </p>
+
+    </div>
+
+  </footer>
+
+</body>
+
+</html>
