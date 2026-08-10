@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>
+    The Wellness Journal | 40PlusGlow Health & Wellness
+  </title>
+
+  <meta
+    name="description"
+    content="Explore the 40PlusGlow Wellness Journal for trusted wellness education, healthy living inspiration, practical self-care tips and resources for your mind, body and soul."
+  >
+
+  <meta name="robots" content="index, follow">
+
+  <link
+    rel="canonical"
+    href="https://www.40plusglow.com/journal.html"
+  >
+
+  <style>
+
+    :root {
+      --gold: #b88936;
+      --dark-gold: #87611f;
+      --champagne: #ead9b9;
+      --cream: #fbf7ef;
+      --ivory: #fffdf9;
+      --sand: #f2e9dc;
+      --taupe: #766b60;
+      --charcoal: #28241f;
+      --white: #ffffff;
+      --border: rgba(184,137,54,.25);
+      --shadow: 0 18px 50px rgba(91,67,30,.12);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--ivory);
+      color: var(--charcoal);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1180px,92%);
+      margin: 0 auto;
+    }
+
+    header {
+      background: rgba(255,253,249,.97);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .navigation {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .logo {
+      color: var(--dark-gold);
+      font-family: Georgia,serif;
+      font-size: 31px;
+      font-weight: 700;
+    }
+
+    .logo span {
+      color: var(--gold);
+      font-style: italic;
+      font-weight: 400;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 22px;
+    }
+
+    nav a {
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .7px;
+    }
+
+    nav a:hover {
+      color: var(--gold);
+    }
+
+    .hero {
+      padding: 90px 0;
+      text-align: center;
+      background:
+        radial-gradient(
+          circle at 20% 15%,
+          rgba(234,217,185,.55),
+          transparent 30%
+        ),
+        linear-gradient(
+          135deg,
+          var(--cream),
+          var(--white)
+        );
+    }
+
+    .eyebrow {
+      color: var(--gold);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 2.4px;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      margin: 12px auto 20px;
+      font-family: Georgia,serif;
+      font-size: clamp(48px,7vw,78px);
+      font-weight: 500;
+      line-height: 1.05;
+    }
+
+    .hero p {
+      max-width: 760px;
+      margin: 0 auto;
+      color: var(--taupe);
+      font-size: 18px;
+    }
+
+    .journal-section {
+      padding: 85px 0;
+      background: var(--white);
+    }
+
+    .section-heading {
+      max-width: 800px;
+      margin: 0 auto 45px;
+      text-align: center;
+    }
+
+    .section-heading h2 {
+      margin: 10px 0 15px;
+      font-family: Georgia,serif;
+      font-size: clamp(38px,5vw,58px);
+      font-weight: 500;
+    }
+
+    .section-heading p {
+      color: var(--taupe);
+    }
+
+    .journal-grid {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 25px;
+    }
+
+    .journal-card {
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      background: var(--ivory);
+      box-shadow: 0 8px 30px rgba(88,66,30,.07);
+      transition: .25s ease;
+    }
+
+    .journal-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow);
+    }
+
+    .article-image {
+      min-height: 240px;
+      display: grid;
+      place-items: center;
+      background:
+        radial-gradient(
+          circle at 30% 20%,
+          rgba(255,255,255,.65),
+          transparent 30%
+        ),
+        linear-gradient(
+          135deg,
+          var(--champagne),
+          var(--sand)
+        );
+      font-size: 70px;
+    }
+
+    .article-content {
+      padding: 26px;
+    }
+
+    .article-category {
+      color: var(--gold);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .article-content h2 {
+      margin: 10px 0 12px;
+      font-family: Georgia,serif;
+      font-size: 27px;
+      font-weight: 500;
+      line-height: 1.2;
+    }
+
+    .article-meta {
+      color: var(--taupe);
+      font-size: 13px;
+      margin-bottom: 15px;
+    }
+
+    .article-content p {
+      color: var(--taupe);
+    }
+
+    .read-more {
+      display: inline-flex;
+      margin-top: 10px;
+      color: var(--dark-gold);
+      font-weight: 900;
+    }
+
+    .coming-soon {
+      padding: 60px 0;
+      background: var(--cream);
+      text-align: center;
+    }
+
+    .coming-soon h2 {
+      margin: 10px 0 15px;
+      font-family: Georgia,serif;
+      font-size: 42px;
+      font-weight: 500;
+    }
+
+    .coming-soon p {
+      max-width: 700px;
+      margin: 0 auto;
+      color: var(--taupe);
+    }
+
+    footer {
+      padding: 45px 0;
+      background: #211d18;
+      color: var(--white);
+      text-align: center;
+    }
+
+    footer p {
+      color: #e8dfd0;
+    }
+
+    @media (max-width:900px) {
+
+      .journal-grid {
+        grid-template-columns: repeat(2,1fr);
+      }
+
+      .navigation {
+        flex-direction: column;
+        padding: 20px 0;
+      }
+
+      nav {
+        justify-content: center;
+      }
+    }
+
+    @media (max-width:640px) {
+
+      .journal-grid {
+        grid-template-columns:1fr;
+      }
+
+      .hero {
+        padding: 65px 0;
+      }
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+<header>
+
+  <div class="container navigation">
+
+    <a href="index.html" class="logo">
+      40Plus<span>Glow</span>
+    </a>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="index.html#story">Our Story</a>
+      <a href="index.html#mission">Mission</a>
+      <a href="products.html">Products</a>
+      <a href="index.html#expo">Expo</a>
+      <a href="journal.html">Wellness Journal</a>
+      <a href="index.html#community">Community</a>
+    </nav>
+
+  </div>
+
+</header>
+
+
+<main>
+
+
+<section class="hero">
+
+  <div class="container">
+
+    <span class="eyebrow">
+      THE WELLNESS JOURNAL
+    </span>
+
+    <h1>
+      Education & Inspiration for Healthier Living
+    </h1>
+
+    <p>
+      Explore trusted wellness education, practical health tips,
+      intentional self-care inspiration and resources designed to help
+      you build healthier habits and feel your best from the inside out.
+    </p>
+
+  </div>
+
+</section>
+
+
+<section class="journal-section">
+
+  <div class="container">
+
+    <div class="section-heading">
+
+      <span class="eyebrow">
+        LATEST FROM THE JOURNAL
+      </span>
+
+      <h2>
+        Wellness Knowledge for Everyday Life
+      </h2>
+
+      <p>
+        Simple, practical information designed to encourage healthier
+        choices, intentional self-care and lifelong wellness.
+      </p>
+
+    </div>
+
+
+    <div class="journal-grid">
+
+
+      <!-- ARTICLE 1 -->
+
+      <article class="journal-card">
+
+        <div class="article-image">
+          🌿
+        </div>
+
+        <div class="article-content">
+
+          <span class="article-category">
+            Mind • Body • Wellness
+          </span>
+
+          <h2>
+            Understanding Your Lymphatic System
+          </h2>
+
+          <div class="article-meta">
+            August 2026 • 6 Min Read
+          </div>
+
+          <p>
+            Learn how your lymphatic system supports normal fluid balance
+            and immune function, plus simple everyday habits such as
+            movement, hydration, nutrition, rest and intentional self-care.
+          </p>
+
+          <a
+            href="lymphatic-system.html"
+            class="read-more">
+            Read the Full Article →
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <!-- FUTURE ARTICLE -->
+
+      <article class="journal-card">
+
+        <div class="article-image">
+          💧
+        </div>
+
+        <div class="article-content">
+
+          <span class="article-category">
+            Healthy Living
+          </span>
+
+          <h2>
+            Why Hydration Matters More Than You Think
+          </h2>
+
+          <div class="article-meta">
+            Coming Soon
+          </div>
+
+          <p>
+            Discover the role hydration plays in everyday wellness and
+            practical ways to make drinking enough water part of your
+            daily routine.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- FUTURE ARTICLE -->
+
+      <article class="journal-card">
+
+        <div class="article-image">
+          ✨
+        </div>
+
+        <div class="article-content">
+
+          <span class="article-category">
+            Self-Care
+          </span>
+
+          <h2>
+            Building a Self-Care Routine That Lasts
+          </h2>
+
+          <div class="article-meta">
+            Coming Soon
+          </div>
+
+          <p>
+            Learn how simple, intentional habits can make self-care a
+            sustainable part of your everyday wellness journey.
+          </p>
+
+        </div>
+
+      </article>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="coming-soon">
+
+  <div class="container">
+
+    <span class="eyebrow">
+      STAY CONNECTED
+    </span>
+
+    <h2>
+      More Wellness Education Is Coming
+    </h2>
+
+    <p>
+      New articles, practical wellness tips, healthy living inspiration,
+      self-care guidance and educational resources will continue to be
+      added to the 40PlusGlow Wellness Journal.
+    </p>
+
+  </div>
+
+</section>
+
+
+</main>
+
+
+<footer>
+
+  <div class="container">
+
+    <a href="index.html" class="logo">
+      40Plus<span>Glow</span>
+    </a>
+
+    <p>
+      Wellness • Beauty • Confidence • Self-Care • Community
+    </p>
+
+    <p>
+      © 2026 40PlusGlow. All rights reserved.
+    </p>
+
+  </div>
+
+</footer>
+
+
+</body>
+
+</html>
