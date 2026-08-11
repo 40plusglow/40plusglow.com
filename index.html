@@ -8,13 +8,7 @@
     content="width=device-width, initial-scale=1.0"
   >
 
-<head>
-  <meta charset="UTF-8">
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
 
   <meta
     name="description"
@@ -922,18 +916,37 @@
       gap: 8px;
     }
 
-    .social-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 14px;
-    }
+.social-links {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 18px;
+}
 
-    .social-links a {
-      padding: 7px 12px;
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      border-radius: 999px;
-    }
+.social-links a {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--gold);
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 22px;
+    transition: all .3s ease;
+    box-shadow: 0 6px 18px rgba(0,0,0,.12);
+}
+
+.social-links a:hover {
+    transform: translateY(-4px);
+    background: var(--dark-gold);
+    box-shadow: 0 12px 24px rgba(0,0,0,.18);
+}
+
+.social-links i {
+    line-height: 1;
+}
 
     .copyright {
       padding-top: 18px;
@@ -1040,7 +1053,10 @@
 
   gtag('config', 'G-06Z99YJG82');
 </script>
-
+  
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  
 </head>
 
 <body>
@@ -2524,37 +2540,41 @@
             Wellness. Beauty. Confidence. Self-care. Community.
           </p>
 
-          <div class="social-links">
+<div class="social-links">
 
-            <a
-              href="https://www.instagram.com/40plusglow"
-              target="_blank"
-              rel="noopener">
-              Instagram
-            </a>
+  <a
+    href="https://www.instagram.com/40plusglow"
+    target="_blank"
+    rel="noopener"
+    aria-label="Instagram">
+    <i class="fa-brands fa-instagram"></i>
+  </a>
 
-            <a
-              href="https://www.facebook.com/40plusglow"
-              target="_blank"
-              rel="noopener">
-              Facebook
-            </a>
+  <a
+    href="https://www.facebook.com/40plusglow"
+    target="_blank"
+    rel="noopener"
+    aria-label="Facebook">
+    <i class="fa-brands fa-facebook-f"></i>
+  </a>
 
-            <a
-              href="https://www.tiktok.com/@40plusglow"
-              target="_blank"
-              rel="noopener">
-              TikTok
-            </a>
+  <a
+    href="https://www.tiktok.com/@40plusglow"
+    target="_blank"
+    rel="noopener"
+    aria-label="TikTok">
+    <i class="fa-brands fa-tiktok"></i>
+  </a>
 
-            <a
-              href="https://www.youtube.com/@40plusglow"
-              target="_blank"
-              rel="noopener">
-              YouTube
-            </a>
+  <a
+    href="https://www.youtube.com/@40plusglow"
+    target="_blank"
+    rel="noopener"
+    aria-label="YouTube">
+    <i class="fa-brands fa-youtube"></i>
+  </a>
 
-          </div>
+</div>
 
         </div>
 
