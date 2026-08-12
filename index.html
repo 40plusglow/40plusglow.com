@@ -374,31 +374,53 @@
     }
 
     .mission-card {
-      padding: 30px 24px;
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      background: var(--white);
-      text-align: center;
-      box-shadow: 0 8px 28px rgba(91, 67, 30, 0.06);
-      transition: 0.25s ease;
-    }
+  overflow: hidden;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  background: var(--white);
+  text-align: center;
+  box-shadow: 0 8px 28px rgba(91, 67, 30, 0.06);
+  transition: 0.25s ease;
+}
 
-    .mission-card:hover {
-      transform: translateY(-6px);
-      box-shadow: var(--shadow);
-    }
+.mission-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow);
+}
 
-    .mission-icon {
-      width: 65px;
-      height: 65px;
-      margin: 0 auto 18px;
-      display: grid;
-      place-items: center;
-      border: 1px solid var(--gold);
-      border-radius: 50%;
-      color: var(--gold);
-      font-size: 27px;
-    }
+.mission-image {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+
+.mission-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+.mission-card-content {
+  padding: 26px 22px 30px;
+}
+
+.mission-card-content h3 {
+  margin: 0 0 12px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--dark-gold);
+}
+
+.mission-card-content p {
+  margin: 0;
+  color: var(--taupe);
+  line-height: 1.7;
+}
 
     .mission-card h3 {
       margin-bottom: 10px;
@@ -1220,80 +1242,104 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
         </div>
 
-        <div class="mission-grid">
+       <div class="mission-grid">
 
-          <article class="mission-card">
+  <article class="mission-card">
 
-            <div class="mission-icon">
-              🌿
-            </div>
+    <div class="mission-image">
+      <img
+        src="mission-wellness-education.png"
+        alt="Wellness education and healthy lifestyle learning">
+    </div>
 
-            <h3>
-              Wellness Education
-            </h3>
+    <div class="mission-card-content">
 
-            <p>
-              Sharing practical information that helps people make more
-              informed health and lifestyle choices.
-            </p>
+      <h3>
+        Wellness Education
+      </h3>
 
-          </article>
+      <p>
+        Sharing practical information that helps people make more
+        informed health and lifestyle choices.
+      </p>
 
-          <article class="mission-card">
+    </div>
 
-            <div class="mission-icon">
-              ✨
-            </div>
+  </article>
 
-            <h3>
-              Intentional Self-Care
-            </h3>
 
-            <p>
-              Encouraging meaningful routines that support rest,
-              restoration, beauty and personal confidence.
-            </p>
+  <article class="mission-card">
 
-          </article>
+    <div class="mission-image">
+      <img
+        src="mission-self-care.png"
+        alt="Intentional self-care and wellness routine">
+    </div>
 
-          <article class="mission-card">
+    <div class="mission-card-content">
 
-            <div class="mission-icon">
-              ♡
-            </div>
+      <h3>
+        Intentional Self-Care
+      </h3>
 
-            <h3>
-              Community
-            </h3>
+      <p>
+        Encouraging meaningful routines that support rest,
+        restoration, beauty and personal confidence.
+      </p>
 
-            <p>
-              Connecting people through uplifting content, wellness
-              experiences, partnerships and shared goals.
-            </p>
+    </div>
 
-          </article>
+  </article>
 
-          <article class="mission-card">
 
-            <div class="mission-icon">
-              ☀
-            </div>
+  <article class="mission-card">
 
-            <h3>
-              Healthy Living
-            </h3>
+    <div class="mission-image">
+      <img
+        src="mission-community.png"
+        alt="Diverse community connecting through wellness">
+    </div>
 
-            <p>
-              Inspiring consistent habits that promote balance,
-              confidence and lifelong wellness.
-            </p>
+    <div class="mission-card-content">
 
-          </article>
+      <h3>
+        Community
+      </h3>
 
-        </div>
+      <p>
+        Connecting people through uplifting content, wellness
+        experiences, partnerships and shared goals.
+      </p>
 
-      </div>
-    </section>
+    </div>
+
+  </article>
+
+
+  <article class="mission-card">
+
+    <div class="mission-image">
+      <img
+        src="mission-healthy-living.png"
+        alt="Healthy living with nutritious food and intentional habits">
+    </div>
+
+    <div class="mission-card-content">
+
+      <h3>
+        Healthy Living
+      </h3>
+
+      <p>
+        Inspiring consistent habits that promote balance,
+        confidence and lifelong wellness.
+      </p>
+
+    </div>
+
+  </article>
+
+</div>
 
 <!-- SHOP -->
 
