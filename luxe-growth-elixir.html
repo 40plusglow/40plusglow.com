@@ -391,6 +391,62 @@
       font-size: 13px;
     }
 
+    /* HOW TO USE */
+
+.how-to-use {
+  padding: 90px 0;
+  background: var(--cream);
+}
+
+.how-to-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.how-to-card {
+  position: relative;
+  padding: 34px 25px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  box-shadow: 0 12px 30px rgba(91,67,30,.07);
+}
+
+.step-number {
+  display: block;
+  margin-bottom: 14px;
+  color: var(--gold);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 35px;
+  line-height: 1;
+}
+
+.how-to-card h3 {
+  margin: 0 0 10px;
+  color: var(--dark-gold);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 23px;
+}
+
+.how-to-card p {
+  margin: 0;
+  color: var(--taupe);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.how-to-buy {
+  margin-top: 45px;
+  text-align: center;
+}
+
+.ritual-message {
+  margin-bottom: 4px;
+  color: var(--charcoal);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 21px;
+}
 
     /* FINAL CTA */
 
@@ -637,10 +693,32 @@
       .cta-box {
         padding: 42px 22px;
       }
+.cta-box {
+  padding: 42px 22px;
+}
 
-    }
 
-  </style>
+/* HOW TO USE - MOBILE */
+
+.how-to-use {
+  padding: 65px 0;
+}
+
+.how-to-grid {
+  grid-template-columns: 1fr;
+}
+
+.how-to-card {
+  padding: 28px 22px;
+}
+
+.how-to-buy .buy-button {
+  width: 100%;
+}
+
+}
+
+</style>
 
 </head>
 
@@ -1044,6 +1122,93 @@
 
 </section>
 
+  <!-- HOW TO USE -->
+
+<section class="how-to-use">
+
+  <div class="container">
+
+    <div class="section-heading">
+
+      <span class="eyebrow">
+        YOUR HAIR CARE RITUAL
+      </span>
+
+      <h2>
+        How to Use Luxe Growth Elixir
+      </h2>
+
+      <p>
+        Consistency is an important part of any healthy hair-care routine.
+        Make Luxe Growth Elixir part of yours with these simple steps.
+      </p>
+
+    </div>
+
+    <div class="how-to-grid">
+
+      <div class="how-to-card">
+        <span class="step-number">01</span>
+        <h3>Part & Apply</h3>
+        <p>
+          Part your hair into sections and apply a small amount of
+          Luxe Growth Elixir directly to the scalp.
+        </p>
+      </div>
+
+      <div class="how-to-card">
+        <span class="step-number">02</span>
+        <h3>Massage</h3>
+        <p>
+          Gently massage the oil into your scalp with your fingertips
+          to evenly distribute the product.
+        </p>
+      </div>
+
+      <div class="how-to-card">
+        <span class="step-number">03</span>
+        <h3>Nourish</h3>
+        <p>
+          Smooth a small amount through dry strands and ends as needed
+          for added softness, moisture and shine.
+        </p>
+      </div>
+
+      <div class="how-to-card">
+        <span class="step-number">04</span>
+        <h3>Stay Consistent</h3>
+        <p>
+          Incorporate Luxe Growth Elixir into your regular hair-care
+          routine to support stronger, healthier-looking hair.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="how-to-buy">
+
+      <p class="ritual-message">
+        Nourish the scalp. Protect your strands. Stay consistent.
+      </p>
+
+      <form
+        action="https://www.paypal.com/ncp/payment/HMBDS3ANA8L5G"
+        method="post"
+        target="_blank">
+
+        <button
+          class="buy-button"
+          type="submit">
+          Start Your Hair Journey →
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</section>
 
 <!-- FINAL CTA -->
 
