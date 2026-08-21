@@ -470,35 +470,69 @@
 
     }
 
-    @media (max-width: 560px) {
+ @media (max-width: 560px) {
 
-      .logo {
-        font-size: 30px;
-      }
+  .logo {
+    font-size: 30px;
+  }
 
-      .elixir-hero {
-        padding: 60px 0;
-      }
+  .elixir-hero {
+    padding: 30px 0 50px;
+  }
 
-      .elixir-copy h1 {
-        font-size: 47px;
-      }
+  .elixir-hero-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
 
-      .elixir-visual {
-        min-height: 440px;
-        padding: 35px;
-      }
+  /* MOVE PRODUCT IMAGE ABOVE THE TEXT ON MOBILE */
+  .elixir-visual {
+    order: 1;
+    width: 100%;
+    min-height: 390px;
+    padding: 25px;
+    margin: 0;
+  }
 
-      .benefit-strip-grid,
-      .ingredient-grid {
-        grid-template-columns: 1fr;
-      }
+  .elixir-visual img {
+    max-height: 350px;
+    width: auto;
+    margin: 0 auto;
+  }
 
-      .buy-button {
-        min-width: 100%;
-      }
+  .elixir-copy {
+    order: 2;
+    text-align: center;
+  }
 
-    }
+  .elixir-copy h1 {
+    font-size: 40px;
+    line-height: 1.08;
+    margin-top: 12px;
+  }
+
+  .hero-intro {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-benefits {
+    width: 100%;
+    margin: 25px auto;
+    text-align: left;
+  }
+
+  .benefit-strip-grid,
+  .ingredient-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .buy-button {
+    min-width: 100%;
+  }
+
+}
 
   </style>
 
