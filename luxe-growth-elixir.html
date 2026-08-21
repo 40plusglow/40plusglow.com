@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+  <title>
+    Luxe Growth Elixir | 40PlusGlow Hair & Scalp Oil
+  </title>
+
+  <meta
+    name="description"
+    content="Discover 40PlusGlow Luxe Growth Elixir, a nourishing botanical hair and scalp oil formulated with jojoba, castor, argan, grapeseed, black seed, rosemary, peppermint and vitamin E.">
+
+  <meta name="robots" content="index, follow">
+
+  <link
+    rel="canonical"
+    href="https://www.40plusglow.com/luxe-growth-elixir.html">
+
+  <style>
+
+    :root {
+      --gold: #b88936;
+      --dark-gold: #87611f;
+      --cream: #fbf7ef;
+      --ivory: #fffdf9;
+      --sand: #f2e9dc;
+      --taupe: #766b60;
+      --charcoal: #28241f;
+      --white: #ffffff;
+      --border: rgba(184,137,54,.25);
+      --shadow: 0 18px 50px rgba(91,67,30,.12);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--ivory);
+      color: var(--charcoal);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.65;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .container {
+      width: min(1180px, 92%);
+      margin: 0 auto;
+    }
+
+    /* HEADER */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255,253,249,.97);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(12px);
+    }
+
+    .navigation {
+      min-height: 86px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+    }
+
+    .logo {
+      color: var(--dark-gold);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 38px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .logo span {
+      color: var(--gold);
+      font-style: italic;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .8px;
+      text-transform: uppercase;
+    }
+
+    nav a:hover {
+      color: var(--gold);
+    }
+
+    /* HERO */
+
+    .elixir-hero {
+      padding: 90px 0;
+      background:
+        radial-gradient(
+          circle at 15% 15%,
+          rgba(234,217,185,.50),
+          transparent 30%
+        ),
+        linear-gradient(
+          135deg,
+          var(--cream),
+          var(--white)
+        );
+    }
+
+    .elixir-hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      color: var(--gold);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 2.4px;
+      text-transform: uppercase;
+    }
+
+    .elixir-copy h1 {
+      max-width: 640px;
+      margin: 14px 0 20px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(48px, 6vw, 74px);
+      line-height: 1.02;
+      font-weight: 500;
+      color: var(--charcoal);
+    }
+
+    .hero-intro {
+      max-width: 620px;
+      margin: 0 0 26px;
+      color: var(--taupe);
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    .hero-benefits {
+      display: grid;
+      gap: 11px;
+      margin: 28px 0;
+    }
+
+    .hero-benefit {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--charcoal);
+      font-weight: 700;
+    }
+
+    .check {
+      width: 25px;
+      height: 25px;
+      display: grid;
+      place-items: center;
+      flex: 0 0 25px;
+      border-radius: 50%;
+      background: rgba(184,137,54,.13);
+      color: var(--dark-gold);
+      font-size: 13px;
+    }
+
+    .price {
+      margin-top: 25px;
+      font-family: Georgia, serif;
+      font-size: 32px;
+      color: var(--dark-gold);
+    }
+
+    .shipping {
+      margin-top: 4px;
+      color: var(--taupe);
+      font-size: 13px;
+    }
+
+    .buy-button {
+      margin-top: 22px;
+      min-width: 280px;
+      padding: 17px 28px;
+      border: 0;
+      border-radius: 999px;
+      background: linear-gradient(
+        135deg,
+        var(--dark-gold),
+        var(--gold)
+      );
+      color: var(--white);
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: .25s ease;
+      box-shadow: 0 10px 26px rgba(135,97,31,.22);
+    }
+
+    .buy-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 16px 32px rgba(135,97,31,.28);
+    }
+
+    .microcopy {
+      margin-top: 13px;
+      color: var(--taupe);
+      font-size: 12px;
+    }
+
+    /* PRODUCT VISUAL */
+
+    .elixir-visual {
+      position: relative;
+      min-height: 650px;
+      display: grid;
+      place-items: center;
+      padding: 55px;
+      overflow: hidden;
+      border-radius: 36px;
+      background:
+        linear-gradient(
+          145deg,
+          #f6ecdc,
+          #fffdf9
+        );
+      box-shadow: var(--shadow);
+    }
+
+    .elixir-visual::before {
+      content: "";
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      border-radius: 50%;
+      background: rgba(184,137,54,.10);
+      filter: blur(8px);
+    }
+
+    .elixir-visual img {
+      position: relative;
+      z-index: 2;
+      max-height: 560px;
+      object-fit: contain;
+      filter: drop-shadow(0 28px 25px rgba(72,48,15,.22));
+    }
+
+    .hero-badge {
+      position: absolute;
+      z-index: 3;
+      top: 28px;
+      right: 28px;
+      padding: 11px 17px;
+      border-radius: 999px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      color: var(--dark-gold);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+      box-shadow: 0 8px 20px rgba(91,67,30,.08);
+    }
+
+    /* BENEFIT STRIP */
+
+    .benefit-strip {
+      padding: 30px 0;
+      background: #211d18;
+      color: var(--white);
+    }
+
+    .benefit-strip-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      text-align: center;
+    }
+
+    .benefit-strip-item strong {
+      display: block;
+      margin-bottom: 5px;
+      color: #e4c98c;
+      font-family: Georgia, serif;
+      font-size: 19px;
+    }
+
+    .benefit-strip-item span {
+      color: #e8dfd0;
+      font-size: 12px;
+    }
+
+    /* INGREDIENT INTRO */
+
+    .ingredients-preview {
+      padding: 90px 0;
+      background: var(--white);
+    }
+
+    .section-heading {
+      max-width: 800px;
+      margin: 0 auto 45px;
+      text-align: center;
+    }
+
+    .section-heading h2 {
+      margin: 10px 0 14px;
+      font-family: Georgia, serif;
+      font-size: clamp(40px, 5vw, 58px);
+      font-weight: 500;
+    }
+
+    .section-heading p {
+      color: var(--taupe);
+      font-size: 17px;
+      line-height: 1.8;
+    }
+
+    .ingredient-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .ingredient-card {
+      padding: 26px 20px;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      background: var(--cream);
+      text-align: center;
+    }
+
+    .ingredient-card h3 {
+      margin: 0 0 8px;
+      font-family: Georgia, serif;
+      font-size: 21px;
+      font-weight: 600;
+      color: var(--dark-gold);
+    }
+
+    .ingredient-card p {
+      margin: 0;
+      color: var(--taupe);
+      font-size: 13px;
+    }
+
+    /* CTA */
+
+    .elixir-cta {
+      padding: 85px 0;
+      background: var(--cream);
+    }
+
+    .cta-box {
+      max-width: 950px;
+      margin: 0 auto;
+      padding: 55px 35px;
+      border: 1px solid var(--border);
+      border-radius: 30px;
+      background: var(--white);
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+
+    .cta-box h2 {
+      margin: 10px 0 16px;
+      font-family: Georgia, serif;
+      font-size: clamp(40px, 5vw, 58px);
+      font-weight: 500;
+    }
+
+    .cta-box p {
+      max-width: 700px;
+      margin: 0 auto 25px;
+      color: var(--taupe);
+      font-size: 17px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      padding: 38px 0;
+      background: #211d18;
+      color: var(--white);
+      text-align: center;
+    }
+
+    footer p {
+      color: #d8cfc3;
+      font-size: 13px;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 900px) {
+
+      .navigation {
+        flex-direction: column;
+        padding: 18px 0;
+      }
+
+      nav {
+        justify-content: center;
+      }
+
+      .elixir-hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .elixir-copy {
+        text-align: center;
+      }
+
+      .hero-intro {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-benefits {
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: left;
+      }
+
+      .benefit-strip-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .ingredient-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .elixir-visual {
+        min-height: 530px;
+      }
+
+    }
+
+    @media (max-width: 560px) {
+
+      .logo {
+        font-size: 30px;
+      }
+
+      .elixir-hero {
+        padding: 60px 0;
+      }
+
+      .elixir-copy h1 {
+        font-size: 47px;
+      }
+
+      .elixir-visual {
+        min-height: 440px;
+        padding: 35px;
+      }
+
+      .benefit-strip-grid,
+      .ingredient-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .buy-button {
+        min-width: 100%;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+<!-- HEADER -->
+
+<header>
+
+  <div class="container navigation">
+
+    <a href="index.html" class="logo">
+      40Plus<span>Glow</span>
+    </a>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="index.html#story">Our Story</a>
+      <a href="index.html#mission">Mission</a>
+      <a href="products.html">Products</a>
+      <a href="journal.html">Wellness Journal</a>
+      <a href="index.html#community">Community</a>
+    </nav>
+
+  </div>
+
+</header>
+
+
+<main>
+
+
+<!-- HERO -->
+
+<section class="elixir-hero">
+
+  <div class="container">
+
+    <div class="elixir-hero-grid">
+
+
+      <!-- LEFT SIDE -->
+
+      <div class="elixir-copy">
+
+        <span class="eyebrow">
+          40PLUSGLOW HAIR CARE
+        </span>
+
+        <h1>
+          Longer. Stronger. Fuller-Looking Hair Starts at the Root.
+        </h1>
+
+        <p class="hero-intro">
+          Meet <strong>40PlusGlow Luxe Growth Elixir</strong> —
+          a luxurious botanical hair & scalp oil created to nourish
+          the scalp, support healthy hair growth, help reduce breakage
+          and shedding, and leave hair softer, more manageable and
+          beautifully shiny.
+        </p>
+
+
+        <div class="hero-benefits">
+
+          <div class="hero-benefit">
+            <span class="check">✓</span>
+            Supports Healthy Hair Growth
+          </div>
+
+          <div class="hero-benefit">
+            <span class="check">✓</span>
+            Helps Reduce Breakage & Shedding
+          </div>
+
+          <div class="hero-benefit">
+            <span class="check">✓</span>
+            Nourishes Dry Hair & Scalp
+          </div>
+
+          <div class="hero-benefit">
+            <span class="check">✓</span>
+            Supports Fuller, Healthier-Looking Hair
+          </div>
+
+          <div class="hero-benefit">
+            <span class="check">✓</span>
+            Adds Softness, Manageability & Shine
+          </div>
+
+        </div>
+
+
+        <div class="price">
+          $25.00
+        </div>
+
+        <div class="shipping">
+          2 FL OZ • Free shipping for a limited time
+        </div>
+
+
+        <form
+          action="https://www.paypal.com/ncp/payment/HMBDS3ANA8L5G"
+          method="post"
+          target="_blank">
+
+          <button
+            class="buy-button"
+            type="submit">
+            Start Your Hair Journey →
+          </button>
+
+        </form>
+
+
+        <div class="microcopy">
+          Secure checkout • Premium botanical hair & scalp care
+        </div>
+
+      </div>
+
+
+      <!-- RIGHT SIDE -->
+
+      <div class="elixir-visual">
+
+        <span class="hero-badge">
+          Customer Favorite
+        </span>
+
+        <img
+          src="luxe-growth-elixir.png?v=20"
+          alt="40PlusGlow Luxe Growth Elixir nourishing botanical hair and scalp oil">
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- BENEFIT STRIP -->
+
+<section class="benefit-strip">
+
+  <div class="container">
+
+    <div class="benefit-strip-grid">
+
+      <div class="benefit-strip-item">
+        <strong>Longer</strong>
+        <span>Supports a healthy hair-growth routine</span>
+      </div>
+
+      <div class="benefit-strip-item">
+        <strong>Stronger</strong>
+        <span>Helps reduce dryness and breakage</span>
+      </div>
+
+      <div class="benefit-strip-item">
+        <strong>Fuller-Looking</strong>
+        <span>Supports healthier-looking hair</span>
+      </div>
+
+      <div class="benefit-strip-item">
+        <strong>More Shine</strong>
+        <span>Soft, nourished, beautiful-looking strands</span>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- INGREDIENT PREVIEW -->
+
+<section class="ingredients-preview">
+
+  <div class="container">
+
+    <div class="section-heading">
+
+      <span class="eyebrow">
+        BOTANICAL NOURISHMENT
+      </span>
+
+      <h2>
+        What’s Inside Your Luxe Growth Elixir
+      </h2>
+
+      <p>
+        Thoughtfully formulated with a nourishing blend of botanical
+        oils selected to support your hair and scalp routine.
+      </p>
+
+    </div>
+
+
+    <div class="ingredient-grid">
+
+      <div class="ingredient-card">
+        <h3>Jojoba Oil</h3>
+        <p>
+          Lightweight moisture for the hair and scalp.
+        </p>
+      </div>
+
+      <div class="ingredient-card">
+        <h3>Castor Seed Oil</h3>
+        <p>
+          Rich nourishment for dry, breakage-prone strands.
+        </p>
+      </div>
+
+      <div class="ingredient-card">
+        <h3>Argan Oil</h3>
+        <p>
+          Helps support softness, smoothness and shine.
+        </p>
+      </div>
+
+      <div class="ingredient-card">
+        <h3>Grapeseed Oil</h3>
+        <p>
+          Lightweight conditioning without a heavy feel.
+        </p>
+      </div>
+
+      <div class="ingredient-card">
+        <h3>Black Seed Oil</h3>
+        <p>
+          Botanical nourishment for your hair-care ritual.
+        </p>
+      </div>
+
+      <div class="ingredient-card">
+        <h3>Rosemary Leaf Oil</h3>
+        <p>
+          A popular botanical addition to healthy-hair routines.
+        </p>
+      </div>
+
+      <div class="ingredient-card">
+        <h3>Peppermint Oil</h3>
+        <p>
+          Provides a refreshing scalp-care experience.
+        </p>
+      </div>
+
+      <div class="ingredient-card">
+        <h3>Vitamin E</h3>
+        <p>
+          Helps condition and support healthy-looking strands.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- FINAL CTA -->
+
+<section class="elixir-cta">
+
+  <div class="container">
+
+    <div class="cta-box">
+
+      <span class="eyebrow">
+        YOUR HAIR JOURNEY STARTS HERE
+      </span>
+
+      <h2>
+        Give Your Hair the Consistent Care It Deserves.
+      </h2>
+
+      <p>
+        Nourish your scalp. Help reduce breakage and shedding.
+        Support stronger, fuller, healthier-looking hair and
+        beautiful shine with 40PlusGlow Luxe Growth Elixir.
+      </p>
+
+      <form
+        action="https://www.paypal.com/ncp/payment/HMBDS3ANA8L5G"
+        method="post"
+        target="_blank">
+
+        <button
+          class="buy-button"
+          type="submit">
+          Shop Luxe Growth Elixir →
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+</main>
+
+
+<footer>
+
+  <div class="container">
+
+    <a href="index.html" class="logo">
+      40Plus<span>Glow</span>
+    </a>
+
+    <p>
+      Wellness • Beauty • Confidence • Self-Care • Community
+    </p>
+
+    <p>
+      © 2026 40PlusGlow. All rights reserved.
+    </p>
+
+  </div>
+
+</footer>
+
+
+</body>
+
+</html>
