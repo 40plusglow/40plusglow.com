@@ -69,6 +69,7 @@
       margin: 0 auto;
     }
 
+
     /* HEADER */
 
     header {
@@ -118,6 +119,7 @@
     nav a:hover {
       color: var(--gold);
     }
+
 
     /* HERO */
 
@@ -241,6 +243,7 @@
       font-size: 12px;
     }
 
+
     /* PRODUCT VISUAL */
 
     .elixir-visual {
@@ -295,6 +298,16 @@
       box-shadow: 0 8px 20px rgba(91,67,30,.08);
     }
 
+
+    /* MOBILE QUICK BUY
+       HIDDEN ON DESKTOP */
+
+    .mobile-product-title,
+    .mobile-quick-buy {
+      display: none;
+    }
+
+
     /* BENEFIT STRIP */
 
     .benefit-strip {
@@ -323,7 +336,8 @@
       font-size: 12px;
     }
 
-    /* INGREDIENT INTRO */
+
+    /* INGREDIENTS */
 
     .ingredients-preview {
       padding: 90px 0;
@@ -377,7 +391,8 @@
       font-size: 13px;
     }
 
-    /* CTA */
+
+    /* FINAL CTA */
 
     .elixir-cta {
       padding: 85px 0;
@@ -409,6 +424,7 @@
       font-size: 17px;
     }
 
+
     /* FOOTER */
 
     footer {
@@ -423,7 +439,8 @@
       font-size: 13px;
     }
 
-    /* MOBILE */
+
+    /* TABLET */
 
     @media (max-width: 900px) {
 
@@ -470,69 +487,158 @@
 
     }
 
- @media (max-width: 560px) {
 
-  .logo {
-    font-size: 30px;
-  }
+    /* MOBILE */
 
-  .elixir-hero {
-    padding: 30px 0 50px;
-  }
+    @media (max-width: 560px) {
 
-  .elixir-hero-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-  }
+      .logo {
+        font-size: 30px;
+      }
 
-  /* MOVE PRODUCT IMAGE ABOVE THE TEXT ON MOBILE */
-  .elixir-visual {
-    order: 1;
-    width: 100%;
-    min-height: 390px;
-    padding: 25px;
-    margin: 0;
-  }
+      .navigation {
+        min-height: auto;
+      }
 
-  .elixir-visual img {
-    max-height: 350px;
-    width: auto;
-    margin: 0 auto;
-  }
+      nav {
+        gap: 13px;
+      }
 
-  .elixir-copy {
-    order: 2;
-    text-align: center;
-  }
+      nav a {
+        font-size: 10px;
+      }
 
-  .elixir-copy h1 {
-    font-size: 40px;
-    line-height: 1.08;
-    margin-top: 12px;
-  }
+      .elixir-hero {
+        padding: 28px 0 50px;
+      }
 
-  .hero-intro {
-    margin-left: auto;
-    margin-right: auto;
-  }
+      .elixir-hero-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
 
-  .hero-benefits {
-    width: 100%;
-    margin: 25px auto;
-    text-align: left;
-  }
 
-  .benefit-strip-grid,
-  .ingredient-grid {
-    grid-template-columns: 1fr;
-  }
+      /* TITLE ABOVE PRODUCT */
 
-  .buy-button {
-    min-width: 100%;
-  }
+      .mobile-product-title {
+        display: block;
+        order: 0;
+        width: 100%;
+        margin: 0;
+        text-align: center;
+        color: var(--dark-gold);
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 32px;
+        font-weight: 600;
+        line-height: 1.15;
+      }
 
-}
+
+      /* PRODUCT IMAGE FIRST */
+
+      .elixir-visual {
+        order: 1;
+        width: 100%;
+        min-height: 365px;
+        padding: 24px;
+        margin: 0;
+        border-radius: 28px;
+      }
+
+      .elixir-visual img {
+        width: auto;
+        max-height: 330px;
+        margin: 0 auto;
+      }
+
+      .hero-badge {
+        top: 18px;
+        right: 18px;
+        padding: 9px 13px;
+      }
+
+
+      /* QUICK BUY DIRECTLY BELOW BOTTLE */
+
+      .mobile-quick-buy {
+        display: block;
+        order: 2;
+        width: 100%;
+        margin: 0;
+        text-align: center;
+      }
+
+      .mobile-price {
+        margin: 2px 0 10px;
+        color: var(--dark-gold);
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 31px;
+        font-weight: 500;
+      }
+
+      .mobile-quick-buy .buy-button {
+        width: 100%;
+        min-width: 100%;
+        margin-top: 0;
+      }
+
+      .mobile-shipping {
+        margin-top: 11px;
+        color: var(--taupe);
+        font-size: 12px;
+      }
+
+
+      /* MAIN SALES COPY AFTER QUICK BUY */
+
+      .elixir-copy {
+        order: 3;
+        text-align: center;
+        margin-top: 16px;
+      }
+
+      .elixir-copy h1 {
+        margin: 12px 0 18px;
+        font-size: 40px;
+        line-height: 1.08;
+      }
+
+      .hero-intro {
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 16px;
+      }
+
+      .hero-benefits {
+        width: 100%;
+        margin: 25px auto;
+        text-align: left;
+      }
+
+      .benefit-strip-grid,
+      .ingredient-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .buy-button {
+        width: 100%;
+        min-width: 100%;
+      }
+
+      .ingredients-preview {
+        padding: 65px 0;
+      }
+
+      .elixir-cta {
+        padding: 65px 0;
+      }
+
+      .cta-box {
+        padding: 42px 22px;
+      }
+
+    }
 
   </style>
 
@@ -553,12 +659,31 @@
     </a>
 
     <nav>
-      <a href="index.html">Home</a>
-      <a href="index.html#story">Our Story</a>
-      <a href="index.html#mission">Mission</a>
-      <a href="products.html">Products</a>
-      <a href="journal.html">Wellness Journal</a>
-      <a href="index.html#community">Community</a>
+
+      <a href="index.html">
+        Home
+      </a>
+
+      <a href="index.html#story">
+        Our Story
+      </a>
+
+      <a href="index.html#mission">
+        Mission
+      </a>
+
+      <a href="products.html">
+        Products
+      </a>
+
+      <a href="journal.html">
+        Wellness Journal
+      </a>
+
+      <a href="index.html#community">
+        Community
+      </a>
+
     </nav>
 
   </div>
@@ -578,7 +703,7 @@
     <div class="elixir-hero-grid">
 
 
-      <!-- LEFT SIDE -->
+      <!-- MAIN COPY -->
 
       <div class="elixir-copy">
 
@@ -659,7 +784,14 @@
       </div>
 
 
-      <!-- RIGHT SIDE -->
+      <!-- MOBILE TITLE -->
+
+      <div class="mobile-product-title">
+        Luxe Growth Elixir
+      </div>
+
+
+      <!-- PRODUCT IMAGE -->
 
       <div class="elixir-visual">
 
@@ -670,6 +802,34 @@
         <img
           src="luxe-growth-elixir.png?v=20"
           alt="40PlusGlow Luxe Growth Elixir nourishing botanical hair and scalp oil">
+
+      </div>
+
+
+      <!-- MOBILE QUICK BUY -->
+
+      <div class="mobile-quick-buy">
+
+        <div class="mobile-price">
+          $25.00
+        </div>
+
+        <form
+          action="https://www.paypal.com/ncp/payment/HMBDS3ANA8L5G"
+          method="post"
+          target="_blank">
+
+          <button
+            class="buy-button"
+            type="submit">
+            Start Your Hair Journey →
+          </button>
+
+        </form>
+
+        <div class="mobile-shipping">
+          2 FL OZ • Free shipping for a limited time
+        </div>
 
       </div>
 
@@ -690,23 +850,54 @@
     <div class="benefit-strip-grid">
 
       <div class="benefit-strip-item">
-        <strong>Longer</strong>
-        <span>Supports a healthy hair-growth routine</span>
+
+        <strong>
+          Longer
+        </strong>
+
+        <span>
+          Supports a healthy hair-growth routine
+        </span>
+
       </div>
 
-      <div class="benefit-strip-item">
-        <strong>Stronger</strong>
-        <span>Helps reduce dryness and breakage</span>
-      </div>
 
       <div class="benefit-strip-item">
-        <strong>Fuller-Looking</strong>
-        <span>Supports healthier-looking hair</span>
+
+        <strong>
+          Stronger
+        </strong>
+
+        <span>
+          Helps reduce dryness and breakage
+        </span>
+
       </div>
 
+
       <div class="benefit-strip-item">
-        <strong>More Shine</strong>
-        <span>Soft, nourished, beautiful-looking strands</span>
+
+        <strong>
+          Fuller-Looking
+        </strong>
+
+        <span>
+          Supports healthier-looking hair
+        </span>
+
+      </div>
+
+
+      <div class="benefit-strip-item">
+
+        <strong>
+          More Shine
+        </strong>
+
+        <span>
+          Soft, nourished, beautiful-looking strands
+        </span>
+
       </div>
 
     </div>
@@ -716,7 +907,7 @@
 </section>
 
 
-<!-- INGREDIENT PREVIEW -->
+<!-- INGREDIENTS -->
 
 <section class="ingredients-preview">
 
@@ -742,61 +933,110 @@
 
     <div class="ingredient-grid">
 
+
       <div class="ingredient-card">
-        <h3>Jojoba Oil</h3>
+
+        <h3>
+          Jojoba Oil
+        </h3>
+
         <p>
           Lightweight moisture for the hair and scalp.
         </p>
+
       </div>
 
+
       <div class="ingredient-card">
-        <h3>Castor Seed Oil</h3>
+
+        <h3>
+          Castor Seed Oil
+        </h3>
+
         <p>
           Rich nourishment for dry, breakage-prone strands.
         </p>
+
       </div>
 
+
       <div class="ingredient-card">
-        <h3>Argan Oil</h3>
+
+        <h3>
+          Argan Oil
+        </h3>
+
         <p>
           Helps support softness, smoothness and shine.
         </p>
+
       </div>
 
+
       <div class="ingredient-card">
-        <h3>Grapeseed Oil</h3>
+
+        <h3>
+          Grapeseed Oil
+        </h3>
+
         <p>
           Lightweight conditioning without a heavy feel.
         </p>
+
       </div>
 
+
       <div class="ingredient-card">
-        <h3>Black Seed Oil</h3>
+
+        <h3>
+          Black Seed Oil
+        </h3>
+
         <p>
           Botanical nourishment for your hair-care ritual.
         </p>
+
       </div>
 
+
       <div class="ingredient-card">
-        <h3>Rosemary Leaf Oil</h3>
+
+        <h3>
+          Rosemary Leaf Oil
+        </h3>
+
         <p>
           A popular botanical addition to healthy-hair routines.
         </p>
+
       </div>
 
+
       <div class="ingredient-card">
-        <h3>Peppermint Oil</h3>
+
+        <h3>
+          Peppermint Oil
+        </h3>
+
         <p>
           Provides a refreshing scalp-care experience.
         </p>
+
       </div>
 
+
       <div class="ingredient-card">
-        <h3>Vitamin E</h3>
+
+        <h3>
+          Vitamin E
+        </h3>
+
         <p>
           Helps condition and support healthy-looking strands.
         </p>
+
       </div>
+
 
     </div>
 
@@ -850,12 +1090,18 @@
 </main>
 
 
+<!-- FOOTER -->
+
 <footer>
 
   <div class="container">
 
-    <a href="index.html" class="logo">
+    <a
+      href="index.html"
+      class="logo">
+
       40Plus<span>Glow</span>
+
     </a>
 
     <p>
