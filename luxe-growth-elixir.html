@@ -23,6 +23,7 @@
     rel="canonical"
     href="https://www.40plusglow.com/luxe-growth-elixir.html">
 
+
   <style>
 
     :root {
@@ -105,45 +106,24 @@
     nav {
       display: flex;
       align-items: center;
-      gap: 24px;
+      gap: 22px;
       flex-wrap: wrap;
     }
 
     nav a {
-      font-size: 12px;
+      font-size: 11px;
       font-weight: 800;
       letter-spacing: .8px;
       text-transform: uppercase;
     }
 
-    nav a:hover {
+    nav a:hover,
+    nav a.active {
       color: var(--gold);
     }
 
 
-    /* HERO */
-
-    .elixir-hero {
-      padding: 90px 0;
-      background:
-        radial-gradient(
-          circle at 15% 15%,
-          rgba(234,217,185,.50),
-          transparent 30%
-        ),
-        linear-gradient(
-          135deg,
-          var(--cream),
-          var(--white)
-        );
-    }
-
-    .elixir-hero-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 70px;
-      align-items: start;
-    }
+    /* SHARED */
 
     .eyebrow {
       display: inline-block;
@@ -154,65 +134,28 @@
       text-transform: uppercase;
     }
 
-    .elixir-copy h1 {
-      max-width: 640px;
-      margin: 14px 0 20px;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(48px, 6vw, 74px);
-      line-height: 1.02;
-      font-weight: 500;
-      color: var(--charcoal);
+    .section-heading {
+      max-width: 800px;
+      margin: 0 auto 45px;
+      text-align: center;
     }
 
-    .hero-intro {
-      max-width: 620px;
-      margin: 0 0 26px;
+    .section-heading h2 {
+      margin: 10px 0 14px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(40px, 5vw, 58px);
+      font-weight: 500;
+      line-height: 1.08;
+    }
+
+    .section-heading p {
       color: var(--taupe);
-      font-size: 18px;
+      font-size: 17px;
       line-height: 1.8;
     }
 
-    .hero-benefits {
-      display: grid;
-      gap: 11px;
-      margin: 28px 0;
-    }
-
-    .hero-benefit {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      color: var(--charcoal);
-      font-weight: 700;
-    }
-
-    .check {
-      width: 25px;
-      height: 25px;
-      display: grid;
-      place-items: center;
-      flex: 0 0 25px;
-      border-radius: 50%;
-      background: rgba(184,137,54,.13);
-      color: var(--dark-gold);
-      font-size: 13px;
-    }
-
-    .price {
-      margin-top: 25px;
-      font-family: Georgia, serif;
-      font-size: 32px;
-      color: var(--dark-gold);
-    }
-
-    .shipping {
-      margin-top: 4px;
-      color: var(--taupe);
-      font-size: 13px;
-    }
-
     .buy-button {
-      margin-top: 22px;
+      margin-top: 18px;
       min-width: 280px;
       padding: 17px 28px;
       border: 0;
@@ -237,23 +180,74 @@
       box-shadow: 0 16px 32px rgba(135,97,31,.28);
     }
 
-    .microcopy {
-      margin-top: 13px;
-      color: var(--taupe);
-      font-size: 12px;
+    .check {
+      width: 25px;
+      height: 25px;
+      display: grid;
+      place-items: center;
+      flex: 0 0 25px;
+      border-radius: 50%;
+      background: rgba(184,137,54,.13);
+      color: var(--dark-gold);
+      font-size: 13px;
     }
 
 
-    /* PRODUCT VISUAL */
+    /* TOP PRODUCT AREA */
 
-    .elixir-visual {
+    .product-hero {
+      padding: 60px 0 80px;
+      background:
+        radial-gradient(
+          circle at 20% 10%,
+          rgba(234,217,185,.55),
+          transparent 30%
+        ),
+        linear-gradient(
+          135deg,
+          var(--cream),
+          var(--white)
+        );
+    }
+
+    .product-heading {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .product-heading h1 {
+      margin: 8px 0 8px;
+      color: var(--charcoal);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(48px, 6vw, 72px);
+      line-height: 1.02;
+      font-weight: 500;
+    }
+
+    .product-heading p {
+      margin: 0 auto;
+      max-width: 700px;
+      color: var(--taupe);
+      font-size: 17px;
+    }
+
+
+    /* SINGLE BOTTLE */
+
+    .single-product {
+      max-width: 820px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .single-product-image {
       position: relative;
-      min-height: 650px;
+      min-height: 520px;
       display: grid;
       place-items: center;
-      padding: 55px;
+      padding: 40px;
       overflow: hidden;
-      border-radius: 36px;
+      border-radius: 34px;
       background:
         linear-gradient(
           145deg,
@@ -263,20 +257,21 @@
       box-shadow: var(--shadow);
     }
 
-    .elixir-visual::before {
+    .single-product-image::before {
       content: "";
       position: absolute;
-      width: 400px;
-      height: 400px;
+      width: 380px;
+      height: 380px;
       border-radius: 50%;
       background: rgba(184,137,54,.10);
       filter: blur(8px);
     }
 
-    .elixir-visual img {
+    .single-product-image img {
       position: relative;
       z-index: 2;
-      max-height: 560px;
+      max-height: 460px;
+      width: auto;
       object-fit: contain;
       filter: drop-shadow(0 28px 25px rgba(72,48,15,.22));
     }
@@ -284,34 +279,142 @@
     .hero-badge {
       position: absolute;
       z-index: 3;
-      top: 28px;
-      right: 28px;
-      padding: 11px 17px;
+      top: 24px;
+      right: 24px;
+      padding: 10px 16px;
       border-radius: 999px;
       background: var(--white);
       border: 1px solid var(--border);
       color: var(--dark-gold);
       font-size: 10px;
       font-weight: 900;
-      letter-spacing: 1.6px;
+      letter-spacing: 1.5px;
       text-transform: uppercase;
       box-shadow: 0 8px 20px rgba(91,67,30,.08);
     }
 
+    .single-price {
+      margin-top: 22px;
+      color: var(--dark-gold);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 36px;
+    }
 
-    /* MOBILE QUICK BUY
-       HIDDEN ON DESKTOP */
+    .single-size {
+      margin-top: 3px;
+      color: var(--taupe);
+      font-size: 13px;
+    }
 
-    .mobile-product-title,
-    .mobile-quick-buy {
-      display: none;
+    .secure-note {
+      margin-top: 11px;
+      color: var(--taupe);
+      font-size: 12px;
+    }
+
+
+    /* DUO */
+
+    .duo-top {
+      max-width: 980px;
+      margin: 55px auto 0;
+      padding: 34px;
+      border: 1px solid var(--gold);
+      border-radius: 30px;
+      background: var(--white);
+      box-shadow: var(--shadow);
+    }
+
+    .duo-top-grid {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 42px;
+      align-items: center;
+    }
+
+    .duo-top-image {
+      overflow: hidden;
+      border-radius: 22px;
+      background: var(--cream);
+    }
+
+    .duo-top-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .duo-top-content {
+      text-align: left;
+    }
+
+    .best-value-badge {
+      display: inline-block;
+      margin-bottom: 10px;
+      padding: 7px 13px;
+      border-radius: 999px;
+      background: rgba(184,137,54,.14);
+      color: var(--dark-gold);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: 1px;
+    }
+
+    .duo-top-content h2 {
+      margin: 7px 0 10px;
+      color: var(--charcoal);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 38px;
+      line-height: 1.08;
+      font-weight: 500;
+    }
+
+    .duo-top-content p {
+      color: var(--taupe);
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .duo-price-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin: 18px 0 4px;
+    }
+
+    .duo-old-price {
+      color: var(--taupe);
+      font-size: 19px;
+      text-decoration: line-through;
+    }
+
+    .duo-new-price {
+      color: var(--dark-gold);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 38px;
+    }
+
+    .duo-save {
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(184,137,54,.14);
+      color: var(--dark-gold);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: 1px;
+    }
+
+    .duo-shipping {
+      color: var(--taupe);
+      font-size: 12px;
     }
 
 
     /* BENEFIT STRIP */
 
     .benefit-strip {
-      padding: 30px 0;
+      padding: 32px 0;
       background: #211d18;
       color: var(--white);
     }
@@ -328,7 +431,7 @@
       margin-bottom: 5px;
       color: #e4c98c;
       font-family: Georgia, serif;
-      font-size: 19px;
+      font-size: 20px;
     }
 
     .benefit-strip-item span {
@@ -337,30 +440,74 @@
     }
 
 
-    /* INGREDIENTS */
+    /* PRODUCT DETAILS */
 
-    .ingredients-preview {
+    .product-details {
       padding: 90px 0;
       background: var(--white);
     }
 
-    .section-heading {
-      max-width: 800px;
-      margin: 0 auto 45px;
-      text-align: center;
+    .details-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
     }
 
-    .section-heading h2 {
-      margin: 10px 0 14px;
-      font-family: Georgia, serif;
+    .details-copy h2 {
+      margin: 10px 0 18px;
+      font-family: Georgia, "Times New Roman", serif;
       font-size: clamp(40px, 5vw, 58px);
+      line-height: 1.08;
       font-weight: 500;
     }
 
-    .section-heading p {
+    .details-copy > p {
       color: var(--taupe);
       font-size: 17px;
       line-height: 1.8;
+    }
+
+    .hero-benefits {
+      display: grid;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .hero-benefit {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 700;
+    }
+
+    .details-highlight {
+      padding: 35px;
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      background: var(--cream);
+      box-shadow: 0 12px 30px rgba(91,67,30,.07);
+    }
+
+    .details-highlight h3 {
+      margin: 0 0 16px;
+      color: var(--dark-gold);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 28px;
+    }
+
+    .details-highlight p {
+      margin: 0;
+      color: var(--taupe);
+      line-height: 1.8;
+    }
+
+
+    /* INGREDIENTS */
+
+    .ingredients-preview {
+      padding: 90px 0;
+      background: var(--cream);
     }
 
     .ingredient-grid {
@@ -373,16 +520,17 @@
       padding: 26px 20px;
       border: 1px solid var(--border);
       border-radius: 20px;
-      background: var(--cream);
+      background: var(--white);
       text-align: center;
+      box-shadow: 0 8px 22px rgba(91,67,30,.04);
     }
 
     .ingredient-card h3 {
       margin: 0 0 8px;
+      color: var(--dark-gold);
       font-family: Georgia, serif;
       font-size: 21px;
       font-weight: 600;
-      color: var(--dark-gold);
     }
 
     .ingredient-card p {
@@ -391,243 +539,149 @@
       font-size: 13px;
     }
 
+
     /* HOW TO USE */
 
-.how-to-use {
-  padding: 90px 0;
-  background: var(--cream);
-}
+    .how-to-use {
+      padding: 90px 0;
+      background: var(--white);
+    }
 
-.how-to-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-}
+    .how-to-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
 
-.how-to-card {
-  position: relative;
-  padding: 34px 25px;
-  background: var(--white);
-  border: 1px solid var(--border);
-  border-radius: 22px;
-  box-shadow: 0 12px 30px rgba(91,67,30,.07);
-}
+    .how-to-card {
+      position: relative;
+      padding: 34px 25px;
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      box-shadow: 0 12px 30px rgba(91,67,30,.07);
+    }
 
-.step-number {
-  display: block;
-  margin-bottom: 14px;
-  color: var(--gold);
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 35px;
-  line-height: 1;
-}
+    .step-number {
+      display: block;
+      margin-bottom: 14px;
+      color: var(--gold);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 35px;
+      line-height: 1;
+    }
 
-.how-to-card h3 {
-  margin: 0 0 10px;
-  color: var(--dark-gold);
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 23px;
-}
+    .how-to-card h3 {
+      margin: 0 0 10px;
+      color: var(--dark-gold);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 23px;
+    }
 
-.how-to-card p {
-  margin: 0;
-  color: var(--taupe);
-  font-size: 14px;
-  line-height: 1.7;
-}
+    .how-to-card p {
+      margin: 0;
+      color: var(--taupe);
+      font-size: 14px;
+      line-height: 1.7;
+    }
 
-.how-to-buy {
-  margin-top: 45px;
-  text-align: center;
-}
+    .how-to-buy {
+      margin-top: 45px;
+      text-align: center;
+    }
 
-.ritual-message {
-  margin-bottom: 4px;
-  color: var(--charcoal);
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 21px;
-}
+    .ritual-message {
+      margin-bottom: 4px;
+      color: var(--charcoal);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 21px;
+    }
 
-/* HAIR JOURNEY DUO */
 
-.duo-section {
-  padding: 95px 0;
-  background: var(--cream);
-}
+    /* HAIR JOURNEYS */
 
-.duo-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: center;
-}
+    .hair-journeys {
+      padding: 95px 0;
+      background: var(--cream);
+    }
 
-.duo-image {
-  overflow: hidden;
-  border-radius: 28px;
-  background: var(--white);
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow);
-}
+    .hair-journey-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
 
-.duo-image img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
+    .hair-journey-card {
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      background: var(--white);
+      box-shadow: 0 12px 32px rgba(91,67,30,.08);
+    }
 
-.duo-content h2 {
-  margin: 10px 0 18px;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(40px, 5vw, 58px);
-  font-weight: 500;
-  line-height: 1.08;
-}
+    .hair-journey-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
 
-.duo-intro {
-  color: var(--taupe);
-  font-size: 17px;
-  line-height: 1.8;
-}
+    .extra-journey {
+      display: none;
+    }
 
-.duo-benefits {
-  display: grid;
-  gap: 11px;
-  margin: 26px 0;
-}
+    .hair-journey-grid.show-all .extra-journey {
+      display: block;
+    }
 
-.duo-benefit {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-weight: 700;
-}
+    .journey-toggle-wrap {
+      margin-top: 30px;
+      text-align: center;
+    }
 
-.duo-pricing {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  flex-wrap: wrap;
-  margin-top: 26px;
-}
+    .journey-toggle {
+      padding: 13px 22px;
+      border: 1px solid var(--gold);
+      border-radius: 999px;
+      background: transparent;
+      color: var(--dark-gold);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
 
-.duo-value {
-  color: var(--taupe);
-  font-size: 20px;
-  text-decoration: line-through;
-}
+    .journey-toggle:hover {
+      background: var(--white);
+    }
 
-.duo-price {
-  color: var(--dark-gold);
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 38px;
-}
+    .journey-disclaimer {
+      max-width: 760px;
+      margin: 28px auto 0;
+      color: var(--taupe);
+      font-size: 12px;
+      line-height: 1.7;
+      text-align: center;
+    }
 
-.duo-save {
-  padding: 7px 11px;
-  border-radius: 999px;
-  background: rgba(184,137,54,.14);
-  color: var(--dark-gold);
-  font-size: 11px;
-  font-weight: 900;
-  letter-spacing: 1px;
-}
+    .journey-cta {
+      margin-top: 42px;
+      text-align: center;
+    }
 
-.duo-shipping {
-  margin-top: 6px;
-  color: var(--taupe);
-  font-size: 12px;
-}
+    .journey-cta h3 {
+      margin: 8px 0 4px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 34px;
+      font-weight: 500;
+    }
 
-.duo-note {
-  margin-top: 12px;
-  color: var(--taupe);
-  font-size: 12px;
-}
-    
-/* HAIR JOURNEYS */
 
-.hair-journeys {
-  padding: 95px 0;
-  background: var(--white);
-}
-
-.hair-journey-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-}
-
-.hair-journey-card {
-  overflow: hidden;
-  border: 1px solid var(--border);
-  border-radius: 24px;
-  background: var(--cream);
-  box-shadow: 0 12px 32px rgba(91,67,30,.08);
-}
-
-.hair-journey-card img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.extra-journey {
-  display: none;
-}
-
-.hair-journey-grid.show-all .extra-journey {
-  display: block;
-}
-
-.journey-toggle-wrap {
-  margin-top: 30px;
-  text-align: center;
-}
-
-.journey-toggle {
-  padding: 13px 22px;
-  border: 1px solid var(--gold);
-  border-radius: 999px;
-  background: transparent;
-  color: var(--dark-gold);
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  cursor: pointer;
-}
-
-.journey-toggle:hover {
-  background: var(--cream);
-}
-
-.journey-disclaimer {
-  max-width: 760px;
-  margin: 28px auto 0;
-  color: var(--taupe);
-  font-size: 12px;
-  line-height: 1.7;
-  text-align: center;
-}
-
-.journey-cta {
-  margin-top: 42px;
-  text-align: center;
-}
-
-.journey-cta h3 {
-  margin: 8px 0 4px;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 34px;
-  font-weight: 500;
-}
-    
     /* FINAL CTA */
 
     .elixir-cta {
       padding: 85px 0;
-      background: var(--cream);
+      background: var(--white);
     }
 
     .cta-box {
@@ -636,7 +690,7 @@
       padding: 55px 35px;
       border: 1px solid var(--border);
       border-radius: 30px;
-      background: var(--white);
+      background: var(--cream);
       text-align: center;
       box-shadow: var(--shadow);
     }
@@ -684,537 +738,155 @@
         justify-content: center;
       }
 
-      .elixir-hero-grid {
+      .duo-top-grid,
+      .details-grid {
         grid-template-columns: 1fr;
       }
 
-      .elixir-copy {
+      .duo-top-content {
         text-align: center;
       }
 
-      .hero-intro {
-        margin-left: auto;
-        margin-right: auto;
+      .duo-price-row {
+        justify-content: center;
       }
 
-      .hero-benefits {
-        width: fit-content;
-        margin-left: auto;
-        margin-right: auto;
-        text-align: left;
-      }
-
-      .benefit-strip-grid {
+      .benefit-strip-grid,
+      .ingredient-grid,
+      .how-to-grid {
         grid-template-columns: repeat(2, 1fr);
-      }
-
-      .ingredient-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .elixir-visual {
-        min-height: 530px;
       }
 
     }
 
-/* DESKTOP HAIR JOURNEY DUO */
-
-.desktop-duo-offer {
-  display: grid;
-  grid-template-columns: 180px 1fr;
-  gap: 24px;
-  align-items: center;
-  margin-top: 28px;
-  padding: 22px;
-  border: 1px solid var(--gold);
-  border-radius: 24px;
-  background: var(--white);
-  box-shadow: 0 12px 30px rgba(91,67,30,.08);
-}
-
-.desktop-duo-image {
-  width: 100%;
-  overflow: hidden;
-  border-radius: 18px;
-}
-
-.desktop-duo-image img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 18px;
-}
-
-.desktop-duo-content {
-  text-align: left;
-}
-
-.desktop-duo-content h3 {
-  margin: 7px 0 8px;
-  color: var(--dark-gold);
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 28px;
-  font-weight: 500;
-}
-
-.desktop-duo-description {
-  margin: 0 0 12px;
-  color: var(--taupe);
-  font-size: 14px;
-  line-height: 1.6;
-}
-
-.desktop-duo-price {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin: 12px 0 15px;
-}
-
-.desktop-old-price {
-  color: var(--taupe);
-  font-size: 17px;
-  text-decoration: line-through;
-}
-
-.desktop-new-price {
-  color: var(--dark-gold);
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 32px;
-}
-
-.desktop-save {
-  padding: 6px 9px;
-  border-radius: 999px;
-  background: rgba(184,137,54,.14);
-  color: var(--dark-gold);
-  font-size: 10px;
-  font-weight: 900;
-  letter-spacing: 1px;
-}
-
-.desktop-duo-shipping {
-  margin: 10px 0 0;
-  color: var(--taupe);
-  font-size: 11px;
-}
-
-/* DESKTOP HAIR JOURNEY DUO */
-
-.desktop-duo-offer {
-  display: grid;
-  grid-template-columns: 180px 1fr;
-  gap: 24px;
-  align-items: center;
-  margin-top: 28px;
-  padding: 22px;
-  border: 1px solid var(--gold);
-  border-radius: 24px;
-  background: var(--white);
-  box-shadow: 0 12px 30px rgba(91,67,30,.08);
-}
-
-.desktop-duo-image {
-  width: 100%;
-  overflow: hidden;
-  border-radius: 18px;
-}
-
-.desktop-duo-image img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 18px;
-}
-
-.desktop-duo-content {
-  text-align: left;
-}
-
-.desktop-duo-content h3 {
-  margin: 7px 0 8px;
-  color: var(--dark-gold);
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 28px;
-  font-weight: 500;
-}
-
-.desktop-duo-description {
-  margin: 0 0 12px;
-  color: var(--taupe);
-  font-size: 14px;
-  line-height: 1.6;
-}
-
-.desktop-duo-price {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin: 12px 0 15px;
-}
-
-.desktop-old-price {
-  color: var(--taupe);
-  font-size: 17px;
-  text-decoration: line-through;
-}
-
-.desktop-new-price {
-  color: var(--dark-gold);
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 32px;
-}
-
-.desktop-save {
-  padding: 6px 9px;
-  border-radius: 999px;
-  background: rgba(184,137,54,.14);
-  color: var(--dark-gold);
-  font-size: 10px;
-  font-weight: 900;
-  letter-spacing: 1px;
-}
-
-.desktop-duo-shipping {
-  margin: 10px 0 0;
-  color: var(--taupe);
-  font-size: 11px;
-}
-    
-    /* QUICK PURCHASE OPTIONS */
-
-.quick-buy-option {
-  text-align: center;
-}
-
-.purchase-label {
-  display: block;
-  margin-bottom: 5px;
-  color: var(--dark-gold);
-  font-size: 11px;
-  font-weight: 800;
-  letter-spacing: 2px;
-}
-
-.purchase-detail {
-  margin: 4px 0 13px;
-  color: var(--taupe);
-  font-size: 13px;
-}
-
-.purchase-divider {
-  position: relative;
-  margin: 22px 0;
-  text-align: center;
-}
-
-.purchase-divider::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  background: var(--border);
-}
-
-.purchase-divider span {
-  position: relative;
-  z-index: 1;
-  padding: 0 13px;
-  background: var(--cream);
-  color: var(--taupe);
-  font-size: 11px;
-  font-weight: 800;
-}
-
-.duo-quick-option {
-  padding: 23px 18px;
-  border: 1px solid var(--gold);
-  border-radius: 20px;
-  background: var(--white);
-}
-
-.best-value-badge {
-  display: inline-block;
-  margin-bottom: 10px;
-  padding: 7px 13px;
-  border-radius: 999px;
-  background: rgba(184,137,54,.14);
-  color: var(--dark-gold);
-  font-size: 10px;
-  font-weight: 900;
-  letter-spacing: 1px;
-}
-
-.duo-quick-option h3 {
-  margin: 3px 0 5px;
-  color: var(--dark-gold);
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 25px;
-  font-weight: 500;
-}
-
-.quick-duo-price {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin: 12px 0 15px;
-}
-
-.quick-old-price {
-  color: var(--taupe);
-  font-size: 17px;
-  text-decoration: line-through;
-}
-
-.quick-new-price {
-  color: var(--dark-gold);
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 30px;
-}
-
-.quick-save {
-  padding: 5px 8px;
-  border-radius: 999px;
-  background: rgba(184,137,54,.14);
-  color: var(--dark-gold);
-  font-size: 10px;
-  font-weight: 900;
-}
-
 
     /* MOBILE */
 
-@media (max-width: 560px) {
+    @media (max-width: 560px) {
 
-  .logo {
-    font-size: 30px;
-  }
+      .logo {
+        font-size: 30px;
+      }
 
-  .navigation {
-    min-height: auto;
-  }
+      .navigation {
+        min-height: auto;
+      }
 
-  nav {
-    gap: 13px;
-  }
+      nav {
+        gap: 12px;
+      }
 
-  nav a {
-    font-size: 10px;
-  }
+      nav a {
+        font-size: 10px;
+      }
 
-  .elixir-hero {
-    padding: 28px 0 50px;
-  }
+      .product-hero {
+        padding: 35px 0 55px;
+      }
 
-  .elixir-hero-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
+      .product-heading {
+        margin-bottom: 22px;
+      }
 
+      .product-heading h1 {
+        font-size: 42px;
+      }
 
-  /* TITLE ABOVE PRODUCT */
+      .product-heading p {
+        font-size: 15px;
+      }
 
-  .mobile-product-title {
-    display: block;
-    order: 0;
-    width: 100%;
-    margin: 0;
-    text-align: center;
-    color: var(--dark-gold);
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 32px;
-    font-weight: 600;
-    line-height: 1.15;
-  }
+      .single-product-image {
+        min-height: 360px;
+        padding: 22px;
+        border-radius: 26px;
+      }
 
+      .single-product-image img {
+        max-height: 320px;
+      }
 
-  /* PRODUCT IMAGE FIRST */
+      .hero-badge {
+        top: 16px;
+        right: 16px;
+        padding: 8px 12px;
+      }
 
-  .elixir-visual {
-    order: 1;
-    width: 100%;
-    min-height: 365px;
-    padding: 24px;
-    margin: 0;
-    border-radius: 28px;
-  }
+      .single-price {
+        font-size: 32px;
+      }
 
-  .elixir-visual img {
-    width: auto;
-    max-height: 330px;
-    margin: 0 auto;
-  }
+      .buy-button {
+        width: 100%;
+        min-width: 100%;
+      }
 
-  .hero-badge {
-    top: 18px;
-    right: 18px;
-    padding: 9px 13px;
-  }
+      .duo-top {
+        margin-top: 38px;
+        padding: 22px;
+        border-radius: 24px;
+      }
 
+      .duo-top-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+      }
 
-  /* QUICK BUY DIRECTLY BELOW BOTTLE */
+      .duo-top-content {
+        text-align: center;
+      }
 
-  .mobile-quick-buy {
-    display: block;
-    order: 2;
-    width: 100%;
-    margin: 0;
-    text-align: center;
-  }
+      .duo-top-content h2 {
+        font-size: 32px;
+      }
 
-  .mobile-price {
-    margin: 2px 0 10px;
-    color: var(--dark-gold);
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 31px;
-    font-weight: 500;
-  }
+      .duo-price-row {
+        justify-content: center;
+      }
 
-  .mobile-quick-buy .buy-button {
-    width: 100%;
-    min-width: 100%;
-    margin-top: 0;
-  }
+      .benefit-strip-grid,
+      .ingredient-grid,
+      .how-to-grid,
+      .hair-journey-grid {
+        grid-template-columns: 1fr;
+      }
 
-  .mobile-shipping {
-    margin-top: 11px;
-    color: var(--taupe);
-    font-size: 12px;
-  }
+      .product-details,
+      .ingredients-preview,
+      .how-to-use,
+      .hair-journeys,
+      .elixir-cta {
+        padding: 65px 0;
+      }
 
+      .details-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
 
-  /* MAIN SALES COPY AFTER QUICK BUY */
+      .details-copy {
+        text-align: center;
+      }
 
-  .elixir-copy {
-    order: 3;
-    text-align: center;
-    margin-top: 16px;
-  }
+      .hero-benefits {
+        text-align: left;
+      }
 
-  .elixir-copy h1 {
-    margin: 12px 0 18px;
-    font-size: 40px;
-    line-height: 1.08;
-  }
+      .how-to-card {
+        padding: 28px 22px;
+      }
 
-  .hero-intro {
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 16px;
-  }
+      .journey-cta h3 {
+        font-size: 30px;
+      }
 
-  .hero-benefits {
-    width: 100%;
-    margin: 25px auto;
-    text-align: left;
-  }
+      .cta-box {
+        padding: 42px 22px;
+      }
 
-  .benefit-strip-grid,
-  .ingredient-grid {
-    grid-template-columns: 1fr;
-  }
+    }
 
-  .buy-button {
-    width: 100%;
-    min-width: 100%;
-  }
-
-  .ingredients-preview {
-    padding: 65px 0;
-  }
-
-  .elixir-cta {
-    padding: 65px 0;
-  }
-
-  .cta-box {
-    padding: 42px 22px;
-  }
-
-
-  /* HOW TO USE - MOBILE */
-
-  .how-to-use {
-    padding: 65px 0;
-  }
-
-  .how-to-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .how-to-card {
-    padding: 28px 22px;
-  }
-
-  .how-to-buy .buy-button {
-    width: 100%;
-  }
-
-
-  /* HAIR JOURNEYS - MOBILE */
-
-  .hair-journeys {
-    padding: 65px 0;
-  }
-
-  .hair-journey-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .journey-cta h3 {
-    font-size: 30px;
-  }
-
-  .journey-cta .buy-button {
-    width: 100%;
-  }
-
-
-  /* HAIR JOURNEY DUO - MOBILE */
-
-  .duo-section {
-    padding: 65px 0;
-  }
-
-  .duo-grid {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-
-  .duo-content {
-    text-align: center;
-  }
-
-  .duo-benefits {
-    text-align: left;
-  }
-
-  .duo-pricing {
-    justify-content: center;
-  }
-
-.duo-content .buy-button {
-  width: 100%;
-}
-
-
-/* HIDE DESKTOP DUO ON MOBILE */
-
-.desktop-duo-offer {
-  display: none;
-}
-
-}
-    
-</style>
+  </style>
 
 </head>
 
@@ -1234,29 +906,23 @@
 
     <nav>
 
-      <a href="index.html">
-        Home
+      <a href="index.html">Home</a>
+
+      <a href="index.html#story">Our Story</a>
+
+      <a href="index.html#mission">Mission</a>
+
+      <a href="products.html">Products</a>
+
+      <a href="luxe-growth-elixir.html" class="active">
+        Hair Care
       </a>
 
-      <a href="index.html#story">
-        Our Story
-      </a>
+      <a href="index.html#expo">Expo</a>
 
-      <a href="index.html#mission">
-        Mission
-      </a>
+      <a href="journal.html">Wellness Journal</a>
 
-      <a href="products.html">
-        Products
-      </a>
-
-      <a href="journal.html">
-        Wellness Journal
-      </a>
-
-      <a href="index.html#community">
-        Community
-      </a>
+      <a href="index.html#community">Community</a>
 
     </nav>
 
@@ -1268,33 +934,221 @@
 <main>
 
 
-<!-- HERO -->
+<!-- TOP PRODUCT AREA -->
 
-<section class="elixir-hero">
+<section class="product-hero">
 
   <div class="container">
 
-    <div class="elixir-hero-grid">
+
+    <div class="product-heading">
+
+      <span class="eyebrow">
+        40PLUSGLOW HAIR CARE
+      </span>
+
+      <h1>
+        Luxe Growth Elixir
+      </h1>
+
+      <p>
+        Nourish your scalp. Strengthen your strands.
+        Support healthier-looking hair from root to tip.
+      </p>
+
+    </div>
 
 
-      <!-- MAIN COPY -->
+    <!-- SINGLE BOTTLE -->
 
-      <div class="elixir-copy">
+    <div class="single-product">
 
-        <span class="eyebrow">
-          40PLUSGLOW HAIR CARE
+      <div class="single-product-image">
+
+        <span class="hero-badge">
+          Customer Favorite
         </span>
 
-        <h1>
-          Longer. Stronger. Fuller-Looking Hair Starts at the Root.
-        </h1>
+        <img
+          src="luxe-growth-elixir.png?v=20"
+          alt="40PlusGlow Luxe Growth Elixir nourishing botanical hair and scalp oil">
 
-        <p class="hero-intro">
-          Meet <strong>40PlusGlow Luxe Growth Elixir</strong> —
-          a luxurious botanical hair & scalp oil created to nourish
-          the scalp, support healthy hair growth, help reduce breakage
-          and shedding, and leave hair softer, more manageable and
-          beautifully shiny.
+      </div>
+
+
+      <div class="single-price">
+        $25.00
+      </div>
+
+      <div class="single-size">
+        1 Full-Size Bottle • 2 FL OZ • Free Shipping for a Limited Time
+      </div>
+
+
+      <form
+        action="https://www.paypal.com/ncp/payment/HMBDS3ANA8L5G"
+        method="post"
+        target="_blank">
+
+        <button
+          class="buy-button"
+          type="submit">
+          Buy One Bottle →
+        </button>
+
+      </form>
+
+
+      <p class="secure-note">
+        Secure checkout • Premium botanical hair & scalp care
+      </p>
+
+    </div>
+
+
+    <!-- DUO -->
+
+    <div class="duo-top">
+
+      <div class="duo-top-grid">
+
+
+        <div class="duo-top-image">
+
+          <img
+            src="hair-journey-duo.png"
+            alt="40PlusGlow Luxe Growth Elixir Hair Journey Duo">
+
+        </div>
+
+
+        <div class="duo-top-content">
+
+          <span class="best-value-badge">
+            ★ BEST VALUE ★
+          </span>
+
+          <span class="eyebrow">
+            HAIR JOURNEY DUO
+          </span>
+
+          <h2>
+            Two Bottles. One Goal. Stay Consistent.
+          </h2>
+
+          <p>
+            Keep your routine going with two full-size 2 oz bottles of
+            Luxe Growth Elixir. Stay consistent while giving your scalp
+            and strands the nourishment they deserve.
+          </p>
+
+
+          <div class="duo-price-row">
+
+            <span class="duo-old-price">
+              $50.00
+            </span>
+
+            <span class="duo-new-price">
+              $45.00
+            </span>
+
+            <span class="duo-save">
+              SAVE $5
+            </span>
+
+          </div>
+
+
+          <div class="duo-shipping">
+            2 Full-Size Bottles • 4 FL OZ Total • Free Shipping for a Limited Time
+          </div>
+
+
+          <form
+            action="https://www.paypal.com/ncp/payment/Y5EMR3QZBZW94"
+            method="post"
+            target="_blank">
+
+            <button
+              class="buy-button"
+              type="submit">
+              Get the Hair Journey Duo →
+            </button>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+<!-- BENEFIT STRIP -->
+
+<section class="benefit-strip">
+
+  <div class="container">
+
+    <div class="benefit-strip-grid">
+
+      <div class="benefit-strip-item">
+        <strong>Longer</strong>
+        <span>Supports a healthy hair-growth routine</span>
+      </div>
+
+      <div class="benefit-strip-item">
+        <strong>Stronger</strong>
+        <span>Helps reduce dryness and breakage</span>
+      </div>
+
+      <div class="benefit-strip-item">
+        <strong>Fuller-Looking</strong>
+        <span>Supports healthier-looking hair</span>
+      </div>
+
+      <div class="benefit-strip-item">
+        <strong>More Shine</strong>
+        <span>Soft, nourished, beautiful-looking strands</span>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- PRODUCT BENEFITS -->
+
+<section class="product-details">
+
+  <div class="container">
+
+    <div class="details-grid">
+
+
+      <div class="details-copy">
+
+        <span class="eyebrow">
+          YOUR HAIR JOURNEY
+        </span>
+
+        <h2>
+          Longer. Stronger. Fuller-Looking Hair Starts at the Root.
+        </h2>
+
+        <p>
+          40PlusGlow Luxe Growth Elixir is a luxurious botanical hair
+          and scalp oil created to nourish the scalp, support healthy
+          hair growth, help reduce breakage and shedding, and leave
+          hair softer, more manageable and beautifully shiny.
         </p>
 
 
@@ -1327,293 +1181,24 @@
 
         </div>
 
-
-        <div class="price">
-          $25.00
-        </div>
-
-        <div class="shipping">
-          2 FL OZ • Free shipping for a limited time
-        </div>
-
-
-        <form
-          action="https://www.paypal.com/ncp/payment/HMBDS3ANA8L5G"
-          method="post"
-          target="_blank">
-
-          <button
-            class="buy-button"
-            type="submit">
-            Start Your Hair Journey →
-          </button>
-
-        </form>
-
-
-        <div class="microcopy">
-  Secure checkout • Premium botanical hair & scalp care
-</div>
-
-
-<!-- DESKTOP HAIR JOURNEY DUO -->
-
-<div class="desktop-duo-offer">
-
-  <div class="desktop-duo-image">
-
-    <img
-      src="hair-journey-duo.png"
-      alt="40PlusGlow Luxe Growth Elixir Hair Journey Duo">
-
-  </div>
-
-  <div class="desktop-duo-content">
-
-    <span class="best-value-badge">
-      ★ BEST VALUE ★
-    </span>
-
-    <h3>
-      Hair Journey Duo
-    </h3>
-
-    <p class="desktop-duo-description">
-      Stay consistent with two full-size 2 oz bottles of
-      Luxe Growth Elixir.
-    </p>
-
-    <div class="desktop-duo-price">
-
-      <span class="desktop-old-price">
-        $50
-      </span>
-
-      <span class="desktop-new-price">
-        $45
-      </span>
-
-      <span class="desktop-save">
-        SAVE $5
-      </span>
-
-    </div>
-
-    <form
-      action="https://www.paypal.com/ncp/payment/Y5EMR3QZBZW94"
-      method="post"
-      target="_blank">
-
-      <button
-        class="buy-button"
-        type="submit">
-        Get the Hair Journey Duo →
-      </button>
-
-    </form>
-
-    <p class="desktop-duo-shipping">
-      2 Full-Size Bottles • 4 FL OZ Total • Free Shipping for a Limited Time
-    </p>
-
-  </div>
-
-</div>
-
-
-</div>
-
-
-<!-- MOBILE TITLE -->
-
-<div class="mobile-product-title">
-  Luxe Growth Elixir
-</div>
-          
-        </div>
-
       </div>
 
 
-      <!-- MOBILE TITLE -->
+      <div class="details-highlight">
 
-      <div class="mobile-product-title">
-        Luxe Growth Elixir
-      </div>
+        <h3>
+          Nourish. Strengthen. Shine.
+        </h3>
 
-
-      <!-- PRODUCT IMAGE -->
-
-      <div class="elixir-visual">
-
-        <span class="hero-badge">
-          Customer Favorite
-        </span>
-
-        <img
-          src="luxe-growth-elixir.png?v=20"
-          alt="40PlusGlow Luxe Growth Elixir nourishing botanical hair and scalp oil">
-
-      </div>
-      
-
-      <!-- MOBILE QUICK BUY -->
-
-<div class="mobile-quick-buy">
-
-  <!-- SINGLE BOTTLE -->
-
-  <div class="quick-buy-option">
-
-    <span class="purchase-label">
-      SINGLE BOTTLE
-    </span>
-
-    <div class="mobile-price">
-      $25.00
-    </div>
-
-    <p class="purchase-detail">
-      1 Full-Size • 2 oz Bottle
-    </p>
-
-    <form
-      action="https://www.paypal.com/ncp/payment/HMBDS3ANA8L5G"
-      method="post"
-      target="_blank">
-
-      <button class="buy-button" type="submit">
-        Buy One Bottle →
-      </button>
-
-    </form>
-
-  </div>
-
-
-  <div class="purchase-divider">
-    <span>OR</span>
-  </div>
-
-
-  <!-- HAIR JOURNEY DUO -->
-
-  <div class="quick-buy-option duo-quick-option">
-
-    <span class="best-value-badge">
-      ★ BEST VALUE ★
-    </span>
-
-    <h3>
-      Hair Journey Duo
-    </h3>
-
-    <p class="purchase-detail">
-      2 Full-Size • 2 oz Bottles
-    </p>
-
-    <div class="quick-duo-price">
-
-      <span class="quick-old-price">
-        $50
-      </span>
-
-      <span class="quick-new-price">
-        $45
-      </span>
-
-      <span class="quick-save">
-        SAVE $5
-      </span>
-
-    </div>
-
-    <form
-      action="https://www.paypal.com/ncp/payment/Y5EMR3QZBZW94"
-      method="post"
-      target="_blank">
-
-      <button class="buy-button" type="submit">
-        Get the Hair Journey Duo →
-      </button>
-
-    </form>
-
-  </div>
-
-
-  <p class="mobile-shipping">
-    Free shipping for a limited time
-  </p>
-
-</div>
-
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- BENEFIT STRIP -->
-
-<section class="benefit-strip">
-
-  <div class="container">
-
-    <div class="benefit-strip-grid">
-
-      <div class="benefit-strip-item">
-
-        <strong>
-          Longer
-        </strong>
-
-        <span>
-          Supports a healthy hair-growth routine
-        </span>
+        <p>
+          Healthy-looking hair begins with consistent care.
+          Luxe Growth Elixir combines nourishing botanical oils
+          into one lightweight hair and scalp ritual designed
+          to support your routine from root to tip.
+        </p>
 
       </div>
 
-
-      <div class="benefit-strip-item">
-
-        <strong>
-          Stronger
-        </strong>
-
-        <span>
-          Helps reduce dryness and breakage
-        </span>
-
-      </div>
-
-
-      <div class="benefit-strip-item">
-
-        <strong>
-          Fuller-Looking
-        </strong>
-
-        <span>
-          Supports healthier-looking hair
-        </span>
-
-      </div>
-
-
-      <div class="benefit-strip-item">
-
-        <strong>
-          More Shine
-        </strong>
-
-        <span>
-          Soft, nourished, beautiful-looking strands
-        </span>
-
-      </div>
 
     </div>
 
@@ -1650,106 +1235,43 @@
 
 
       <div class="ingredient-card">
-
-        <h3>
-          Jojoba Oil
-        </h3>
-
-        <p>
-          Lightweight moisture for the hair and scalp.
-        </p>
-
+        <h3>Jojoba Oil</h3>
+        <p>Lightweight moisture for the hair and scalp.</p>
       </div>
 
-
       <div class="ingredient-card">
-
-        <h3>
-          Castor Seed Oil
-        </h3>
-
-        <p>
-          Rich nourishment for dry, breakage-prone strands.
-        </p>
-
+        <h3>Castor Seed Oil</h3>
+        <p>Rich nourishment for dry, breakage-prone strands.</p>
       </div>
 
-
       <div class="ingredient-card">
-
-        <h3>
-          Argan Oil
-        </h3>
-
-        <p>
-          Helps support softness, smoothness and shine.
-        </p>
-
+        <h3>Argan Kernel Oil</h3>
+        <p>Helps support softness, smoothness and shine.</p>
       </div>
 
-
       <div class="ingredient-card">
-
-        <h3>
-          Grapeseed Oil
-        </h3>
-
-        <p>
-          Lightweight conditioning without a heavy feel.
-        </p>
-
+        <h3>Grapeseed Oil</h3>
+        <p>Lightweight conditioning without a heavy feel.</p>
       </div>
 
-
       <div class="ingredient-card">
-
-        <h3>
-          Black Seed Oil
-        </h3>
-
-        <p>
-          Botanical nourishment for your hair-care ritual.
-        </p>
-
+        <h3>Black Seed Oil</h3>
+        <p>Botanical nourishment for your hair-care ritual.</p>
       </div>
 
-
       <div class="ingredient-card">
-
-        <h3>
-          Rosemary Leaf Oil
-        </h3>
-
-        <p>
-          A popular botanical addition to healthy-hair routines.
-        </p>
-
+        <h3>Rosemary Leaf Oil</h3>
+        <p>A popular botanical addition to healthy-hair routines.</p>
       </div>
 
-
       <div class="ingredient-card">
-
-        <h3>
-          Peppermint Oil
-        </h3>
-
-        <p>
-          Provides a refreshing scalp-care experience.
-        </p>
-
+        <h3>Peppermint Oil</h3>
+        <p>Provides a refreshing scalp-care experience.</p>
       </div>
 
-
       <div class="ingredient-card">
-
-        <h3>
-          Vitamin E
-        </h3>
-
-        <p>
-          Helps condition and support healthy-looking strands.
-        </p>
-
+        <h3>Vitamin E</h3>
+        <p>Helps condition and support healthy-looking strands.</p>
       </div>
 
 
@@ -1759,7 +1281,8 @@
 
 </section>
 
-  <!-- HOW TO USE -->
+
+<!-- HOW TO USE -->
 
 <section class="how-to-use">
 
@@ -1782,51 +1305,91 @@
 
     </div>
 
+
     <div class="how-to-grid">
 
+
       <div class="how-to-card">
-        <span class="step-number">01</span>
-        <h3>Part & Apply</h3>
+
+        <span class="step-number">
+          01
+        </span>
+
+        <h3>
+          Part & Apply
+        </h3>
+
         <p>
           Part your hair into sections and apply a small amount of
           Luxe Growth Elixir directly to the scalp.
         </p>
+
       </div>
 
+
       <div class="how-to-card">
-        <span class="step-number">02</span>
-        <h3>Massage</h3>
+
+        <span class="step-number">
+          02
+        </span>
+
+        <h3>
+          Massage
+        </h3>
+
         <p>
           Gently massage the oil into your scalp with your fingertips
           to evenly distribute the product.
         </p>
+
       </div>
 
+
       <div class="how-to-card">
-        <span class="step-number">03</span>
-        <h3>Nourish</h3>
+
+        <span class="step-number">
+          03
+        </span>
+
+        <h3>
+          Nourish
+        </h3>
+
         <p>
           Smooth a small amount through dry strands and ends as needed
           for added softness, moisture and shine.
         </p>
+
       </div>
 
+
       <div class="how-to-card">
-        <span class="step-number">04</span>
-        <h3>Stay Consistent</h3>
+
+        <span class="step-number">
+          04
+        </span>
+
+        <h3>
+          Stay Consistent
+        </h3>
+
         <p>
           Incorporate Luxe Growth Elixir into your regular hair-care
           routine to support stronger, healthier-looking hair.
         </p>
+
       </div>
 
+
     </div>
+
 
     <div class="how-to-buy">
 
       <p class="ritual-message">
         Nourish the scalp. Protect your strands. Stay consistent.
       </p>
+
 
       <form
         action="https://www.paypal.com/ncp/payment/HMBDS3ANA8L5G"
@@ -1843,12 +1406,13 @@
 
     </div>
 
+
   </div>
 
 </section>
 
-  
-  <!-- HAIR JOURNEYS -->
+
+<!-- HAIR JOURNEYS -->
 
 <section class="hair-journeys">
 
@@ -1874,17 +1438,20 @@
 
     <div class="hair-journey-grid">
 
+
       <div class="hair-journey-card">
         <img
           src="elixir-results-1.png"
           alt="Luxe Growth Elixir hair care journey before and after">
       </div>
 
+
       <div class="hair-journey-card">
         <img
           src="elixir-results-2.png"
           alt="Luxe Growth Elixir hair care journey before and after">
       </div>
+
 
       <div class="hair-journey-card">
         <img
@@ -1899,18 +1466,21 @@
           alt="Luxe Growth Elixir hair care journey before and after">
       </div>
 
+
       <div class="hair-journey-card extra-journey">
         <img
           src="elixir-results-5.png"
           alt="Luxe Growth Elixir hair care journey before and after">
       </div>
 
+
       <div class="hair-journey-card extra-journey">
-  <img
-    src="elixir-results-6.png"
-    alt="Luxe Growth Elixir hair care journey before and after">
-</div>
-      
+        <img
+          src="elixir-results-6.png"
+          alt="Luxe Growth Elixir hair care journey before and after">
+      </div>
+
+
     </div>
 
 
@@ -1945,6 +1515,7 @@
         Start Your Hair Journey Today.
       </h3>
 
+
       <form
         action="https://www.paypal.com/ncp/payment/HMBDS3ANA8L5G"
         method="post"
@@ -1960,10 +1531,12 @@
 
     </div>
 
+
   </div>
 
 </section>
-  
+
+
 <!-- FINAL CTA -->
 
 <section class="elixir-cta">
@@ -1985,6 +1558,7 @@
         Support stronger, fuller, healthier-looking hair and
         beautiful shine with 40PlusGlow Luxe Growth Elixir.
       </p>
+
 
       <form
         action="https://www.paypal.com/ncp/payment/HMBDS3ANA8L5G"
@@ -2035,20 +1609,35 @@
 
 </footer>
 
-  <script>
+
+<script>
+
   function toggleJourneys() {
-    const grid = document.querySelector('.hair-journey-grid');
-    const button = document.getElementById('journeyToggle');
+
+    const grid =
+      document.querySelector('.hair-journey-grid');
+
+    const button =
+      document.getElementById('journeyToggle');
 
     grid.classList.toggle('show-all');
 
     if (grid.classList.contains('show-all')) {
-      button.textContent = 'Show Fewer Hair Journeys ↑';
+
+      button.textContent =
+        'Show Fewer Hair Journeys ↑';
+
     } else {
-      button.textContent = 'See More Hair Journeys ↓';
+
+      button.textContent =
+        'See More Hair Journeys ↓';
+
     }
+
   }
+
 </script>
+
 
 </body>
 
