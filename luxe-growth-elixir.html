@@ -718,6 +718,110 @@
 
     }
 
+    /* QUICK PURCHASE OPTIONS */
+
+.quick-buy-option {
+  text-align: center;
+}
+
+.purchase-label {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--dark-gold);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.purchase-detail {
+  margin: 4px 0 13px;
+  color: var(--taupe);
+  font-size: 13px;
+}
+
+.purchase-divider {
+  position: relative;
+  margin: 22px 0;
+  text-align: center;
+}
+
+.purchase-divider::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--border);
+}
+
+.purchase-divider span {
+  position: relative;
+  z-index: 1;
+  padding: 0 13px;
+  background: var(--cream);
+  color: var(--taupe);
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.duo-quick-option {
+  padding: 23px 18px;
+  border: 1px solid var(--gold);
+  border-radius: 20px;
+  background: var(--white);
+}
+
+.best-value-badge {
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 7px 13px;
+  border-radius: 999px;
+  background: rgba(184,137,54,.14);
+  color: var(--dark-gold);
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.duo-quick-option h3 {
+  margin: 3px 0 5px;
+  color: var(--dark-gold);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.quick-duo-price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 12px 0 15px;
+}
+
+.quick-old-price {
+  color: var(--taupe);
+  font-size: 17px;
+  text-decoration: line-through;
+}
+
+.quick-new-price {
+  color: var(--dark-gold);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 30px;
+}
+
+.quick-save {
+  padding: 5px 8px;
+  border-radius: 999px;
+  background: rgba(184,137,54,.14);
+  color: var(--dark-gold);
+  font-size: 10px;
+  font-weight: 900;
+}
+
 
     /* MOBILE */
 
@@ -1106,30 +1210,94 @@
 
       <!-- MOBILE QUICK BUY -->
 
-      <div class="mobile-quick-buy">
+<div class="mobile-quick-buy">
 
-        <div class="mobile-price">
-          $25.00
-        </div>
+  <!-- SINGLE BOTTLE -->
 
-        <form
-          action="https://www.paypal.com/ncp/payment/HMBDS3ANA8L5G"
-          method="post"
-          target="_blank">
+  <div class="quick-buy-option">
 
-          <button
-            class="buy-button"
-            type="submit">
-            Start Your Hair Journey →
-          </button>
+    <span class="purchase-label">
+      SINGLE BOTTLE
+    </span>
 
-        </form>
+    <div class="mobile-price">
+      $25.00
+    </div>
 
-        <div class="mobile-shipping">
-          2 FL OZ • Free shipping for a limited time
-        </div>
+    <p class="purchase-detail">
+      1 Full-Size • 2 oz Bottle
+    </p>
 
-      </div>
+    <form
+      action="https://www.paypal.com/ncp/payment/HMBDS3ANA8L5G"
+      method="post"
+      target="_blank">
+
+      <button class="buy-button" type="submit">
+        Buy One Bottle →
+      </button>
+
+    </form>
+
+  </div>
+
+
+  <div class="purchase-divider">
+    <span>OR</span>
+  </div>
+
+
+  <!-- HAIR JOURNEY DUO -->
+
+  <div class="quick-buy-option duo-quick-option">
+
+    <span class="best-value-badge">
+      ★ BEST VALUE ★
+    </span>
+
+    <h3>
+      Hair Journey Duo
+    </h3>
+
+    <p class="purchase-detail">
+      2 Full-Size • 2 oz Bottles
+    </p>
+
+    <div class="quick-duo-price">
+
+      <span class="quick-old-price">
+        $50
+      </span>
+
+      <span class="quick-new-price">
+        $45
+      </span>
+
+      <span class="quick-save">
+        SAVE $5
+      </span>
+
+    </div>
+
+    <form
+      action="https://www.paypal.com/ncp/payment/Y5EMR3QZBZW94"
+      method="post"
+      target="_blank">
+
+      <button class="buy-button" type="submit">
+        Get the Hair Journey Duo →
+      </button>
+
+    </form>
+
+  </div>
+
+
+  <p class="mobile-shipping">
+    Free shipping for a limited time
+  </p>
+
+</div>
 
 
     </div>
