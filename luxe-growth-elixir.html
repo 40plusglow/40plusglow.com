@@ -448,6 +448,84 @@
   font-size: 21px;
 }
 
+/* HAIR JOURNEYS */
+
+.hair-journeys {
+  padding: 95px 0;
+  background: var(--white);
+}
+
+.hair-journey-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.hair-journey-card {
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  background: var(--cream);
+  box-shadow: 0 12px 32px rgba(91,67,30,.08);
+}
+
+.hair-journey-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.extra-journey {
+  display: none;
+}
+
+.hair-journey-grid.show-all .extra-journey {
+  display: block;
+}
+
+.journey-toggle-wrap {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.journey-toggle {
+  padding: 13px 22px;
+  border: 1px solid var(--gold);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--dark-gold);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.journey-toggle:hover {
+  background: var(--cream);
+}
+
+.journey-disclaimer {
+  max-width: 760px;
+  margin: 28px auto 0;
+  color: var(--taupe);
+  font-size: 12px;
+  line-height: 1.7;
+  text-align: center;
+}
+
+.journey-cta {
+  margin-top: 42px;
+  text-align: center;
+}
+
+.journey-cta h3 {
+  margin: 8px 0 4px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 34px;
+  font-weight: 500;
+}
+    
     /* FINAL CTA */
 
     .elixir-cta {
@@ -693,9 +771,9 @@
       .cta-box {
         padding: 42px 22px;
       }
-.cta-box {
-  padding: 42px 22px;
-}
+
+
+
 
 
 /* HOW TO USE - MOBILE */
@@ -713,6 +791,25 @@
 }
 
 .how-to-buy .buy-button {
+  width: 100%;
+}
+
+
+/* HAIR JOURNEYS - MOBILE */
+
+.hair-journeys {
+  padding: 65px 0;
+}
+
+.hair-journey-grid {
+  grid-template-columns: 1fr;
+}
+
+.journey-cta h3 {
+  font-size: 30px;
+}
+
+.journey-cta .buy-button {
   width: 100%;
 }
 
@@ -1210,6 +1307,116 @@
 
 </section>
 
+  <!-- HAIR JOURNEYS -->
+
+<section class="hair-journeys">
+
+  <div class="container">
+
+    <div class="section-heading">
+
+      <span class="eyebrow">
+        HAIR JOURNEYS
+      </span>
+
+      <h2>
+        Consistency. Care. Confidence.
+      </h2>
+
+      <p>
+        Explore individual hair-care journeys and see how consistent
+        scalp and strand care can support healthier-looking hair.
+      </p>
+
+    </div>
+
+
+    <div class="hair-journey-grid">
+
+      <div class="hair-journey-card">
+        <img
+          src="elixir-results-1.png"
+          alt="Luxe Growth Elixir hair care journey before and after">
+      </div>
+
+      <div class="hair-journey-card">
+        <img
+          src="elixir-results-2.png"
+          alt="Luxe Growth Elixir hair care journey before and after">
+      </div>
+
+      <div class="hair-journey-card">
+        <img
+          src="elixir-results-3.png"
+          alt="Luxe Growth Elixir hair care journey before and after">
+      </div>
+
+
+      <div class="hair-journey-card extra-journey">
+        <img
+          src="elixir-results-4.png"
+          alt="Luxe Growth Elixir hair care journey before and after">
+      </div>
+
+      <div class="hair-journey-card extra-journey">
+        <img
+          src="elixir-results-5.png"
+          alt="Luxe Growth Elixir hair care journey before and after">
+      </div>
+
+    </div>
+
+
+    <div class="journey-toggle-wrap">
+
+      <button
+        class="journey-toggle"
+        id="journeyToggle"
+        type="button"
+        onclick="toggleJourneys()">
+
+        See More Hair Journeys ↓
+
+      </button>
+
+    </div>
+
+
+    <p class="journey-disclaimer">
+      Individual experiences may vary. Hair type, routine, consistency,
+      styling practices and other individual factors can influence results.
+    </p>
+
+
+    <div class="journey-cta">
+
+      <span class="eyebrow">
+        READY TO BEGIN?
+      </span>
+
+      <h3>
+        Start Your Hair Journey Today.
+      </h3>
+
+      <form
+        action="https://www.paypal.com/ncp/payment/HMBDS3ANA8L5G"
+        method="post"
+        target="_blank">
+
+        <button
+          class="buy-button"
+          type="submit">
+          Start Your Hair Journey →
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</section>
+  
 <!-- FINAL CTA -->
 
 <section class="elixir-cta">
@@ -1281,6 +1488,20 @@
 
 </footer>
 
+  <script>
+  function toggleJourneys() {
+    const grid = document.querySelector('.hair-journey-grid');
+    const button = document.getElementById('journeyToggle');
+
+    grid.classList.toggle('show-all');
+
+    if (grid.classList.contains('show-all')) {
+      button.textContent = 'Show Fewer Hair Journeys ↑';
+    } else {
+      button.textContent = 'See More Hair Journeys ↓';
+    }
+  }
+</script>
 
 </body>
 
