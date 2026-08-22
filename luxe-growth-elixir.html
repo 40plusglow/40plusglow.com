@@ -410,6 +410,90 @@
       font-size: 12px;
     }
 
+    /* SUBSCRIBE & SAVE */
+
+.subscribe-save {
+  max-width: 900px;
+  margin: 55px auto 0;
+  padding: 38px 32px;
+  text-align: center;
+  border: 1px solid var(--gold);
+  border-radius: 28px;
+  background: var(--white);
+  box-shadow: var(--shadow);
+}
+
+.subscribe-save h2 {
+  margin: 10px 0 12px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 38px;
+  font-weight: 500;
+  line-height: 1.08;
+}
+
+.subscribe-intro {
+  margin: 0 auto 18px;
+  max-width: 650px;
+  color: var(--taupe);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.subscribe-price-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 16px 0 10px;
+}
+
+.subscribe-regular-price {
+  color: var(--taupe);
+  font-size: 18px;
+  text-decoration: line-through;
+}
+
+.subscribe-price {
+  color: var(--dark-gold);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 38px;
+}
+
+.subscribe-month {
+  color: var(--taupe);
+  font-size: 14px;
+}
+
+.subscribe-save-badge {
+  display: inline-block;
+  margin: 5px 0 12px;
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: rgba(184,137,54,.14);
+  color: var(--dark-gold);
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.subscribe-details {
+  color: var(--taupe);
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+.subscribe-cancel {
+  margin: 8px 0 18px;
+  color: var(--charcoal);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+#paypal-button-container-P-6C6637318L2072305NKESHUQ {
+  max-width: 420px;
+  margin: 20px auto 0;
+}
 
     /* BENEFIT STRIP */
 
@@ -883,7 +967,20 @@
       .cta-box {
         padding: 42px 22px;
       }
+/* SUBSCRIBE & SAVE - MOBILE */
 
+.subscribe-save {
+  margin-top: 35px;
+  padding: 28px 20px;
+}
+
+.subscribe-save h2 {
+  font-size: 30px;
+}
+
+.subscribe-price {
+  font-size: 34px;
+}
     }
 
   </style>
@@ -1089,6 +1186,55 @@
 
 </section>
 
+<!-- SUBSCRIBE & SAVE -->
+
+<div class="subscribe-save">
+
+  <span class="eyebrow">
+    SUBSCRIBE & SAVE
+  </span>
+
+  <h2>
+    Stay Consistent. Save Every Month.
+  </h2>
+
+  <p class="subscribe-intro">
+    Receive one full-size 2 oz Luxe Growth Elixir automatically every month.
+  </p>
+
+  <div class="subscribe-price-row">
+
+    <span class="subscribe-regular-price">
+      $25.00
+    </span>
+
+    <span class="subscribe-price">
+      $22.99
+    </span>
+
+    <span class="subscribe-month">
+      / month
+    </span>
+
+  </div>
+
+  <span class="subscribe-save-badge">
+    SAVE ON EVERY DELIVERY
+  </span>
+
+  <div class="subscribe-details">
+    1 Full-Size 2 oz Bottle • Automatic Monthly Delivery
+  </div>
+
+  <p class="subscribe-cancel">
+    Cancel anytime • No obligations
+  </p>
+
+  <!-- PAYPAL SUBSCRIPTION BUTTON -->
+
+  <div id="paypal-button-container-P-6C6637318L2072305NKESHUQ"></div>
+
+</div>  
 
 <!-- BENEFIT STRIP -->
 
@@ -1638,6 +1784,34 @@
 
 </script>
 
+  <!-- PAYPAL SUBSCRIPTION SCRIPT -->
+
+<script
+  src="https://www.paypal.com/sdk/js?client-id=BAAWyw6NK2xmO5FFj0x11t9SLrbeIkFx1fVT8umNknsSn_2WdiRulLR6z7DA_jnJ9Zun35UxVmsPEvZcvQ&vault=true&intent=subscription"
+  data-sdk-integration-source="button-factory">
+</script>
+
+<script>
+  paypal.Buttons({
+    style: {
+      shape: 'rect',
+      color: 'gold',
+      layout: 'vertical',
+      label: 'subscribe'
+    },
+
+    createSubscription: function(data, actions) {
+      return actions.subscription.create({
+        plan_id: 'P-6C6637318L2072305NKESHUQ'
+      });
+    },
+
+    onApprove: function(data, actions) {
+      alert('Thank you for subscribing to 40PlusGlow Luxe Growth Elixir!');
+    }
+
+  }).render('#paypal-button-container-P-6C6637318L2072305NKESHUQ');
+</script>
 
 </body>
 
