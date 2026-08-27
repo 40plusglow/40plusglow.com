@@ -23,7 +23,6 @@
 Botanical Balance™ Premium Herbal Tea | 40PlusGlow
 </title>
 
-
 <style>
 
 :root {
@@ -32,7 +31,6 @@ Botanical Balance™ Premium Herbal Tea | 40PlusGlow
   --champagne: #ead9b9;
   --cream: #fbf7ef;
   --ivory: #fffdf9;
-  --sand: #f2e9dc;
   --taupe: #766b60;
   --charcoal: #28241f;
   --white: #ffffff;
@@ -67,7 +65,7 @@ a {
 }
 
 .container {
-  width: min(1180px,92%);
+  width: min(1180px, 92%);
   margin: 0 auto;
 }
 
@@ -125,11 +123,11 @@ nav a:hover {
 /* HERO */
 
 .hero {
-  padding: 85px 0;
+  padding: 70px 0;
   background:
     radial-gradient(
       circle at 80% 20%,
-      rgba(234,217,185,.45),
+      rgba(234,217,185,.42),
       transparent 34%
     ),
     linear-gradient(
@@ -141,22 +139,28 @@ nav a:hover {
 
 .product-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 65px;
+  grid-template-columns: 1.05fr .95fr;
+  gap: 60px;
   align-items: center;
 }
 
 .product-image {
-  padding: 28px;
-  background: var(--white);
+  overflow: hidden;
   border: 1px solid var(--border);
-  border-radius: 30px;
+  border-radius: 28px;
+  background: var(--white);
   box-shadow: 0 20px 55px rgba(88,66,30,.12);
+}
+
+.product-image picture {
+  display: block;
+  width: 100%;
 }
 
 .product-image img {
   width: 100%;
-  border-radius: 20px;
+  height: auto;
+  display: block;
 }
 
 .eyebrow {
@@ -233,7 +237,6 @@ nav a:hover {
 
 .buy-button:hover {
   filter: brightness(.96);
-  transform: translateY(-1px);
 }
 
 .secure-note {
@@ -276,19 +279,16 @@ nav a:hover {
 }
 
 .benefit-card {
-  padding: 30px 23px;
+  overflow: hidden;
   border: 1px solid var(--border);
   border-radius: 22px;
   background: var(--ivory);
   text-align: center;
 }
 
-.benefit-icon {
- .benefit-image {
+.benefit-image {
   width: 100%;
   height: 190px;
-  margin-bottom: 22px;
-  border-radius: 16px;
   overflow: hidden;
 }
 
@@ -296,7 +296,10 @@ nav a:hover {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
+}
+
+.benefit-content {
+  padding: 24px 22px 28px;
 }
 
 .benefit-card h3 {
@@ -430,13 +433,13 @@ footer a {
 }
 
 
-/* MOBILE */
+/* TABLET */
 
 @media (max-width: 850px) {
 
   .product-grid {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 36px;
   }
 
   .benefits,
@@ -447,11 +450,58 @@ footer a {
   nav {
     display: none;
   }
+
 }
+
+
+/* MOBILE */
 
 @media (max-width: 600px) {
 
-  .hero,
+  .container {
+    width: 94%;
+  }
+
+  .hero {
+    padding: 18px 0 55px;
+  }
+
+  .hero .container {
+    width: 100%;
+  }
+
+  .product-grid {
+    gap: 28px;
+  }
+
+  .product-image {
+    width: 100%;
+    border-radius: 0;
+    border-left: 0;
+    border-right: 0;
+    box-shadow: none;
+  }
+
+  .product-image picture {
+    width: 100%;
+    display: block;
+  }
+
+  .product-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .product-copy {
+    width: 92%;
+    margin: 0 auto;
+  }
+
+  .product-copy h1 {
+    font-size: 44px;
+  }
+
   .benefits-section,
   .ingredients-section,
   .brew-section,
@@ -464,57 +514,14 @@ footer a {
     grid-template-columns: 1fr;
   }
 
-  .product-copy h1 {
-    font-size: 45px;
+  .benefit-image {
+    height: 230px;
   }
 
   .brew-box {
     padding: 32px 22px;
   }
-  
-/* LARGE HERO IMAGE ON MOBILE */
 
-.hero .product-grid {
-  width: 100%;
-}
-
-.hero .product-image {
-  width: calc(100vw - 16px);
-  max-width: none;
-  margin-left: calc(50% - 50vw + 8px);
-  padding: 0;
-  border-radius: 18px;
-}
-
-.hero .product-image {
-  width: calc(100vw - 16px);
-  height: 430px;
-  max-width: none;
-  margin-left: calc(50% - 50vw + 8px);
-  padding: 0;
-  overflow: hidden;
-  border-radius: 18px;
-}
-
-.hero .product-image picture {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
-.hero .product-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  display: block;
-  border-radius: 18px;
-}
-
-.product-grid {
-  gap: 25px;
-}
-  
 }
 
 </style>
@@ -556,22 +563,21 @@ footer a {
 
   <div class="container product-grid">
 
+    <div class="product-image">
 
- <div class="product-image">
+      <picture>
 
-  <picture>
+        <source
+          media="(max-width: 600px)"
+          srcset="botanical-balance-mobile.png?v=5">
 
-    <source
-      media="(max-width: 600px)"
-      srcset="botanical-balance-mobile.png?v=1">
+        <img
+          src="botanical-balance.png?v=21"
+          alt="40PlusGlow Botanical Balance Premium Herbal Tea">
 
-    <img
-      src="botanical-balance.png?v=21"
-      alt="40PlusGlow Botanical Balance Premium Herbal Tea">
+      </picture>
 
-  </picture>
-
-</div>
+    </div>
 
 
     <div class="product-copy">
@@ -612,7 +618,6 @@ footer a {
         15 Premium Herbal Tea Bags • Free Shipping for a Limited Time
       </div>
 
-
       <form
         action="https://www.paypal.com/ncp/payment/CBQSTAN25BJ8S"
         method="post"
@@ -626,13 +631,11 @@ footer a {
 
       </form>
 
-
       <div class="secure-note">
         Secure checkout powered by PayPal
       </div>
 
     </div>
-
 
   </div>
 
@@ -645,7 +648,6 @@ footer a {
 <section class="benefits-section">
 
   <div class="container">
-
 
     <div class="section-heading">
 
@@ -665,106 +667,115 @@ footer a {
     </div>
 
 
-  <div class="benefits">
+    <div class="benefits">
 
 
-  <!-- ANTIOXIDANT SUPPORT -->
+      <article class="benefit-card">
 
-  <article class="benefit-card">
+        <div class="benefit-image">
+          <img
+            src="tea-antioxidant-support.png"
+            alt="Antioxidant cellular protection and oxidative stress">
+        </div>
 
-    <div class="benefit-image">
-      <img
-        src="tea-antioxidant-support.png"
-        alt="Antioxidant cellular protection and oxidative stress">
+        <div class="benefit-content">
+
+          <h3>
+            Antioxidant Support
+          </h3>
+
+          <p>
+            Hibiscus and warming botanicals provide antioxidant
+            plant compounds that help support the body's natural
+            defenses against everyday oxidative stress.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <article class="benefit-card">
+
+        <div class="benefit-image">
+          <img
+            src="tea-cardiovascular-wellness.png"
+            alt="Human heart representing cardiovascular wellness">
+        </div>
+
+        <div class="benefit-content">
+
+          <h3>
+            Cardiovascular Wellness
+          </h3>
+
+          <p>
+            Hibiscus has been widely studied in connection with
+            cardiovascular wellness and can complement a
+            heart-conscious lifestyle.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <article class="benefit-card">
+
+        <div class="benefit-image">
+          <img
+            src="tea-digestive-wellness.png"
+            alt="Human digestive system representing digestive wellness">
+        </div>
+
+        <div class="benefit-content">
+
+          <h3>
+            Digestive Wellness
+          </h3>
+
+          <p>
+            Ceylon cinnamon, star anise and cloves create a
+            warming botanical blend that fits beautifully into
+            a balanced digestive-wellness routine.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <article class="benefit-card">
+
+        <div class="benefit-image">
+          <img
+            src="tea-skin-wellness.png"
+            alt="Radiant mature skin representing skin wellness">
+        </div>
+
+        <div class="benefit-content">
+
+          <h3>
+            Skin Wellness
+          </h3>
+
+          <p>
+            Hydration and antioxidant-rich foods and beverages
+            can be part of an intentional routine supporting
+            healthy-looking, radiant skin.
+          </p>
+
+        </div>
+
+      </article>
+
+
     </div>
 
-    <h3>
-      Antioxidant Support
-    </h3>
-
-    <p>
-      Hibiscus and warming botanicals provide antioxidant
-      plant compounds that help support the body's natural
-      defenses against everyday oxidative stress.
-    </p>
-
-  </article>
-
-
-  <!-- CARDIOVASCULAR WELLNESS -->
-
-  <article class="benefit-card">
-
-    <div class="benefit-image">
-      <img
-        src="tea-cardiovascular-wellness.png"
-        alt="Human heart representing cardiovascular wellness">
-    </div>
-
-    <h3>
-      Cardiovascular Wellness
-    </h3>
-
-    <p>
-      Hibiscus has been widely studied in connection with
-      cardiovascular wellness and can complement a
-      heart-conscious lifestyle.
-    </p>
-
-  </article>
-
-
-  <!-- DIGESTIVE WELLNESS -->
-
-  <article class="benefit-card">
-
-    <div class="benefit-image">
-      <img
-        src="tea-digestive-wellness.png"
-        alt="Human digestive system representing digestive wellness">
-    </div>
-
-    <h3>
-      Digestive Wellness
-    </h3>
-
-    <p>
-      Ceylon cinnamon, star anise and cloves create a
-      warming botanical blend that fits beautifully into
-      a balanced digestive-wellness routine.
-    </p>
-
-  </article>
-
-
-  <!-- SKIN WELLNESS -->
-
-  <article class="benefit-card">
-
-    <div class="benefit-image">
-      <img
-        src="tea-skin-wellness.png"
-        alt="Radiant mature skin representing skin wellness">
-    </div>
-
-    <h3>
-      Skin Wellness
-    </h3>
-
-    <p>
-      Hydration and antioxidant-rich foods and beverages
-      can be part of an intentional routine supporting
-      healthy-looking, radiant skin.
-    </p>
-
-  </article>
-
-
-</div>
-
-</div>
+  </div>
 
 </section>
+
 
 
 <!-- INGREDIENTS -->
@@ -772,7 +783,6 @@ footer a {
 <section class="ingredients-section">
 
   <div class="container">
-
 
     <div class="section-heading">
 
@@ -797,9 +807,7 @@ footer a {
 
       <article class="ingredient">
 
-        <h3>
-          Hibiscus
-        </h3>
+        <h3>Hibiscus</h3>
 
         <p>
           Vibrant, tart and naturally rich in antioxidant
@@ -811,9 +819,7 @@ footer a {
 
       <article class="ingredient">
 
-        <h3>
-          Ceylon Cinnamon
-        </h3>
+        <h3>Ceylon Cinnamon</h3>
 
         <p>
           A warm, aromatic spice traditionally enjoyed as
@@ -825,9 +831,7 @@ footer a {
 
       <article class="ingredient">
 
-        <h3>
-          Star Anise
-        </h3>
+        <h3>Star Anise</h3>
 
         <p>
           Distinctively aromatic with a naturally warm,
@@ -839,9 +843,7 @@ footer a {
 
       <article class="ingredient">
 
-        <h3>
-          Cloves
-        </h3>
+        <h3>Cloves</h3>
 
         <p>
           A deeply aromatic spice containing naturally
@@ -865,7 +867,6 @@ footer a {
 
   <div class="container">
 
-
     <div class="brew-box">
 
       <span class="eyebrow">
@@ -888,7 +889,6 @@ footer a {
         Sip. Balance. Thrive.
       </div>
 
-
       <form
         action="https://www.paypal.com/ncp/payment/CBQSTAN25BJ8S"
         method="post"
@@ -903,7 +903,6 @@ footer a {
       </form>
 
     </div>
-
 
   </div>
 
@@ -929,7 +928,6 @@ footer a {
       Turn your everyday cup of tea into an intentional
       wellness ritual with Botanical Balance™.
     </p>
-
 
     <form
       action="https://www.paypal.com/ncp/payment/CBQSTAN25BJ8S"
