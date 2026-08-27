@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0">
+
+<meta
+  name="description"
+  content="Shop Botanical Balance™ by 40PlusGlow, a naturally caffeine-free premium herbal tea featuring hibiscus, Ceylon cinnamon, star anise and cloves.">
+
+<meta name="robots" content="index, follow">
+
+<link
+  rel="canonical"
+  href="https://www.40plusglow.com/botanical-balance.html">
+
+<title>
+Botanical Balance™ Premium Herbal Tea | 40PlusGlow
+</title>
+
+
+<style>
+
+:root {
+  --gold: #b88936;
+  --dark-gold: #87611f;
+  --champagne: #ead9b9;
+  --cream: #fbf7ef;
+  --ivory: #fffdf9;
+  --sand: #f2e9dc;
+  --taupe: #766b60;
+  --charcoal: #28241f;
+  --white: #ffffff;
+  --burgundy: #7b2132;
+  --border: rgba(184,137,54,.25);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--ivory);
+  color: var(--charcoal);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.7;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: min(1180px,92%);
+  margin: 0 auto;
+}
+
+
+/* HEADER */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255,253,249,.97);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(12px);
+}
+
+.navigation {
+  min-height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.logo {
+  color: var(--dark-gold);
+  font-family: Georgia, serif;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.logo span {
+  color: var(--gold);
+  font-style: italic;
+  font-weight: 400;
+}
+
+nav {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+nav a {
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: .7px;
+  text-transform: uppercase;
+}
+
+nav a:hover {
+  color: var(--gold);
+}
+
+
+/* HERO */
+
+.hero {
+  padding: 85px 0;
+  background:
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(234,217,185,.45),
+      transparent 34%
+    ),
+    linear-gradient(
+      135deg,
+      var(--ivory),
+      var(--cream)
+    );
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 65px;
+  align-items: center;
+}
+
+.product-image {
+  padding: 28px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 30px;
+  box-shadow: 0 20px 55px rgba(88,66,30,.12);
+}
+
+.product-image img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.eyebrow {
+  display: inline-block;
+  margin-bottom: 10px;
+  color: var(--gold);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.rating {
+  margin-bottom: 14px;
+  color: var(--gold);
+  font-size: 22px;
+  letter-spacing: 4px;
+}
+
+.product-copy h1 {
+  margin: 0 0 18px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(42px,5vw,68px);
+  font-weight: 500;
+  line-height: 1.05;
+}
+
+.subtitle {
+  margin: 0 0 20px;
+  color: var(--burgundy);
+  font-family: Georgia, serif;
+  font-size: 24px;
+}
+
+.description {
+  margin-bottom: 22px;
+  color: var(--taupe);
+  font-size: 17px;
+}
+
+.price {
+  margin: 18px 0 2px;
+  color: var(--charcoal);
+  font-family: Georgia, serif;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.shipping {
+  margin-bottom: 25px;
+  color: var(--dark-gold);
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.buy-button {
+  width: 100%;
+  min-height: 58px;
+  border: 0;
+  border-radius: 999px;
+  background:
+    linear-gradient(
+      135deg,
+      var(--dark-gold),
+      var(--gold)
+    );
+  color: var(--white);
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.buy-button:hover {
+  filter: brightness(.96);
+  transform: translateY(-1px);
+}
+
+.secure-note {
+  margin-top: 12px;
+  color: var(--taupe);
+  font-size: 12px;
+  text-align: center;
+}
+
+
+/* BENEFITS */
+
+.benefits-section {
+  padding: 90px 0;
+  background: var(--white);
+}
+
+.section-heading {
+  max-width: 780px;
+  margin: 0 auto 45px;
+  text-align: center;
+}
+
+.section-heading h2 {
+  margin: 10px 0 16px;
+  font-family: Georgia, serif;
+  font-size: clamp(38px,5vw,58px);
+  font-weight: 500;
+}
+
+.section-heading p {
+  color: var(--taupe);
+  font-size: 17px;
+}
+
+.benefits {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 18px;
+}
+
+.benefit-card {
+  padding: 30px 23px;
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  background: var(--ivory);
+  text-align: center;
+}
+
+.benefit-icon {
+  margin-bottom: 12px;
+  font-size: 34px;
+}
+
+.benefit-card h3 {
+  margin: 0 0 10px;
+  color: var(--dark-gold);
+  font-family: Georgia, serif;
+  font-size: 22px;
+}
+
+.benefit-card p {
+  margin: 0;
+  color: var(--taupe);
+  font-size: 14px;
+}
+
+
+/* INGREDIENTS */
+
+.ingredients-section {
+  padding: 90px 0;
+  background: var(--cream);
+}
+
+.ingredients-grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 20px;
+}
+
+.ingredient {
+  padding: 30px 22px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: var(--white);
+  text-align: center;
+}
+
+.ingredient h3 {
+  margin: 0 0 10px;
+  color: var(--burgundy);
+  font-family: Georgia, serif;
+  font-size: 23px;
+}
+
+.ingredient p {
+  margin: 0;
+  color: var(--taupe);
+}
+
+
+/* BREW */
+
+.brew-section {
+  padding: 90px 0;
+  background: var(--white);
+}
+
+.brew-box {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 50px;
+  border: 1px solid var(--border);
+  border-radius: 30px;
+  background:
+    linear-gradient(
+      135deg,
+      var(--ivory),
+      var(--cream)
+    );
+  text-align: center;
+  box-shadow: 0 16px 45px rgba(88,66,30,.08);
+}
+
+.brew-box h2 {
+  margin-top: 0;
+  font-family: Georgia, serif;
+  font-size: 42px;
+  font-weight: 500;
+}
+
+.brew-steps {
+  margin: 25px auto 35px;
+  max-width: 600px;
+  color: var(--taupe);
+  font-size: 17px;
+}
+
+.tagline {
+  margin: 24px 0;
+  color: var(--burgundy);
+  font-family: Georgia, serif;
+  font-size: 28px;
+  font-style: italic;
+}
+
+
+/* CTA */
+
+.final-cta {
+  padding: 90px 0;
+  background: #241f1a;
+  color: var(--white);
+  text-align: center;
+}
+
+.final-cta h2 {
+  margin: 0 0 15px;
+  font-family: Georgia, serif;
+  font-size: clamp(40px,5vw,60px);
+  font-weight: 500;
+}
+
+.final-cta p {
+  max-width: 650px;
+  margin: 0 auto 28px;
+  color: #e6ddcf;
+}
+
+
+/* FOOTER */
+
+footer {
+  padding: 35px 0;
+  background: #1b1815;
+  color: #ddd2c2;
+  text-align: center;
+}
+
+footer a {
+  color: var(--champagne);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 850px) {
+
+  .product-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .benefits,
+  .ingredients-grid {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  nav {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .hero,
+  .benefits-section,
+  .ingredients-section,
+  .brew-section,
+  .final-cta {
+    padding: 60px 0;
+  }
+
+  .benefits,
+  .ingredients-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-copy h1 {
+    font-size: 45px;
+  }
+
+  .brew-box {
+    padding: 32px 22px;
+  }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+  <div class="container navigation">
+
+    <a
+      href="index.html"
+      class="logo">
+      40Plus<span>Glow</span>
+    </a>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="luxe-growth-elixir.html">Hair Care</a>
+      <a href="journal.html">Wellness Journal</a>
+    </nav>
+
+  </div>
+
+</header>
+
+
+<main>
+
+
+<!-- PRODUCT HERO -->
+
+<section class="hero">
+
+  <div class="container product-grid">
+
+
+    <div class="product-image">
+
+      <img
+        src="botanical-balance.png?v=20"
+        alt="40PlusGlow Botanical Balance Premium Herbal Tea">
+
+    </div>
+
+
+    <div class="product-copy">
+
+      <span class="eyebrow">
+        40PlusGlow Premium Wellness
+      </span>
+
+      <div class="rating">
+        ★★★★★
+      </div>
+
+      <h1>
+        Botanical Balance™
+      </h1>
+
+      <div class="subtitle">
+        Premium Herbal Tea
+      </div>
+
+      <p class="description">
+        A naturally caffeine-free botanical blend featuring
+        hibiscus, Ceylon cinnamon, star anise and cloves.
+        Created for those who want to make intentional wellness
+        a beautiful part of their everyday routine.
+      </p>
+
+      <p class="description">
+        Enjoy a rich, vibrant cup hot or iced while adding
+        antioxidant-rich botanicals to your daily wellness ritual.
+      </p>
+
+      <div class="price">
+        $24.99
+      </div>
+
+      <div class="shipping">
+        15 Premium Herbal Tea Bags • Free Shipping for a Limited Time
+      </div>
+
+
+      <form
+        action="https://www.paypal.com/ncp/payment/CBQSTAN25BJ8S"
+        method="post"
+        target="_blank">
+
+        <button
+          class="buy-button"
+          type="submit">
+          Buy Botanical Balance™
+        </button>
+
+      </form>
+
+
+      <div class="secure-note">
+        Secure checkout powered by PayPal
+      </div>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- WELLNESS BENEFITS -->
+
+<section class="benefits-section">
+
+  <div class="container">
+
+
+    <div class="section-heading">
+
+      <span class="eyebrow">
+        WELLNESS IN EVERY CUP
+      </span>
+
+      <h2>
+        More Than a Cup of Tea
+      </h2>
+
+      <p>
+        Botanical Balance™ combines carefully selected botanicals
+        to complement an intentional daily wellness routine.
+      </p>
+
+    </div>
+
+
+    <div class="benefits">
+
+
+      <article class="benefit-card">
+
+        <div class="benefit-icon">
+          🌺
+        </div>
+
+        <h3>
+          Antioxidant Support
+        </h3>
+
+        <p>
+          Hibiscus and warming botanicals provide antioxidant
+          plant compounds that help support the body's natural
+          defenses against everyday oxidative stress.
+        </p>
+
+      </article>
+
+
+      <article class="benefit-card">
+
+        <div class="benefit-icon">
+          ❤️
+        </div>
+
+        <h3>
+          Cardiovascular Wellness
+        </h3>
+
+        <p>
+          Hibiscus has been widely studied in connection with
+          cardiovascular wellness and can complement a
+          heart-conscious lifestyle.
+        </p>
+
+      </article>
+
+
+      <article class="benefit-card">
+
+        <div class="benefit-icon">
+          🌿
+        </div>
+
+        <h3>
+          Digestive Wellness
+        </h3>
+
+        <p>
+          Ceylon cinnamon, star anise and cloves create a
+          warming botanical blend that fits beautifully into
+          a balanced digestive-wellness routine.
+        </p>
+
+      </article>
+
+
+      <article class="benefit-card">
+
+        <div class="benefit-icon">
+          ✨
+        </div>
+
+        <h3>
+          Skin Wellness
+        </h3>
+
+        <p>
+          Hydration and antioxidant-rich foods and beverages
+          can be part of an intentional routine supporting
+          healthy-looking, radiant skin.
+        </p>
+
+      </article>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- INGREDIENTS -->
+
+<section class="ingredients-section">
+
+  <div class="container">
+
+
+    <div class="section-heading">
+
+      <span class="eyebrow">
+        INSIDE THE BLEND
+      </span>
+
+      <h2>
+        Four Beautiful Botanicals
+      </h2>
+
+      <p>
+        Simple ingredients. Bold flavor. An intentional
+        wellness ritual.
+      </p>
+
+    </div>
+
+
+    <div class="ingredients-grid">
+
+
+      <article class="ingredient">
+
+        <h3>
+          Hibiscus
+        </h3>
+
+        <p>
+          Vibrant, tart and naturally rich in antioxidant
+          plant compounds.
+        </p>
+
+      </article>
+
+
+      <article class="ingredient">
+
+        <h3>
+          Ceylon Cinnamon
+        </h3>
+
+        <p>
+          A warm, aromatic spice traditionally enjoyed as
+          part of balanced wellness routines.
+        </p>
+
+      </article>
+
+
+      <article class="ingredient">
+
+        <h3>
+          Star Anise
+        </h3>
+
+        <p>
+          Distinctively aromatic with a naturally warm,
+          comforting flavor.
+        </p>
+
+      </article>
+
+
+      <article class="ingredient">
+
+        <h3>
+          Cloves
+        </h3>
+
+        <p>
+          A deeply aromatic spice containing naturally
+          occurring plant compounds.
+        </p>
+
+      </article>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- BREW -->
+
+<section class="brew-section">
+
+  <div class="container">
+
+
+    <div class="brew-box">
+
+      <span class="eyebrow">
+        YOUR DAILY RITUAL
+      </span>
+
+      <h2>
+        Brew Your Balance
+      </h2>
+
+      <div class="brew-steps">
+        Place one Botanical Balance™ tea bag in your cup,
+        add freshly heated water and allow the botanicals
+        to steep until the tea develops its beautiful
+        ruby-red color. Enjoy warm or pour over ice for
+        a refreshing botanical drink.
+      </div>
+
+      <div class="tagline">
+        Sip. Balance. Thrive.
+      </div>
+
+
+      <form
+        action="https://www.paypal.com/ncp/payment/CBQSTAN25BJ8S"
+        method="post"
+        target="_blank">
+
+        <button
+          class="buy-button"
+          type="submit">
+          Shop Botanical Balance™ — $24.99
+        </button>
+
+      </form>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- FINAL CTA -->
+
+<section class="final-cta">
+
+  <div class="container">
+
+    <span class="eyebrow">
+      40PLUSGLOW
+    </span>
+
+    <h2>
+      Wellness Starts With Intention.
+    </h2>
+
+    <p>
+      Turn your everyday cup of tea into an intentional
+      wellness ritual with Botanical Balance™.
+    </p>
+
+
+    <form
+      action="https://www.paypal.com/ncp/payment/CBQSTAN25BJ8S"
+      method="post"
+      target="_blank"
+      style="max-width:440px;margin:0 auto;">
+
+      <button
+        class="buy-button"
+        type="submit">
+        Buy Botanical Balance™
+      </button>
+
+    </form>
+
+  </div>
+
+</section>
+
+
+</main>
+
+
+
+<footer>
+
+  <div class="container">
+
+    <strong>
+      40PlusGlow
+    </strong>
+
+    <p>
+      Wellness • Beauty • Confidence • Community
+    </p>
+
+    <p>
+      <a href="https://www.40plusglow.com/">
+        40plusglow.com
+      </a>
+    </p>
+
+    <p>
+      © 2026 40PlusGlow. All Rights Reserved.
+    </p>
+
+  </div>
+
+</footer>
+
+
+</body>
+
+</html>
