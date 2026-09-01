@@ -977,57 +977,73 @@ height: 54px;
       color: #c8bdad;
       font-size: 13px;
     }
+    
+/* MOBILE */
 
-    /* MOBILE */
+@media (max-width: 960px) {
 
-  @media (max-width: 960px) {
+  header {
+    position: static;
+  }
+
+  .navigation {
+    min-height: auto;
+    flex-direction: column;
+    justify-content: center;
+    gap: 22px;
+    padding: 28px 0 26px;
+  }
 
   .logo {
-    font-size: 30px;
+    font-size: 38px;
+    text-align: center;
   }
 
   nav {
-    position: fixed;
-    top: 78px;
-    left: 0;
-    right: 0;
-    display: none;
-    flex-direction: column;
-    padding: 28px;
-    background: var(--ivory);
-    border-bottom: 1px solid var(--border);
+    position: static;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 18px 26px;
+    width: 100%;
+    padding: 0;
+    background: transparent;
+    border: 0;
   }
 
-      nav.open {
-        display: flex;
-      }
+  nav a {
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+  }
 
-      .menu-button {
-        display: inline-grid;
-        place-items: center;
-      }
+  .menu-button {
+    display: none;
+  }
 
-      .story-grid {
-        grid-template-columns: 1fr;
-      }
+  .story-grid {
+    grid-template-columns: 1fr;
+  }
 
-      .mission-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
+  .mission-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-      .products,
-      .journal-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
+  .products,
+  .journal-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-      .difference-grid {
-        grid-template-columns: 1fr 1fr;
-      }
+  .difference-grid {
+    grid-template-columns: 1fr 1fr;
+  }
 
-      .footer-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
 
     @media (max-width: 640px) {
      .navigation {
@@ -1095,15 +1111,14 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         40Plus<span>Glow</span>
       </a>
 
-     <nav id="mainNavigation">
-  <a href="#home">Home</a>
-  <a href="#story">Our Story</a>
-  <a href="#mission">Mission</a>
+<nav id="mainNavigation">
+  <a href="index.html#home">Home</a>
+  <a href="index.html#story">Our Story</a>
+  <a href="index.html#mission">Mission</a>
   <a href="products.html">Products</a>
-  <a href="luxe-growth-elixir.html">Hair Care</a>
-  <a href="#expo">Expo</a>
-  <a href="journal.html">Wellness Journal</a>
-  <a href="#community">Community</a>
+  <a href="index.html#expo">Expo</a>
+  <a href="journal.html">Journal</a>
+  <a href="index.html#community">Community</a>
 </nav>
 
       <button
