@@ -236,18 +236,24 @@
 
     /* COVER */
 
-    .cover-section {
-      width: 100%;
-      overflow: hidden;
-      background: var(--white);
-    }
+.cover-section {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  line-height: 0;
+  background: var(--white);
+}
 
-    .cover-section img {
-      width: 100%;
-      height: auto;
-      object-fit: contain;
-      object-position: center;
-    }
+.cover-section img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  object-fit: contain;
+  object-position: center;
+}
 
     /* INTRO */
 
@@ -297,6 +303,10 @@
     section {
       padding: 84px 0;
     }
+
+    .cover-section {
+  padding: 0;
+}
 
     .section-heading {
       max-width: 780px;
