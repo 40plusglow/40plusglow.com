@@ -447,6 +447,41 @@
 
     /* PRODUCTS */
 
+    
+/* BOTANICAL BALANCE NEW LOOK BADGE */
+
+.tea-image-wrapper {
+  position: relative;
+}
+
+.tea-new-look-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 2;
+  padding: 10px 13px;
+  border: 2px solid #d4af37;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #e83e8c, #a71962);
+  color: #ffffff;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 900;
+  line-height: 1.4;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 600px) {
+  .tea-new-look-badge {
+    top: 8px;
+    right: 8px;
+    padding: 8px 10px;
+    font-size: 10px;
+  }
+}
+
+
     .shop {
       background: var(--white);
     }
@@ -1469,13 +1504,21 @@ src="mission-healthy-living-final.webp?v=1"
 
   <article class="product" id="botanical-balance">
 
-    <div class="product-image">
-      <img
-  src="botanical-balance-optimized.webp?v=1"
-  alt="40PlusGlow Botanical Balance Premium Herbal Tea with hibiscus, Ceylon cinnamon, star anise and cloves"
-  loading="lazy"
-  decoding="async">
-    </div>
+  
+<div class="product-image tea-image-wrapper">
+
+  <span class="tea-new-look-badge">
+    NEW LOOK<br>
+    SAME GREAT TASTE!
+  </span>
+
+  <img
+    src="botanical-balance-optimized.webp?v=1"
+    alt="40PlusGlow Botanical Balance Premium Herbal Tea with hibiscus, Ceylon cinnamon, star anise and cloves"
+    loading="lazy"
+    decoding="async">
+
+</div>
 
     <div class="product-content">
 
